@@ -482,16 +482,55 @@ If token usage reaches 50-60%, create `docs/phase1/context-handoff.md` with:
 - Relevant file paths
 - Any blockers or decisions needed
 
+## Future Enhancements / Backlog
+
+**Priority: LOW - Post-Phase 1 iterations**
+
+### Design Iteration (Inspired by Live Examples)
+
+**Status:** Deferred until after Phase 1 deployment
+
+**Inspiration Sources:**
+- **Primary:** [Anmol Nemagouda's Portfolio](https://anmolnemagouda.github.io/) - Modern, interactive, professional layout
+  - Hero section with animations
+  - Project cards with hover effects
+  - Visual skills tags/badges
+  - Contact section with form (integrate Formspree or EmailJS)
+  - Smooth animations and transitions
+- **Secondary:** [Maria Campbell's Resume](https://interglobalmedia.github.io/example-portfolio-site-github/resume.html) - Clean, traditional
+- **Secondary:** [Junior Dev Resume](https://glemakk.github.io/github-my-resume/) - Simple, mobile-first
+
+**Elements to Consider:**
+- Hero section redesign with animation/interactivity
+- Project cards instead of list (hover effects, better visual hierarchy)
+- Skills section with badges/tags instead of lists
+- Contact form integration (Formspree free tier: 50 submissions/month)
+- Enhanced animations and transitions
+- Better spacing and visual separation between sections
+
+**Implementation Notes:**
+- Keep HTML/CSS only (no build step)
+- Maintain dark mode toggle functionality
+- Ensure mobile responsive across all new components
+- Keep print-friendly (forms hidden on print)
+
+**When to Implement:**
+- After Phase 1 completion and AI Residency application submitted
+- Optional Phase 1.5 before Phase 2 (job scraping)
+- Could be user-driven: generate multiple resume variants with different designs
+
+---
+
 ## Questions for Alain
 
-- [ ] GitHub username for Pages deployment URL?
-- [ ] Custom domain for resumes (or use username.github.io)?
+- [x] GitHub username for Pages deployment URL? → solosza
+- [x] Custom domain for resumes (or use username.github.io)? → Use GitHub Pages default
 - [ ] Which job applications to target after AI Residency?
-- [ ] CSS framework preference (custom/minimal/Tailwind)?
+- [x] CSS framework preference (custom/minimal/Tailwind)? → Custom/minimal (no framework)
 - [ ] When to start Phase 2 (job scraping integration)?
 
 ---
 
-**Last Updated:** 2025-01-06
-**Current Phase:** Phase 1 - PRD Generation
-**Next Action:** Create `docs/phase1/` folder and generate PRD
+**Last Updated:** 2025-01-07
+**Current Phase:** Phase 1 - Implementation (Task 4.0 in progress)
+**Next Action:** Complete Task 4.0 (Generate AI Residency Resume), then documentation and deployment

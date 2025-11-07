@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alain Ignacio - AI Specialist Resume for AI Residency Program">
+    <title>Alain Ignacio - AI Specialist Resume</title>
+    <style>
+        /* CSS Variables for Light/Dark Theme */
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --text-primary: #212529;
+            --text-secondary: #6c757d;
+            --accent: #0066cc;
+            --accent-hover: #0052a3;
+            --border: #dee2e6;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2d2d2d;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent: #4da6ff;
+            --accent-hover: #66b3ff;
+            --border: #404040;
+            --shadow: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Text', system-ui, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Dark Mode Toggle Button */
+        #darkModeToggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 16px;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-primary);
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+
+        #darkModeToggle:hover {
+            background-color: var(--accent);
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px var(--shadow);
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 12px;
+        }
+
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .links a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 48px;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        /* About Section */
+        .about p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            max-width: 800px;
+        }
+
+        /* Projects Section */
+        .project {
+            margin-bottom: 32px;
+            padding: 20px;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .project-header h3 {
+            margin-bottom: 0;
+        }
+
+        .project-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .tech-stack {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .project ul {
+            list-style: none;
+            margin-top: 12px;
+        }
+
+        .project li {
+            padding-left: 24px;
+            margin-bottom: 8px;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .project li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Experience Section */
+        .job {
+            margin-bottom: 32px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 4px;
+        }
+
+        .job-title {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .job-meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .job ul {
+            list-style: none;
+            margin-top: 12px;
+        }
+
+        .job li {
+            padding-left: 24px;
+            margin-bottom: 8px;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .job li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Skills Section */
+        .skill-category {
+            margin-bottom: 16px;
+        }
+
+        .skill-category h4 {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .skill-list {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.15rem;
+            }
+
+            .container {
+                padding: 30px 16px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .links {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            #darkModeToggle {
+                top: 10px;
+                right: 10px;
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+
+            .project-header,
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            body {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .container {
+                padding: 20px 12px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background-color: white;
+                color: black;
+                font-size: 11pt;
+            }
+
+            #darkModeToggle {
+                display: none;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            h1 {
+                font-size: 24pt;
+            }
+
+            h2 {
+                font-size: 16pt;
+                border-bottom: 1px solid #000;
+                page-break-after: avoid;
+            }
+
+            h3 {
+                font-size: 12pt;
+                page-break-after: avoid;
+            }
+
+            section {
+                margin-bottom: 20pt;
+                page-break-inside: avoid;
+            }
+
+            .project,
+            .job {
+                page-break-inside: avoid;
+            }
+
+            a {
+                color: #0066cc;
+                text-decoration: none;
+            }
+
+            .links a::after {
+                content: " (" attr(href) ")";
+                font-size: 9pt;
+                color: #666;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+
+    <div class="container">
+        <header>
+            <h1>Alain Ignacio</h1>
+            <div class="contact-info">
+                <span>📧 solosza@yahoo.com</span>
+                <span>📱 808.354.4526</span>
+                <span>📍 Las Vegas, NV</span>
+            </div>
+            <div class="links">
+                <a href="https://github.com/solosza" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/alain-ignacio-54b9823/" target="_blank">LinkedIn</a>
+            </div>
+        </header>
+
+        <section class="about">
+            <h2>Professional Summary</h2>
+            <p>
+                AI builder transitioning from QA automation to AI engineering. Hands-on experience with Claude Code, multi-LLM integration, and AI agent systems. Self-taught AI practitioner with producer mindset—I build real tools, not just experiment. Seeking intensive AI engineering focus to accelerate technical depth and system design expertise.
+            </p>
+        </section>
+
+        <section class="projects">
+            <h2>AI Projects</h2>
+
+            <div class="project">
+                <div class="project-header">
+                    <h3>AI-Powered Resume Generation System</h3>
+                    <span class="project-date">2025</span>
+                </div>
+                <div class="tech-stack">Claude Code • Markdown • HTML/CSS • Git/GitHub • GitHub Pages</div>
+                <ul>
+                    <li>Designed data-driven AI workflow where Claude Code analyzes job descriptions and generates optimized HTML resumes from structured master data with tag-based filtering</li>
+                    <li>Architected master data structure with tags and metadata enabling AI reasoning to select relevant projects and experience bullets based on role requirements</li>
+                    <li>Demonstrated AI system design through prompt engineering, reusable workflow templates, and reproducible generation process deployed to GitHub Pages</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <h3>Multi-Phase AI Agent System</h3>
+                    <span class="project-date">2024</span>
+                </div>
+                <div class="tech-stack">Make.com • Relevance AI • OpenAI API • Claude API • Multi-agent communication</div>
+                <ul>
+                    <li>Designed and prototyped 6-phase AI agent system using Make.com as orchestration platform and Relevance AI for agent implementation, successfully deploying Phase 1 document analyzer and filter agents with data pipeline integration</li>
+                    <li>Built structured multi-step AI workflows integrating prompt chains, agent-to-agent communication protocols, and contextual decision-making using OpenAI and Claude APIs</li>
+                    <li>Demonstrated practical AI-ops implementation with hands-on experience in agent design, prompt chaining, workflow debugging, and production deployment</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <h3>Real Estate Automation with AI-Assisted Development</h3>
+                    <span class="project-date">2024</span>
+                </div>
+                <div class="tech-stack">Claude Code • Python • Selenium WebDriver • Web scraping • CLI interfaces</div>
+                <ul>
+                    <li>Developed end-to-end real estate lead automation system using Claude Code for AI-assisted development, combining web scraping, intelligent lead scoring, and automated outreach workflows</li>
+                    <li>Built custom automation framework for Zillow FSBO scraper, lead intelligence engine with motivation scoring, and automated contact form submission with state management</li>
+                    <li>Demonstrated practical application of AI-assisted development methodology using structured workflow (PRD → task decomposition → test-driven implementation) to guide LLM through building production-ready Python code</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="experience">
+            <h2>Experience</h2>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3>Lead QA Engineer</h3>
+                        <span class="job-title">Helios Digital</span>
+                    </div>
+                    <span class="job-meta">Remote | May 2025 - Present</span>
+                </div>
+                <ul>
+                    <li>Built AI-first QA function from scratch using Claude Code and major LLMs (GPT-5, Claude, Gemini, GitHub Copilot) for test generation, edge case analysis, and automation of repetitive coding tasks</li>
+                    <li>Designed custom testing framework with role-task-page architecture, implementing structured three-phase AI development workflow (PRD → task decomposition → test-driven implementation)</li>
+                    <li>Accelerated test development through AI-assisted selector finding, code refactoring, and intelligent test case generation from requirements</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3>Senior QA Automation Engineer</h3>
+                        <span class="job-title">Nakupuna Consulting</span>
+                    </div>
+                    <span class="job-meta">Remote (Navy contract) | Nov 2022 - May 2025</span>
+                </div>
+                <ul>
+                    <li>Designed modular framework architecture with Page Object Model and data-driven testing that developers adopted for their own unit testing, demonstrating practical software design patterns</li>
+                    <li>Applied structured problem-solving approach to navigate Navy restrictions (no admin rights, limited tools), demonstrating adaptability and technical resourcefulness</li>
+                    <li>Built Python/Selenium automation framework for PeopleSoft ERP testing with pytest reporting, parallel execution, and smart test selection</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3>QA Lead</h3>
+                        <span class="job-title">HMSA (Hawaii Medical Service Association)</span>
+                    </div>
+                    <span class="job-meta">Honolulu, HI | May 2013 - Nov 2022</span>
+                </div>
+                <ul>
+                    <li>Developed automation frameworks for healthcare systems including comprehensive API testing (Postman, HL7-FHIR standards) and end-to-end UI testing (Cypress/JavaScript)</li>
+                    <li>Built RESTful service testing infrastructure with request/response validation, database integration, and healthcare data compliance verification</li>
+                    <li>Established testing standards and automation patterns adopted across multiple development teams</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3>Senior Test Analyst</h3>
+                        <span class="job-title">IBM</span>
+                    </div>
+                    <span class="job-meta">Honolulu, HI | July 2008 - May 2013</span>
+                </div>
+                <ul>
+                    <li>Led QA efforts for enterprise billing platform implementations serving Virgin Mobile and Sprint/Nextel accounts</li>
+                    <li>Developed test strategies and executed comprehensive testing across billing, provisioning, and customer service systems</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2>Technical Skills</h2>
+
+            <div class="skill-category">
+                <h4>AI Tools & Platforms</h4>
+                <p class="skill-list">Claude Code (Anthropic), GPT-5 (OpenAI), Claude, Gemini, Prompt Engineering/Context Engineering, AI-Assisted Development Workflows</p>
+            </div>
+
+            <div class="skill-category">
+                <h4>Automation Platforms</h4>
+                <p class="skill-list">Make.com, Relevance AI, Zapier</p>
+            </div>
+
+            <div class="skill-category">
+                <h4>Programming Languages & Tools</h4>
+                <p class="skill-list">Python, JavaScript, SQL, Git/GitHub</p>
+            </div>
+
+            <div class="skill-category">
+                <h4>Test Automation & Frameworks</h4>
+                <p class="skill-list">Selenium WebDriver, pytest, Cypress, Custom Framework Architecture, Page Object Model, Screenplay</p>
+            </div>
+
+            <div class="skill-category">
+                <h4>API & Integration</h4>
+                <p class="skill-list">REST API, Postman, JSON, HL7-FHIR, Web scraping</p>
+            </div>
+
+            <div class="skill-category">
+                <h4>Development Methodologies</h4>
+                <p class="skill-list">Agile, Test-Driven Development, AI-Assisted Development Workflows, CI/CD</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Dark Mode Toggle
+        const toggleButton = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        // Load saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            html.setAttribute('data-theme', 'dark');
+            toggleButton.textContent = '☀️ Light Mode';
+        }
+
+        // Toggle theme on button click
+        toggleButton.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                html.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                toggleButton.textContent = '🌙 Dark Mode';
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                toggleButton.textContent = '☀️ Light Mode';
+            }
+        });
+    </script>
+</body>
+</html>
