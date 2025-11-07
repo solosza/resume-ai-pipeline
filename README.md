@@ -108,6 +108,140 @@ resume-ai-pipeline/
 - Claude Code CLI installed
 - Git configured
 
+### For Your Own Use: Customizing This System
+
+Want to use this system for your own resumes? Here's how to adapt it:
+
+#### Step 1: Fork or Clone the Repository
+
+```bash
+# Fork on GitHub, then clone
+git clone https://github.com/YOUR-USERNAME/resume-ai-pipeline.git
+cd resume-ai-pipeline
+```
+
+#### Step 2: Customize `resume-master.md`
+
+Replace the content with your own information:
+
+**Personal Information:**
+- Update name, email, phone, location
+- Update GitHub and LinkedIn URLs
+
+**Projects:**
+```markdown
+### Project Name
+**Tags:** `relevant`, `tags`, `for`, `filtering`
+**Description:** Brief project description
+**Tech Stack:** Technologies used
+**Bullets:**
+- Accomplishment with metrics
+- Technical challenge solved
+- Business impact demonstrated
+**Outcomes:**
+- Measurable results
+**Date:** YYYY
+```
+
+**Experience:**
+```markdown
+### Company Name - Job Title
+**Location:** City, State/Remote
+**Dates:** Month YYYY - Month YYYY
+**Tags:** `technical`, `management`, `ai`, etc.
+
+**Bullet Variants:**
+**ai_focused:**
+- Bullet emphasizing AI tool usage and integration
+- Focus on LLMs, automation, AI-assisted work
+
+**technical:**
+- Bullet emphasizing hands-on coding and framework building
+- Focus on technical depth and implementation details
+
+**management:**
+- Bullet emphasizing team leadership and scaling
+- Focus on people management and process improvement
+```
+
+**Skills:**
+- Organize into categories relevant to your field
+- Tag each category (e.g., `ai_tools`, `programming`, `testing`)
+- List technologies you actually use
+
+**Generation Guidelines:**
+- Update the role type mappings for your target jobs
+- Adjust content selection rules based on your experience
+- Modify section ordering preferences
+
+#### Step 3: Update Prompt Template (Optional)
+
+Edit `prompts/generate-resume.md` if you need different:
+- Role type categories (e.g., add `data_scientist`, `devops_engineer`)
+- Content selection logic (different bullet variant rules)
+- HTML/CSS design preferences
+- Section ordering for your industry
+
+**Most users won't need to modify the prompt template** - the default workflow is flexible.
+
+#### Step 4: Test with Your First Resume
+
+```bash
+# Start Claude Code
+# Provide a job description
+# Claude Code will:
+# 1. Read your resume-master.md
+# 2. Read prompts/generate-resume.md
+# 3. Analyze the job
+# 4. Generate resumes/[job-name].html
+
+# Test locally
+cd resumes
+python -m http.server 8000
+# Open http://localhost:8000/[job-name].html
+```
+
+#### Step 5: Deploy to GitHub Pages
+
+```bash
+# Push to your repository
+git add .
+git commit -m "feat: Add my resume content"
+git push
+
+# Enable GitHub Pages:
+# 1. Go to repo Settings → Pages
+# 2. Source: Deploy from branch
+# 3. Branch: master, Folder: / (root)
+# 4. Save
+
+# Your resume will be at:
+# https://YOUR-USERNAME.github.io/resume-ai-pipeline/resumes/[job-name].html
+```
+
+#### Tips for Best Results
+
+**Tagging Strategy:**
+- Use consistent tags across projects and experience
+- Common tags: `ai`, `automation`, `technical`, `management`, `python`, `javascript`
+- Create role-specific tags: `qa`, `frontend`, `backend`, `devops`, `ml`
+
+**Bullet Variants:**
+- Write 2-3 variants per job to support different role emphases
+- `technical` variant: Focus on implementation, frameworks, technical challenges
+- `management` variant: Focus on team leadership, process, scaling
+- Add custom variants if needed (e.g., `research_focused`, `customer_focused`)
+
+**Content Quality:**
+- Use metrics and specific outcomes ("Reduced test time by 40%")
+- Focus on impact, not just tasks ("Built X that enabled Y")
+- Keep bullets concise (1-2 lines max)
+
+**Testing Multiple Variants:**
+- Generate different resumes for different job types
+- Compare which content gets selected
+- Iterate on tags and bullet variants based on results
+
 ### Generating a New Resume
 
 1. **Gather job description** - Copy the full job posting or requirements

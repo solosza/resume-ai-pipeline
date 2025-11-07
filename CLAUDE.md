@@ -499,6 +499,42 @@ If token usage reaches 50-60%, create `docs/phase1/context-handoff.md` with:
 
 **Priority: LOW - Post-Phase 1 iterations**
 
+### Architectural Decision: Direct Claude Code vs Agents
+
+**Decision:** Use Claude Code directly for resume generation (current implementation)
+
+**Rationale:**
+- **Token efficiency:** Direct execution has no agent invocation overhead
+- **Simplicity:** Single-step workflow, easier to debug and maintain
+- **Speed:** Already achieving sub-5-minute generation time
+- **Current scale:** Generating 1 resume at a time is the primary use case
+
+**When to introduce Claude Code agents (Task tool):**
+- **Phase 2+**: Batch generation (10+ resumes from scraped jobs in parallel)
+- **Concurrent generation**: Multiple resume variants needed simultaneously
+- **Complex workflows**: Multi-step processes requiring state management between steps
+- **Parallel processing**: When token usage benefits outweigh agent overhead
+
+**Implementation if using agents:**
+```python
+# Example: Task tool usage for parallel resume generation
+Task(
+    subagent_type="general-purpose",
+    description="Generate resume for JobX",
+    prompt="Read resume-master.md and prompts/generate-resume.md. Generate resume for: [job description]"
+)
+```
+
+**Current workflow (no agents):**
+- Claude Code reads prompt template directly
+- Executes 4-step workflow in single invocation
+- Generates HTML and commits
+- Simple, fast, token-efficient
+
+**Status:** Architectural decision documented. Revisit in Phase 2 if batch generation is needed.
+
+---
+
 ### Design Iteration (Inspired by Live Examples)
 
 **Status:** Deferred until after Phase 1 deployment
