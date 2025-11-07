@@ -395,6 +395,27 @@ Tags enable Claude Code to filter content based on job requirements.
 ### The Pitch:
 "This isn't a traditional code project. It's an AI system that demonstrates how to architect workflows for AI agents. The master data structure enables intelligent filtering, the prompt templates ensure consistent behavior, and the entire workflow is reproducible and extensible."
 
+## Quick Reference
+
+### Deployed URLs
+- **GitHub Repository:** https://github.com/solosza/resume-ai-pipeline
+- **AI Residency Resume:** https://solosza.github.io/resume-ai-pipeline/resumes/ai-residency.html
+- **Base URL (GitHub Pages):** https://solosza.github.io/resume-ai-pipeline/
+
+### Key Files
+- **Master Data:** `resume-master.md`
+- **Prompt Template:** `prompts/generate-resume.md`
+- **Generated Resumes:** `resumes/*.html`
+- **Documentation:** `README.md`
+- **Project Context:** `CLAUDE.md` (this file)
+
+### Git Repository
+- **Remote:** https://github.com/solosza/resume-ai-pipeline.git
+- **Branch:** master
+- **Latest Commit:** b1f8e72
+
+---
+
 ## Current Session Context
 
 ### Phase 1 Complete ✅
