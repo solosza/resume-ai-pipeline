@@ -1,0 +1,60 @@
+# Claude Code internal files
+.claude/
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+*~
+
+# Python (Phase 2+)
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+.venv/
+ENV/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# Environment variables (Phase 2+ for job site credentials)
+.env
+.env.local
+.env.*.local
+
+# Build/Distribution (future phases)
+dist/
+build/
+*.egg
+
+# Node modules (if any JS tooling added)
+node_modules/
+package-lock.json
+
+# Test outputs
+test-results/
+screenshots/
+
+# Database files (Phase 2+ job tracking)
+*.db
+*.sqlite
+*.sqlite3
