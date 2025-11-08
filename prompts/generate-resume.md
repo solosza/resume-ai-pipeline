@@ -155,13 +155,13 @@ This prompt guides Claude Code through the AI-powered resume generation workflow
 ### Section Ordering
 
 **For AI-focused roles:**
-Header → About → **Projects** (prominent) → Experience → Skills
+Header → Professional Summary → **Projects** (prominent) → Experience → Skills
 
 **For Traditional QA/Technical roles:**
-Header → About → **Experience** (prominent) → Projects → Skills
+Header → Professional Summary → **Experience** (prominent) → Projects → Skills
 
 **For Leadership roles:**
-Header → About → **Experience** (prominent) → Projects → Skills
+Header → Professional Summary → **Experience** (prominent) → Projects → Skills
 
 ---
 
@@ -298,7 +298,8 @@ toggleButton.addEventListener('click', () => {
 - Contact: Email, phone, location (smaller, inline)
 - Links: GitHub, LinkedIn (clickable, styled)
 
-**About Section:**
+**Professional Summary Section:**
+- Section heading: "Professional Summary" (industry standard, not "About")
 - 2-3 sentences summarizing role focus
 - Emphasize builder/producer mindset for AI roles
 - Technical foundation + AI experience
@@ -399,7 +400,7 @@ Experience bullets: ai_focused variants
 
 Skills order: AI Tools → Automation Platforms → Programming → Testing
 
-Section order: Header → About → Projects → Experience → Skills
+Section order: Header → Professional Summary → Projects → Experience → Skills
 ```
 
 ---
