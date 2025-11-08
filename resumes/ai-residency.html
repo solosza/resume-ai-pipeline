@@ -186,11 +186,22 @@
         .project ul {
             margin-left: 20px;
             margin-bottom: 10px;
+            list-style-type: none;
         }
 
         .project li {
             margin-bottom: 8px;
             line-height: 1.6;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .project li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
         }
 
         /* Experience */
@@ -224,11 +235,22 @@
 
         .job ul {
             margin-left: 20px;
+            list-style-type: none;
         }
 
         .job li {
             margin-bottom: 8px;
             line-height: 1.6;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .job li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
         }
 
         /* Skills */
