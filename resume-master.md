@@ -101,19 +101,21 @@ Real estate lead automation system built using Claude Code for AI-assisted devel
 **Bullet Variants:**
 
 **ai_focused:**
-- Built AI-first QA function from scratch using Claude Code and major LLMs (GPT-5, Claude, Gemini, GitHub Copilot) for test generation, edge case analysis, and automation of repetitive coding tasks
-- Designed custom testing framework with role-task-page architecture, implementing structured three-phase AI development workflow (PRD → task decomposition → test-driven implementation)
-- Accelerated test development through AI-assisted selector finding, code refactoring, and intelligent test case generation from requirements
+- Established quality assurance function as founding QA hire at early-stage startup prior to development kickoff, building AI-first testing approach from day one using Claude Code and open-source tools to create test automation framework, establish testing processes, and scale team to two engineers while working under startup budget constraints
+- Integrated AI tools directly into QA workflows from inception using Claude Code and major LLMs (GPT-5, Claude, Gemini, Copilot) to generate test cases from requirements, surface edge cases through conversational analysis, and eliminate manual documentation bottlenecks that would have consumed hours in traditional QA setup
+- Built custom testing framework with role-task-page architecture and established structured three-phase development process using Claude Code to enforce requirements validation, iterative task approval, and test-driven execution with mandatory quality gates across the testing lifecycle
+- Used Claude Code in version-controlled repositories to accelerate test script development through automated selector-finding scripts, test code refactoring, and repetitive coding task automation that reduced manual trial-and-error in browser DevTools
 
 **technical:**
 - Architected and implemented custom test automation framework with role-task-page pattern supporting multi-tenant SaaS platform testing across authentication, data processing, and UI workflows
 - Built Python/Selenium test infrastructure from zero with pytest, custom fixtures, Page Object Model, and parallel execution capabilities
+- Designed custom testing framework with role-task-page architecture implementing structured three-phase development process to enforce requirements validation, iterative task approval, and test-driven execution with mandatory quality gates
 - Established CI/CD integration, reporting infrastructure, and test data management system for seed-stage startup
 
 **management:**
-- Established QA function as founding QA hire, scaling team to 2 engineers while defining testing strategy, processes, and quality standards
+- Established QA function as founding QA hire at early-stage startup prior to development kickoff, scaling team to two engineers while defining testing strategy, processes, and quality standards under startup budget constraints
 - Built testing infrastructure from scratch including framework architecture, CI/CD pipelines, and test data management
-- Integrated AI tools (Claude Code, GPT-5, Gemini, Copilot) into team workflows to accelerate test development and improve quality
+- Integrated AI tools (Claude Code, GPT-5, Gemini, Copilot) into team workflows to accelerate test development, eliminate documentation bottlenecks, and improve quality
 
 ---
 
@@ -127,19 +129,21 @@ Real estate lead automation system built using Claude Code for AI-assisted devel
 **Bullet Variants:**
 
 **ai_focused:**
-- Designed modular framework architecture with Page Object Model and data-driven testing that developers adopted for their own unit testing, demonstrating practical software design patterns
-- Applied structured problem-solving approach to navigate Navy restrictions (no admin rights, limited tools), demonstrating adaptability and technical resourcefulness
-- Built Python/Selenium automation framework for PeopleSoft ERP testing with pytest reporting, parallel execution, and smart test selection
+- Established test automation function from ground zero as founding automation hire after previous efforts failed, navigating strict Navy environment restrictions and lengthy software approval processes to implement Python/Selenium framework for PeopleSoft ERP testing across deployment, muster, leave, onboarding, and military pay workflows where only antiquated legacy tools were previously approved
+- Built framework architecture that developers adopted for their own unit testing after UI-heavy testing became too tedious with existing tools, providing training and enablement that expanded framework impact beyond QA into development workflows
+- Designed custom automation framework from scratch implementing Page Object Model and data-driven testing to handle PeopleSoft's UI-only testing constraints with no API layer access, creating modular architecture with supporting utility libraries for data handling and system integration
 
 **technical:**
-- Established test automation function from scratch in restrictive Navy environment, implementing Python/Selenium framework for PeopleSoft ERP testing with custom Page Object Model architecture
-- Designed modular framework with data-driven testing, pytest reporting, parallel execution, and smart test selection adopted by developers for unit testing
-- Built and optimized automation infrastructure including fixture management, test data utilities, and CI integration within government security constraints
+- Established test automation function from ground zero as founding automation hire after previous efforts failed, navigating strict Navy environment restrictions and lengthy software approval processes to implement Python/Selenium framework for PeopleSoft ERP testing across deployment, muster, leave, onboarding, and military pay workflows where only antiquated legacy tools were previously approved
+- Designed custom automation framework from scratch implementing Page Object Model and data-driven testing to handle PeopleSoft's UI-only testing constraints with no API layer access, creating modular architecture with supporting utility libraries for data handling and system integration
+- Built framework architecture that developers adopted for their own unit testing after UI-heavy testing became too tedious with existing tools, providing training and enablement that expanded framework impact beyond QA into development workflows
+- Established regression-first automation strategy prioritizing heavily used Navy workflows, running automated regression suites to provide quality validation and catch critical defects in mission-critical personnel operations
+- Integrated pytest reporting framework with custom HTML dashboards and continuously optimized framework performance through parallel execution and smart test selection while adapting to PeopleSoft system updates and evolving Navy security requirements
 
 **management:**
-- Built and scaled test automation team from 0 to 4 engineers, establishing testing standards, code review processes, and knowledge sharing practices
-- Created framework architecture and development patterns that enabled rapid onboarding and consistent code quality across growing team
-- Navigated Navy bureaucracy and technical restrictions to deliver functional automation infrastructure supporting critical ERP deployment
+- Scaled automation team from zero to four engineers within six months while operating under Navy procurement and security restrictions, establishing coding standards, peer review processes, and structured onboarding that maintained quality despite limited tool options
+- Built framework architecture that developers adopted for their own unit testing, providing training and enablement that expanded framework impact beyond QA into development workflows
+- Navigated Navy bureaucracy and technical restrictions to deliver functional automation infrastructure supporting critical ERP deployment across deployment, muster, leave, onboarding, and military pay workflows
 
 ---
 
@@ -153,14 +157,17 @@ Real estate lead automation system built using Claude Code for AI-assisted devel
 **Bullet Variants:**
 
 **technical:**
-- Developed automation frameworks for healthcare systems including comprehensive API testing (Postman, HL7-FHIR standards) and end-to-end UI testing (Cypress/JavaScript)
-- Built RESTful service testing infrastructure with request/response validation, database integration, and healthcare data compliance verification
-- Established testing standards and automation patterns adopted across multiple development teams
+- Established testing standards for Healthcare Claims Processing, EDI, Membership, Billing, Enrollment, HL7-FHIR, and RESTful services in Agile (Kanban) environment
+- Conducted API automation using Postman, Fiddler, SOAP UI, and WCFTest Client to validate SaaS (Informatica) environments
+- Developed comprehensive automation scripts for HL7-FHIR APIs using Postman for integration, functional, and UAT testing
+- Created RESTful web service testing with assertions using Postman Sandbox for JSON payload validation, schema validation, data mapping, status codes, workflows
+- Developed integration, end-to-end, and UAT scripts in Cypress using JavaScript, implementing Page Object Framework for enhanced test script maintenance
+- Conducted database testing on SQL and Oracle with SQL queries, providing pre- and post-deployment support
 
 **management:**
-- Led QA initiatives for healthcare systems modernization, coordinating testing across development teams and establishing quality standards
-- Mentored junior QA engineers and guided adoption of automation frameworks and testing best practices
-- Collaborated with product, development, and operations teams to ensure healthcare system reliability and compliance
+- Led multiple projects in test automation and manual testing, developing test strategies, cases, and scenarios for complex healthcare systems
+- Managed development and execution of test plans, scenarios, and scripts, maintaining manual test scripts in TFS
+- Established testing standards for Healthcare Claims Processing, EDI, Membership, Billing, Enrollment, HL7-FHIR, and RESTful services across multiple development teams in Agile environment
 
 ---
 
@@ -174,8 +181,16 @@ Real estate lead automation system built using Claude Code for AI-assisted devel
 **Bullet Variants:**
 
 **technical:**
-- Led QA efforts for enterprise billing platform implementations serving Virgin Mobile and Sprint/Nextel accounts
-- Developed test strategies and executed comprehensive testing across billing, provisioning, and customer service systems
+- Led QA and testing for Virgin Mobile USA's mission-critical billing platform across multiple channels including website, CRM, WAP platform, and charging/rating systems
+- Provided QA expertise and drove test execution for over 15 enterprise-level releases
+- Defined UAT test approach and framework, developed test plans, managed test case execution, and tracked defects in defect management tools
+- Collaborated with cross-functional teams to troubleshoot and resolve critical defects efficiently
+- Managed production support by coordinating with operations on defect triage and executing patch release testing
+
+**management:**
+- Managed 18-member team of onshore and offshore resources on Sprint/Nextel Pre-Paid account
+- Monitored testing progress, working closely with senior project managers and offshore teams to manage timelines, budgets, and contingency plans
+- Oversaw UAT, black box (functional), and end-to-end testing for multiple releases
 
 ---
 
@@ -270,14 +285,44 @@ Real estate lead automation system built using Claude Code for AI-assisted devel
 
 ### Experience Condensing Rules
 
-**For AI-focused roles:**
-- Show: Helios (3 bullets), Nakupuna (3 bullets), HMSA (1-2 bullets), IBM (omit or 1 line)
-- Emphasis: AI integration, framework building, technical depth
+**Bullet Point Selection by Role:**
 
-**For Traditional QA roles:**
-- Show: All 4 roles with 2-3 bullets each
-- Emphasis: Testing expertise, automation frameworks, team leadership
+**Helios Digital (May 2025 - Present):**
+- Use ALL bullets from selected variant (ai_focused, technical, or management)
+- This is the most recent and most impressive role - showcase it fully
 
-**For Portfolio/Showcase:**
-- Show: Projects first (all 3), Experience condensed (2-3 bullets per role max)
-- Emphasis: Building things, producer mindset, outcomes
+**Nakupuna Consulting (Nov 2022 - May 2025):**
+- Use ALL bullets from selected variant (ai_focused, technical, or management)
+- Second most recent role - demonstrate depth and impact
+
+**HMSA (May 2013 - Nov 2022):**
+- Select 2-4 most relevant bullets based on job requirements
+- Use technical variant for technical roles
+- Use management variant for leadership roles
+- Prioritize bullets that align with job description keywords
+
+**IBM (July 2008 - May 2013):**
+- Select 1-3 most relevant bullets based on job requirements
+- For senior/leadership roles: include management variant bullets
+- For technical roles: include technical variant bullets
+- May omit entirely if resume length is tight and role isn't relevant
+
+**Variant Selection by Role Type:**
+
+**For AI-focused roles (ai_specialist, ai_engineer, ml_engineer, ai_residency):**
+- Helios: ALL ai_focused bullets
+- Nakupuna: ALL ai_focused bullets
+- HMSA: 2-3 technical bullets (API, automation focus)
+- IBM: 1-2 bullets or omit
+
+**For QA/Automation roles (qa_engineer, sdet, automation_engineer):**
+- Helios: ALL technical bullets
+- Nakupuna: ALL technical bullets
+- HMSA: 3-4 technical bullets (automation, API, framework focus)
+- IBM: 2-3 technical bullets
+
+**For Technical Leadership roles (qa_lead, engineering_manager):**
+- Helios: ALL management bullets
+- Nakupuna: ALL management bullets
+- HMSA: 2-3 management bullets
+- IBM: 2-3 management bullets
