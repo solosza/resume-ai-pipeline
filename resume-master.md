@@ -89,6 +89,31 @@ Real estate lead automation system built using Claude Code for AI-assisted devel
 
 ---
 
+### Project 4: CLAUDE.md Development Framework
+**Tags:** `ai-workflow-design`, `process-engineering`, `developer-productivity`, `claude-code`, `prompt-engineering`, `software-methodology`, `documentation`, `systems-thinking`, `meta-learning`
+
+**Description:**
+Production-grade development framework (CLAUDE.md v1.6.0) serving as a reusable template system for AI-assisted software projects. Combines process engineering, prompt design, and software development best practices into a 6-phase methodology that accelerates project delivery while teaching software engineering principles.
+
+**Tech Stack:** Claude Code, Markdown, Git/GitHub, Python, Jinja2, Selenium
+
+**Bullets:**
+- Designed 6-phase development methodology (Idea Validation → Discovery → Design → Define → Divide → Deliver) with optional modules that activate only when needed, preventing over-engineering while maintaining structure for complex projects
+- Engineered conversational AI protocols including "Truth Filter" and "Reality Filter" communication frameworks to ensure factual accuracy and first-principles thinking in AI-assisted development workflows
+- Built comprehensive process documentation system (Phase 0-3) with reusable prompt templates for requirements gathering, task generation, and code execution that shipped 2 production projects in 7 days while simultaneously building the framework
+- Established quality gates and TDD workflow patterns requiring tests to pass before task completion, with coverage targets (90%+ core logic, 80%+ integration) and dual tracking system (TodoWrite tool + markdown files)
+
+**Outcomes:**
+- 2 production projects shipped in 7 days (Zillow FSBO Scraper, Resume AI Pipeline)
+- Framework iterated 6 times (v1.0.0 → v1.6.0) based on real-world feedback
+- Template successfully copied and customized across multiple projects
+- Professional documentation standards (500+ line READMEs, proper architectural layering)
+- Meta-learning loop: build process → use process → find gaps → improve process
+
+**Date:** January 2025 (7 days)
+
+---
+
 ## Experience
 
 ### Helios Digital - Lead QA Engineer
