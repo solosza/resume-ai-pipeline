@@ -309,6 +309,10 @@ toggleButton.addEventListener('click', () => {
 - Tech stack (small, gray text)
 - 2-3 bullet points per project
 - Link to GitHub repo if available
+- **AI-Powered Resume Generation System project MUST include:**
+  - GitHub repo link: https://github.com/solosza/resume-ai-pipeline
+  - Live Demo link pointing to the current resume being generated (meta self-reference)
+  - Format: `2025 (Phase 1) | <a href="https://github.com/solosza/resume-ai-pipeline" target="_blank">GitHub</a> | <a href="https://solosza.github.io/resume-ai-pipeline/resumes/[current-resume-filename].html" target="_blank">Live Demo</a>`
 
 **Experience Section:**
 - Company name + title (h3)
