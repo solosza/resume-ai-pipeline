@@ -116,10 +116,10 @@ Production-grade development framework (CLAUDE.md v1.6.0) serving as a reusable 
 
 ## Experience
 
-### Helios Digital - Lead QA Engineer
+### Helios Digital - QA Manager
 **Location:** Remote
 **Dates:** May 2025 - Present
-**Tags:** `ai`, `qa`, `technical`, `framework-building`, `claude-code`
+**Tags:** `ai`, `qa`, `technical`, `framework-building`, `claude-code`, `management`
 
 **Context:** Founding QA hire for seed-stage startup building AI-powered financial analysis platform.
 
