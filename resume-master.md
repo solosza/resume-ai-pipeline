@@ -312,6 +312,8 @@ Production-grade development framework (CLAUDE.md v1.6.0) serving as a reusable 
 
 **CRITICAL - Avoid These Mistakes:**
 - ❌ DO NOT mimic job description language verbatim
+- ❌ DO NOT use the job title from the JD in the summary (e.g., if JD says "Principal Quality Engineer," use "QA and Test Automation Leader" instead)
+- ❌ DO NOT include years of experience (e.g., "15+ years") - AI tell
 - ❌ DO NOT copy job-specific keywords or phrases (e.g., if JD says "data pipeline testing," don't use that exact phrase)
 - ❌ DO NOT optimize by adding JD-specific terminology - stay general and capability-focused
 - ❌ DO NOT mention specific performance testing tools (JMeter, LoadRunner, etc.)
@@ -325,19 +327,19 @@ Production-grade development framework (CLAUDE.md v1.6.0) serving as a reusable 
 - ✅ Keep high-level and capability-focused
 - ✅ Use authentic, natural language
 - ✅ Emphasize: building from ground up, scaling teams, AI integration
-- ✅ Show: years of experience, types of organizations (startups/enterprise), impact
+- ✅ Show: types of organizations (startups/enterprise), impact, breadth of experience
 - ✅ Technical details belong in Skills and Experience sections, not summary
 
 **Example Professional Summary Pattern:**
 ```
-[Role Type] Leader with 15+ years establishing [function] from ground up across [org types].
+[Role Type] Leader establishing [function] from ground up across [org types].
 Strong technical foundation in [general capability] combined with proven ability to [key achievements].
 Recently integrated AI tools (Claude Code, GPT-5, Gemini) into [workflows] to [benefits].
 Track record of [leadership impact] and delivering [infrastructure type] that supports [impact].
 ```
 
 **Good Example:**
-"QA and Automation Leader with 15+ years establishing quality engineering functions from ground up across startups and enterprise organizations. Strong technical foundation in test automation combined with proven ability to build custom testing frameworks, scale engineering teams, and drive quality practices across complex system architectures. Recently integrated AI tools (Claude Code, GPT-5, Gemini) into testing workflows to accelerate development and eliminate manual bottlenecks. Track record of mentoring engineers and delivering testing infrastructure that supports mission critical applications."
+"QA and Automation Leader establishing quality engineering functions from ground up across startups and enterprise organizations. Strong technical foundation in test automation combined with proven ability to build custom testing frameworks, scale engineering teams, and drive quality practices across complex system architectures. Recently integrated AI tools (Claude Code, GPT-5, Gemini) into testing workflows to accelerate development and eliminate manual bottlenecks. Track record of mentoring engineers and delivering testing infrastructure that supports mission critical applications."
 
 **Bad Example (DO NOT USE):**
 "Performance and Quality Engineering Lead with 15+ years building end-to-end testing frameworks and performance validation strategies for enterprise-scale applications using JMeter, LoadRunner, and Selenium. Expert in Python and JavaScript automation..."

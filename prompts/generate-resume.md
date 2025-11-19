@@ -303,6 +303,8 @@ toggleButton.addEventListener('click', () => {
 - 2-3 sentences summarizing role focus
 - **CRITICAL - Avoid These Mistakes:**
   - ❌ DO NOT mimic job description language verbatim
+  - ❌ DO NOT use the job title from the JD in the summary (e.g., if JD says "Principal Quality Engineer," use "QA and Test Automation Leader" instead)
+  - ❌ DO NOT include years of experience (e.g., "15+ years") - AI tell
   - ❌ DO NOT copy job-specific keywords or phrases (e.g., if JD says "data pipeline testing," don't use that exact phrase)
   - ❌ DO NOT mention specific performance testing tools (JMeter, LoadRunner, etc.)
   - ❌ DO NOT mention specific scripting languages (Python, JavaScript, etc.)
@@ -313,9 +315,9 @@ toggleButton.addEventListener('click', () => {
   - ✅ Keep high-level and capability-focused
   - ✅ Use authentic, natural language
   - ✅ Emphasize: building from ground up, scaling teams, AI integration
-  - ✅ Show: years of experience, types of organizations (startups/enterprise), impact
+  - ✅ Show: types of organizations (startups/enterprise), impact, breadth of experience
   - ✅ Technical details belong in Skills and Experience sections, not summary
-- **Pattern:** [Role Type] Leader with 15+ years establishing [function] from ground up across [org types]. Strong technical foundation in [general capability] combined with proven ability to [key achievements]. Recently integrated AI tools (Claude Code, GPT-5, Gemini) into [workflows] to [benefits]. Track record of [leadership impact] and delivering [infrastructure type] that supports [impact].
+- **Pattern:** [Role Type] Leader establishing [function] from ground up across [org types]. Strong technical foundation in [general capability] combined with proven ability to [key achievements]. Recently integrated AI tools (Claude Code, GPT-5, Gemini) into [workflows] to [benefits]. Track record of [leadership impact] and delivering [infrastructure type] that supports [impact].
 
 **Projects Section:**
 - Project title (h3) with date
