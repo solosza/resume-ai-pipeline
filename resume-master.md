@@ -114,6 +114,30 @@ Production-grade development framework (CLAUDE.md v1.6.0) serving as a reusable 
 
 ---
 
+### Project 5: Python Selenium Framework with MCP Integration
+**Tags:** `qa`, `technical`, `python`, `selenium`, `automation`, `ai`, `framework-building`, `pytest`, `mcp`
+
+**Description:**
+Production grade test automation framework showcasing enterprise architecture and AI integration through Model Context Protocol (MCP). Demonstrates QA leadership level skills in framework design combined with forward thinking AI integration.
+
+**Tech Stack:** Python, Selenium WebDriver, Pytest, Model Context Protocol (MCP), Faker, pytest html
+
+**Bullets:**
+- Architected 4 layer test automation framework (Tests to Roles to Tasks to Pages to WebInterface) implementing enterprise patterns for separation of concerns, maintainability, and scalability across e commerce testing workflows
+- Built custom MCP server integrating AI assisted testing workflows including natural language test execution, automated failure analysis, test coverage reporting, and scenario discovery
+- Designed robust error handling with exponential backoff, smart waiting strategies, automatic screenshot capture on failures, and detailed HTML reporting with execution metrics
+- Established test data management system combining JSON configuration files with dynamic Faker library integration for flexible test data generation
+
+**Outcomes:**
+- Production ready framework architecture demonstrating enterprise test automation patterns
+- MCP integration showcasing AI tool integration in QA workflows (not autonomous AI testing)
+- Clean 4 layer separation enabling maintainable, scalable test automation
+- Portfolio piece proving ability to build frameworks from scratch using industry best practices
+
+**Date:** January 2025 (In Development)
+
+---
+
 ## Experience
 
 ### Helios Digital - QA Manager
