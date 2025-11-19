@@ -303,10 +303,12 @@ toggleButton.addEventListener('click', () => {
 - 2-3 sentences summarizing role focus
 - **CRITICAL - Avoid These Mistakes:**
   - ❌ DO NOT mimic job description language verbatim
+  - ❌ DO NOT copy job-specific keywords or phrases (e.g., if JD says "data pipeline testing," don't use that exact phrase)
   - ❌ DO NOT mention specific performance testing tools (JMeter, LoadRunner, etc.)
   - ❌ DO NOT mention specific scripting languages (Python, JavaScript, etc.)
   - ❌ DO NOT keyword-stuff or sound robotic
   - ❌ DO NOT use dashes " - " anywhere in resume content (AI-generated content indicator)
+  - ❌ DO NOT optimize by adding JD-specific terminology - stay general and capability-focused
 - **DO Use These Principles:**
   - ✅ Keep high-level and capability-focused
   - ✅ Use authentic, natural language
