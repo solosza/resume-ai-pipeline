@@ -340,7 +340,8 @@ Production grade test automation framework showcasing enterprise architecture an
 
 **CRITICAL - Avoid These Mistakes:**
 - ❌ DO NOT mimic job description language verbatim
-- ❌ DO NOT use the job title from the JD in the summary (e.g., if JD says "Principal Quality Engineer," use "QA and Test Automation Leader" instead)
+- ❌ DO NOT start with ANY job title or role label (not "QA Leader", "AI Developer", "Quality Engineer", "Principal Engineer", etc.)
+- ❌ DO NOT use the job title from the JD anywhere in the summary
 - ❌ DO NOT include years of experience (e.g., "15+ years") - AI tell
 - ❌ DO NOT copy job-specific keywords or phrases (e.g., if JD says "data pipeline testing," don't use that exact phrase)
 - ❌ DO NOT optimize by adding JD-specific terminology - stay general and capability-focused
@@ -350,25 +351,40 @@ Production grade test automation framework showcasing enterprise architecture an
 - ❌ DO NOT keyword-stuff or sound robotic
 - ❌ DO NOT use dashes " - " anywhere in resume content (AI-generated content indicator)
   - Use colons ":" instead: "Claude Code (Anthropic: AI-assisted development)"
-  - Not dashes: "Claude Code (Anthropic: AI-assisted development)"
+  - Not dashes: "Claude Code (Anthropic - AI-assisted development)"
 
 **DO Use These Principles:**
+- ✅ Start directly with experience and capabilities, NOT with a job title or role label
 - ✅ Keep high-level and capability-focused
 - ✅ Use authentic, natural language
-- ✅ Emphasize: building from ground up, scaling teams, AI integration
+- ✅ Emphasize: building from ground up, scaling teams, AI integration (for leadership roles)
 - ✅ Show: types of organizations (startups/enterprise), impact, breadth of experience
 - ✅ Technical details belong in Skills and Experience sections, not summary
 
-**Example Professional Summary Pattern:**
+**Example Professional Summary Patterns:**
+
+**Pattern (Leadership roles):**
 ```
-[Role Type] Leader establishing [function] from ground up across [org types].
+Establishing [function] from ground up across [org types].
 Strong technical foundation in [general capability] combined with proven ability to [key achievements].
 Recently integrated AI tools (Claude Code, GPT-5, Gemini) into [workflows] to [benefits].
 Track record of [leadership impact] and delivering [infrastructure type] that supports [impact].
 ```
 
-**Good Example:**
-"QA and Automation Leader establishing quality engineering functions from ground up across startups and enterprise organizations. Strong technical foundation in test automation combined with proven ability to build custom testing frameworks, scale engineering teams, and drive quality practices across complex system architectures. Recently integrated AI tools (Claude Code, GPT-5, Gemini) into testing workflows to accelerate development and eliminate manual bottlenecks. Track record of mentoring engineers and delivering testing infrastructure that supports mission critical applications."
+**Pattern (IC/Technical roles):**
+```
+Hands on experience building [technical systems/capabilities].
+Demonstrated expertise in [skills] through practical projects and production deployments.
+Strong foundation in [technologies].
+[Domain] background with experience in [relevant systems].
+[Mindset/approach] focused on [outcomes].
+```
+
+**Good Example (Leadership role):**
+"Establishing quality engineering functions from ground up across startups and enterprise organizations. Strong technical foundation in test automation combined with proven ability to build custom testing frameworks, scale engineering teams, and drive quality practices across complex system architectures. Recently integrated AI tools (Claude Code, GPT-5, Gemini) into testing workflows to accelerate development and eliminate manual bottlenecks. Track record of mentoring engineers and delivering testing infrastructure that supports mission critical applications."
+
+**Good Example (IC/Technical role):**
+"Hands on experience building generative AI systems, multi agent architectures, and LLM integration workflows. Demonstrated expertise in prompt engineering, AI model implementation, and healthcare informatics through practical projects and production deployments. Strong foundation in Python development, API integration, and data architecture design. Healthcare industry background with claims processing systems, EDI transactions, and HL7 FHIR standards. Research oriented mindset focused on exploring emerging AI technologies and their practical applications in healthcare operations and treatment optimization."
 
 **Bad Example (DO NOT USE):**
 "Performance and Quality Engineering Lead with 15+ years building end-to-end testing frameworks and performance validation strategies for enterprise-scale applications using JMeter, LoadRunner, and Selenium. Expert in Python and JavaScript automation..."
