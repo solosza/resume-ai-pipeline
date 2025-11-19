@@ -335,7 +335,7 @@ Track record of [leadership impact] and delivering [infrastructure type] that su
 ```
 
 **Good Example:**
-"QA and Automation Leader with 15+ years establishing quality engineering functions from ground up across startups and enterprise organizations. Strong technical foundation in test automation combined with proven ability to build custom testing frameworks, scale engineering teams, and drive quality practices across complex system architectures. Recently integrated AI tools (Claude Code, GPT-5, Gemini) into testing workflows to accelerate development and eliminate manual bottlenecks. Track record of mentoring engineers and delivering testing infrastructure that supports mission-critical applications."
+"QA and Automation Leader with 15+ years establishing quality engineering functions from ground up across startups and enterprise organizations. Strong technical foundation in test automation combined with proven ability to build custom testing frameworks, scale engineering teams, and drive quality practices across complex system architectures. Recently integrated AI tools (Claude Code, GPT-5, Gemini) into testing workflows to accelerate development and eliminate manual bottlenecks. Track record of mentoring engineers and delivering testing infrastructure that supports mission critical applications."
 
 **Bad Example (DO NOT USE):**
 "Performance and Quality Engineering Lead with 15+ years building end-to-end testing frameworks and performance validation strategies for enterprise-scale applications using JMeter, LoadRunner, and Selenium. Expert in Python and JavaScript automation..."
