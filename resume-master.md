@@ -308,6 +308,38 @@ Production-grade development framework (CLAUDE.md v1.6.0) serving as a reusable 
 - `python` - Python-heavy work
 - `api` - API testing and integration
 
+### Professional Summary Guidelines
+
+**CRITICAL - Avoid These Mistakes:**
+- ❌ DO NOT mimic job description language verbatim
+- ❌ DO NOT mention specific performance testing tools (JMeter, LoadRunner, etc.)
+- ❌ DO NOT mention specific scripting languages (Python, JavaScript, etc.)
+- ❌ DO NOT keyword-stuff or sound robotic
+
+**DO Use These Principles:**
+- ✅ Keep high-level and capability-focused
+- ✅ Use authentic, natural language
+- ✅ Emphasize: building from ground up, scaling teams, AI integration
+- ✅ Show: years of experience, types of organizations (startups/enterprise), impact
+- ✅ Technical details belong in Skills and Experience sections, not summary
+
+**Example Professional Summary Pattern:**
+```
+[Role Type] Leader with 15+ years establishing [function] from ground up across [org types].
+Strong technical foundation in [general capability] combined with proven ability to [key achievements].
+Recently integrated AI tools (Claude Code, GPT-5, Gemini) into [workflows] to [benefits].
+Track record of [leadership impact] and delivering [infrastructure type] that supports [impact].
+```
+
+**Good Example:**
+"QA and Automation Leader with 15+ years establishing quality engineering functions from ground up across startups and enterprise organizations. Strong technical foundation in test automation combined with proven ability to build custom testing frameworks, scale engineering teams, and drive quality practices across complex system architectures. Recently integrated AI tools (Claude Code, GPT-5, Gemini) into testing workflows to accelerate development and eliminate manual bottlenecks. Track record of mentoring engineers and delivering testing infrastructure that supports mission-critical applications."
+
+**Bad Example (DO NOT USE):**
+"Performance and Quality Engineering Lead with 15+ years building end-to-end testing frameworks and performance validation strategies for enterprise-scale applications using JMeter, LoadRunner, and Selenium. Expert in Python and JavaScript automation..."
+- ❌ Copies JD language ("end-to-end," "performance validation strategies")
+- ❌ Mentions specific tools (JMeter, LoadRunner, Selenium)
+- ❌ Lists scripting languages (Python, JavaScript)
+
 ### Experience Condensing Rules
 
 **Bullet Point Selection by Role:**

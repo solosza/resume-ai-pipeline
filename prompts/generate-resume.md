@@ -301,8 +301,18 @@ toggleButton.addEventListener('click', () => {
 **Professional Summary Section:**
 - Section heading: "Professional Summary" (industry standard, not "About")
 - 2-3 sentences summarizing role focus
-- Emphasize builder/producer mindset for AI roles
-- Technical foundation + AI experience
+- **CRITICAL - Avoid These Mistakes:**
+  - ❌ DO NOT mimic job description language verbatim
+  - ❌ DO NOT mention specific performance testing tools (JMeter, LoadRunner, etc.)
+  - ❌ DO NOT mention specific scripting languages (Python, JavaScript, etc.)
+  - ❌ DO NOT keyword-stuff or sound robotic
+- **DO Use These Principles:**
+  - ✅ Keep high-level and capability-focused
+  - ✅ Use authentic, natural language
+  - ✅ Emphasize: building from ground up, scaling teams, AI integration
+  - ✅ Show: years of experience, types of organizations (startups/enterprise), impact
+  - ✅ Technical details belong in Skills and Experience sections, not summary
+- **Pattern:** [Role Type] Leader with 15+ years establishing [function] from ground up across [org types]. Strong technical foundation in [general capability] combined with proven ability to [key achievements]. Recently integrated AI tools (Claude Code, GPT-5, Gemini) into [workflows] to [benefits]. Track record of [leadership impact] and delivering [infrastructure type] that supports [impact].
 
 **Projects Section:**
 - Project title (h3) with date
