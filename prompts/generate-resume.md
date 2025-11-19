@@ -303,7 +303,8 @@ toggleButton.addEventListener('click', () => {
 - 2-3 sentences summarizing role focus
 - **CRITICAL - Avoid These Mistakes:**
   - ❌ DO NOT mimic job description language verbatim
-  - ❌ DO NOT use the job title from the JD in the summary (e.g., if JD says "Principal Quality Engineer," use "QA and Test Automation Leader" instead)
+  - ❌ DO NOT start with ANY job title or role label (not "QA Leader", "AI Developer", "Quality Engineer", "Principal Engineer", etc.)
+  - ❌ DO NOT use the job title from the JD anywhere in the summary
   - ❌ DO NOT include years of experience (e.g., "15+ years") - AI tell
   - ❌ DO NOT copy job-specific keywords or phrases (e.g., if JD says "data pipeline testing," don't use that exact phrase)
   - ❌ DO NOT mention specific performance testing tools (JMeter, LoadRunner, etc.)
@@ -313,12 +314,14 @@ toggleButton.addEventListener('click', () => {
   - ❌ DO NOT use dashes " - " anywhere in resume content (AI-generated content indicator)
   - ❌ DO NOT optimize by adding JD-specific terminology - stay general and capability-focused
 - **DO Use These Principles:**
+  - ✅ Start directly with experience and capabilities, NOT with a job title or role label
   - ✅ Keep high-level and capability-focused
   - ✅ Use authentic, natural language
-  - ✅ Emphasize: building from ground up, scaling teams, AI integration
+  - ✅ Emphasize: building from ground up, scaling teams, AI integration (for leadership roles)
   - ✅ Show: types of organizations (startups/enterprise), impact, breadth of experience
   - ✅ Technical details belong in Skills and Experience sections, not summary
-- **Pattern:** [Role Type] Leader establishing [function] from ground up across [org types]. Strong technical foundation in [general capability] combined with proven ability to [key achievements]. Recently integrated AI tools (Claude Code, GPT-5, Gemini) into [workflows] to [benefits]. Track record of [leadership impact] and delivering [infrastructure type] that supports [impact].
+- **Pattern (Leadership roles):** Establishing [function] from ground up across [org types]. Strong technical foundation in [general capability] combined with proven ability to [key achievements]. Recently integrated AI tools (Claude Code, GPT-5, Gemini) into [workflows] to [benefits]. Track record of [leadership impact] and delivering [infrastructure type] that supports [impact].
+- **Pattern (IC/Technical roles):** Hands on experience building [technical systems/capabilities]. Demonstrated expertise in [skills] through practical projects and production deployments. Strong foundation in [technologies]. [Domain] background with experience in [relevant systems]. [Mindset/approach] focused on [outcomes].
 
 **Projects Section:**
 - Project title (h3) with date
