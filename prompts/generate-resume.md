@@ -306,6 +306,7 @@ toggleButton.addEventListener('click', () => {
   - ❌ DO NOT mention specific performance testing tools (JMeter, LoadRunner, etc.)
   - ❌ DO NOT mention specific scripting languages (Python, JavaScript, etc.)
   - ❌ DO NOT keyword-stuff or sound robotic
+  - ❌ DO NOT use dashes " - " anywhere in resume content (AI-generated content indicator)
 - **DO Use These Principles:**
   - ✅ Keep high-level and capability-focused
   - ✅ Use authentic, natural language
@@ -329,6 +330,9 @@ toggleButton.addEventListener('click', () => {
 - Group by category (h4)
 - Comma-separated list per category
 - Ordered by relevance to role
+- **Format for tool descriptions:** Use colons instead of dashes
+  - ✅ Correct: "Claude Code (Anthropic: AI-assisted development)"
+  - ❌ Incorrect: "Claude Code (Anthropic - AI-assisted development)"
 
 **Footer Section:**
 - MUST include footer after Skills section, before closing container

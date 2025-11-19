@@ -315,6 +315,9 @@ Production-grade development framework (CLAUDE.md v1.6.0) serving as a reusable 
 - ❌ DO NOT mention specific performance testing tools (JMeter, LoadRunner, etc.)
 - ❌ DO NOT mention specific scripting languages (Python, JavaScript, etc.)
 - ❌ DO NOT keyword-stuff or sound robotic
+- ❌ DO NOT use dashes " - " anywhere in resume content (AI-generated content indicator)
+  - Use colons ":" instead: "Claude Code (Anthropic: AI-assisted development)"
+  - Not dashes: "Claude Code (Anthropic - AI-assisted development)"
 
 **DO Use These Principles:**
 - ✅ Keep high-level and capability-focused
