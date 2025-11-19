@@ -140,12 +140,16 @@ Production grade test automation framework showcasing enterprise architecture an
 
 ## Experience
 
-### Helios Digital - QA Manager
+### Helios Digital - [Title varies by role level]
 **Location:** Remote
 **Dates:** May 2025 - Present
 **Tags:** `ai`, `qa`, `technical`, `framework-building`, `claude-code`, `management`
 
 **Context:** Founding QA hire for seed-stage startup building AI-powered financial analysis platform.
+
+**Title Selection Logic:**
+- **For IC roles (Senior QA Engineer, Principal QA Engineer, SDET, etc.):** Use "Senior QA Engineer"
+- **For Manager+ roles (QA Manager, Director, etc.):** Use "QA Manager"
 
 **Bullet Variants:**
 
@@ -342,6 +346,7 @@ Production grade test automation framework showcasing enterprise architecture an
 - ❌ DO NOT optimize by adding JD-specific terminology - stay general and capability-focused
 - ❌ DO NOT mention specific performance testing tools (JMeter, LoadRunner, etc.)
 - ❌ DO NOT mention specific scripting languages (Python, JavaScript, etc.)
+- ❌ DO NOT highlight CI/CD in professional summary - it's baseline, not a differentiator
 - ❌ DO NOT keyword-stuff or sound robotic
 - ❌ DO NOT use dashes " - " anywhere in resume content (AI-generated content indicator)
   - Use colons ":" instead: "Claude Code (Anthropic: AI-assisted development)"
@@ -372,6 +377,10 @@ Track record of [leadership impact] and delivering [infrastructure type] that su
 - ❌ Lists scripting languages (Python, JavaScript)
 
 ### Experience Condensing Rules
+
+**Helios Digital Title Selection:**
+- **For IC roles** (Senior QA Engineer, Principal QA Engineer, SDET, Test Engineer, etc.): Use **"Senior QA Engineer"**
+- **For Manager+ roles** (QA Manager, Director, VP, etc.): Use **"QA Manager"**
 
 **Bullet Point Selection by Role:**
 

@@ -308,6 +308,7 @@ toggleButton.addEventListener('click', () => {
   - ❌ DO NOT copy job-specific keywords or phrases (e.g., if JD says "data pipeline testing," don't use that exact phrase)
   - ❌ DO NOT mention specific performance testing tools (JMeter, LoadRunner, etc.)
   - ❌ DO NOT mention specific scripting languages (Python, JavaScript, etc.)
+  - ❌ DO NOT highlight CI/CD in professional summary - it's baseline, not a differentiator
   - ❌ DO NOT keyword-stuff or sound robotic
   - ❌ DO NOT use dashes " - " anywhere in resume content (AI-generated content indicator)
   - ❌ DO NOT optimize by adding JD-specific terminology - stay general and capability-focused
