@@ -1,0 +1,40 @@
+Alain Ignacio
+solosza@yahoo.com
+808.354.4526
+Las Vegas, NV
+
+Hiring Manager
+Xpansiv
+[Date]
+
+Dear Hiring Manager,
+
+I am writing to express my interest in the Quality Assurance Engineer position at Xpansiv. Your focus on building transparent, trusted infrastructure for environmental commodities aligns with my experience establishing quality engineering functions in complex system environments.
+
+Over the past 10+ years, I have built test automation frameworks from the ground up across enterprise and startup environments. Most recently at Nakupuna Consulting, I established the test automation function from zero as the founding automation hire, implementing a Python/Selenium framework for Navy PeopleSoft ERP testing in a highly restrictive environment. I designed the framework architecture using Page Object Model and data-driven testing patterns, which developers later adopted for their own unit testing after recognizing its value. This experience taught me how to navigate strict approval processes, deliver functional automation infrastructure under constraints, and build tools that scale beyond their initial scope.
+
+My technical background directly aligns with your requirements. I have hands on experience with the testing tools and methodologies you're seeking:
+
+• Automated testing frameworks: Built production frameworks using Cypress (JavaScript) and Selenium (Python) with pytest
+• API and microservices testing: Extensive experience using Postman and SOAP UI for RESTful and SOAP web services validation, including HL7-FHIR APIs
+• Multiple testing types: Created and executed test plans for functional, end-to-end, regression, integration, and UAT testing across healthcare and government systems
+• Agile development: 9 years in Agile environments working with cross functional teams, including business analysts, product managers, and developers
+
+At HMSA (Hawaii's largest health insurer), I established testing standards for Healthcare Claims Processing, EDI, Membership, Billing, and Enrollment systems. I developed comprehensive automation scripts for HL7-FHIR APIs using Postman and created RESTful web service tests with assertions for JSON payload validation, schema validation, and workflow testing. I also built integration and UAT scripts in Cypress using the Page Object Framework for maintainable test automation.
+
+What draws me to Xpansiv is the opportunity to contribute to market infrastructure that supports the global energy transition. Your integrated platform serving thousands of market participants requires robust quality assurance across complex workflows and data pipelines. My background building frameworks that handle intricate business logic (healthcare claims processing, military personnel operations) translates well to the challenges of testing environmental commodities trading systems.
+
+I am a self starter who thrives in environments where quality practices need to be established or improved. At Helios Digital, I joined as the founding QA hire prior to development kickoff, building the test automation framework and processes from day one. I work effectively both independently and collaboratively, whether that's designing framework architecture on my own or partnering with developers and product managers to review defects and discuss solutions.
+
+I have reviewed your interview process and am prepared for the take home assessment and technical interviews. I am confident my combination of framework building experience, API testing expertise, and ability to establish quality practices in complex environments makes me a strong fit for this role.
+
+I look forward to discussing how my background in building scalable test automation infrastructure can contribute to Xpansiv's mission. Thank you for your consideration.
+
+Sincerely,
+Alain Ignacio
+
+---
+
+Portfolio: https://github.com/solosza
+LinkedIn: https://www.linkedin.com/in/alain-ignacio
+Resume: https://solosza.github.io/resume-ai-pipeline/resumes/xpansiv-qa-engineer.html
