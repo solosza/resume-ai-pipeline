@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alain Ignacio - AI Adoption Lead Resume</title>
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --text-primary: #212529;
+            --text-secondary: #6c757d;
+            --accent: #0066cc;
+            --border: #dee2e6;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2d2d2d;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent: #4da6ff;
+            --border: #404040;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', 'Segoe UI', Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        #darkModeToggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 16px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        #darkModeToggle:hover {
+            background-color: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .contact-info {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-info span {
+            margin: 0 8px;
+        }
+
+        .links {
+            margin-top: 12px;
+        }
+
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 0.95rem;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        section h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .about p {
+            color: var(--text-primary);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .experience-item, .project-item {
+            margin-bottom: 28px;
+        }
+
+        .experience-item h3, .project-item h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .experience-meta, .project-meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .tech-stack {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        ul li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        .skills-category {
+            margin-bottom: 18px;
+        }
+
+        .skills-category h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        .skills-category p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 767px) {
+            .container {
+                padding: 20px 16px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .contact-info span {
+                display: block;
+                margin: 4px 0;
+            }
+
+            #darkModeToggle {
+                top: 10px;
+                right: 10px;
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+
+            section h2 {
+                font-size: 1.25rem;
+            }
+        }
+
+        @media print {
+            #darkModeToggle {
+                display: none !important;
+            }
+
+            footer {
+                display: none !important;
+            }
+
+            body {
+                background-color: white !important;
+                color: #212529 !important;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            header {
+                margin-bottom: 20px;
+                padding-bottom: 15px;
+            }
+
+            section {
+                margin-bottom: 20px;
+                page-break-inside: avoid;
+            }
+
+            a {
+                color: #212529 !important;
+                text-decoration: none !important;
+            }
+
+            section h2 {
+                border-bottom-color: #212529 !important;
+            }
+
+            ul li::before {
+                color: #212529 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+
+    <div class="container">
+        <header>
+            <h1>Alain Ignacio</h1>
+            <div class="contact-info">
+                <span>solosza@yahoo.com</span>
+                <span>808.354.4526</span>
+                <span>Las Vegas, NV</span>
+            </div>
+            <div class="links">
+                <a href="https://github.com/solosza" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/alain-ignacio" target="_blank">LinkedIn</a>
+            </div>
+        </header>
+
+        <section class="about">
+            <h2>Professional Summary</h2>
+            <p>Hands on experience building generative AI systems, multi-agent architectures, and practical automation workflows using Claude, GPT, and Gemini. Proven track record of integrating AI tools into team workflows, delivering training and enablement that drives adoption, and building frameworks that make AI accessible to technical and non-technical users alike. Background in process optimization and workflow analysis across enterprise healthcare, government, and startup environments. Combines technical depth in prompt engineering with strong communication skills to translate complex AI capabilities into measurable business value.</p>
+        </section>
+
+        <section class="projects">
+            <h2>AI Projects</h2>
+
+            <div class="project-item">
+                <h3>CLAUDE.md Development Framework</h3>
+                <div class="project-meta">January 2025</div>
+                <div class="tech-stack">Claude Code, Prompt Engineering, Process Documentation, Workflow Design</div>
+                <ul>
+                    <li>Designed 6-phase development methodology with reusable templates and playbooks that shipped 2 production projects in 7 days, demonstrating rapid AI-powered delivery</li>
+                    <li>Engineered conversational AI protocols including "Truth Filter" and "Reality Filter" communication frameworks ensuring factual accuracy and first-principles thinking in AI-assisted workflows</li>
+                    <li>Built comprehensive process documentation system with quality gates and workflow patterns that can be adopted by teams with varying technical backgrounds</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <h3>AI-Powered Resume Generation System</h3>
+                <div class="project-meta">2025</div>
+                <div class="tech-stack">Claude Code, Prompt Engineering, Markdown, HTML/CSS, GitHub Pages</div>
+                <ul>
+                    <li>Designed data-driven AI workflow where Claude Code analyzes job descriptions and generates optimized outputs from structured master data with tag-based filtering</li>
+                    <li>Architected master data structure with tags and metadata enabling intelligent content selection based on role requirements, demonstrating practical prompt engineering</li>
+                    <li>Created reproducible, documented workflow that non-technical users could understand and adapt for their own use cases</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <h3>Multi-Phase AI Agent System</h3>
+                <div class="project-meta">2024</div>
+                <div class="tech-stack">Make.com, Relevance AI, OpenAI API, Claude API, Multi-agent Communication</div>
+                <ul>
+                    <li>Designed and prototyped 6-phase AI agent system using Make.com as orchestration platform and Relevance AI for agent implementation, successfully deploying document analyzer and filter agents</li>
+                    <li>Built structured multi-step AI workflows integrating prompt chains, agent-to-agent communication protocols, and contextual decision-making</li>
+                    <li>Demonstrated practical AI-ops implementation with hands-on experience in agent design, prompt chaining, workflow debugging, and production deployment</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="experience">
+            <h2>Experience</h2>
+
+            <div class="experience-item">
+                <h3>Senior QA Engineer | Helios Digital</h3>
+                <div class="experience-meta">Remote | May 2025 – Present</div>
+                <ul>
+                    <li>Established AI-first approach as founding QA hire at early-stage fintech startup, integrating Claude Code and major LLMs (GPT-5, Claude, Gemini) into daily workflows from day one to accelerate development and eliminate manual bottlenecks</li>
+                    <li>Integrated AI tools directly into team workflows, using Claude Code to generate test cases from requirements, surface edge cases through conversational analysis, and automate repetitive documentation tasks</li>
+                    <li>Built custom framework with structured development process, providing training and enablement to team members on AI-assisted workflows that improved productivity across technical and non-technical tasks</li>
+                    <li>Used Claude Code in version-controlled repositories to accelerate script development through automated code generation, refactoring, and repetitive task automation</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Senior QA Automation Engineer | Nakupuna Consulting</h3>
+                <div class="experience-meta">Remote (Navy Contract) | Nov 2022 – May 2025</div>
+                <ul>
+                    <li>Established automation function from ground zero as founding hire, navigating strict Navy environment restrictions and lengthy software approval processes to implement new workflows for ERP testing across deployment, muster, leave, onboarding, and military pay processes</li>
+                    <li>Built framework architecture that developers adopted for their own workflows after existing tools became too tedious, providing training and enablement that expanded impact beyond initial scope into development teams</li>
+                    <li>Scaled team from zero to four engineers within six months, establishing coding standards, peer review processes, and structured onboarding that maintained quality while driving adoption of new methodologies</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>QA Lead | HMSA (Hawaii Medical Service Association)</h3>
+                <div class="experience-meta">Honolulu, HI | May 2013 – Nov 2022</div>
+                <ul>
+                    <li>Led workflow analysis and process optimization across Healthcare Claims Processing, EDI, Membership, Billing, and Enrollment systems, identifying inefficiencies and implementing automation strategies</li>
+                    <li>Developed comprehensive automation scripts and established testing standards across multiple development teams in Agile environment, translating technical requirements into accessible documentation</li>
+                    <li>Conducted API automation and integration testing, building expertise in workflow optimization and process improvement across complex healthcare system architectures</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Senior Test Analyst | IBM</h3>
+                <div class="experience-meta">Honolulu, HI | July 2008 – May 2013</div>
+                <ul>
+                    <li>Managed 18-member team of onshore and offshore resources, driving stakeholder collaboration and change management across multiple enterprise releases</li>
+                    <li>Defined approach and framework for UAT testing, developing training materials and coordinating cross-functional teams to ensure successful adoption</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2>Skills</h2>
+
+            <div class="skills-category">
+                <h4>AI & Generative AI</h4>
+                <p>Claude (Anthropic), GPT-5 (OpenAI), Gemini (Google), Prompt Engineering, Context Engineering, Multi-agent Workflows, AI-Assisted Development</p>
+            </div>
+
+            <div class="skills-category">
+                <h4>Automation & Workflow Platforms</h4>
+                <p>Make.com (Workflow Orchestration), Relevance AI (Agent Platform), Zapier, Claude Code (AI-assisted automation)</p>
+            </div>
+
+            <div class="skills-category">
+                <h4>Training & Enablement</h4>
+                <p>Technical Documentation, Process Documentation, Playbook Development, Cross-functional Training, Change Management, Stakeholder Communication</p>
+            </div>
+
+            <div class="skills-category">
+                <h4>Technical Foundation</h4>
+                <p>Python, JavaScript, SQL, Git/GitHub, API Integration, REST APIs, JSON, Workflow Design</p>
+            </div>
+
+            <div class="skills-category">
+                <h4>Methodologies</h4>
+                <p>Agile (Scrum, Kanban), Process Optimization, Workflow Analysis, ROI Assessment, Continuous Improvement</p>
+            </div>
+
+            <div class="skills-category">
+                <h4>Domains</h4>
+                <p>Healthcare Systems (Claims, EDI, HL7-FHIR), Financial Technology, Government/DoD, Enterprise Operations</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Generated using my custom <a href="https://github.com/solosza/resume-ai-pipeline" target="_blank">AI-Powered Resume Generation System</a> | <a href="https://solosza.github.io/resume-ai-pipeline/resumes/finn-ai-adoption-lead.html" target="_blank">View Live Demo</a></p>
+        </footer>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            html.setAttribute('data-theme', 'dark');
+            toggleButton.textContent = '☀️ Light Mode';
+        }
+
+        toggleButton.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                html.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                toggleButton.textContent = '🌙 Dark Mode';
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                toggleButton.textContent = '☀️ Light Mode';
+            }
+        });
+    </script>
+</body>
+</html>
