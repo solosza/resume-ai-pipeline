@@ -155,20 +155,21 @@ Production grade test automation framework showcasing enterprise architecture an
 
 **ai_focused:**
 - Established quality assurance function as founding QA hire at early-stage startup prior to development kickoff, building AI-first testing approach from day one using Claude Code and open-source tools to create test automation framework, establish testing processes, and scale team to two engineers while working under startup budget constraints
-- Integrated AI tools directly into QA workflows from inception using Claude Code and major LLMs (GPT-5, Claude, Gemini, Copilot) to generate test cases from requirements, surface edge cases through conversational analysis, and eliminate manual documentation bottlenecks that would have consumed hours in traditional QA setup
-- Built custom testing framework with role-task-page architecture and established structured three-phase development process using Claude Code to enforce requirements validation, iterative task approval, and test-driven execution with mandatory quality gates across the testing lifecycle
-- Used Claude Code in version-controlled repositories to accelerate test script development through automated selector-finding scripts, test code refactoring, and repetitive coding task automation that reduced manual trial-and-error in browser DevTools
+- Built custom MCP server with 11 specialized tools integrating Claude Code directly into test automation workflows, enabling natural language test generation where QA describes scenarios in plain English and AI generates complete test code with automated element discovery and page object generation
+- Designed 4-layer test automation architecture (Tests, Roles, Tasks, Page Objects) with strict separation of concerns and fluent API that makes generated code readable, allowing manual testers to review and validate AI-generated tests while learning the codebase
+- Used Claude Code with MCP integration for AI-powered failure analysis, automatic locator updates when UI changes, and self-healing test capabilities that reduced test maintenance overhead
 
 **technical:**
-- Architected and implemented custom test automation framework with role-task-page pattern supporting multi-tenant SaaS platform testing across authentication, data processing, and UI workflows
-- Built Python/Selenium test infrastructure from zero with pytest, custom fixtures, Page Object Model, and parallel execution capabilities
-- Designed custom testing framework with role-task-page architecture implementing structured three-phase development process to enforce requirements validation, iterative task approval, and test-driven execution with mandatory quality gates
-- Established CI/CD integration, reporting infrastructure, and test data management system for seed-stage startup
+- Established quality assurance function as founding QA hire at early-stage startup prior to development kickoff, building test automation framework from day one, establishing testing processes, and scaling team to two engineers while working under startup budget constraints
+- Built custom MCP server with 11 specialized tools integrating Claude Code directly into test automation workflows, enabling natural language test generation where QA describes scenarios in plain English and AI generates complete test code with automated element discovery and page object generation
+- Designed 4-layer test automation architecture (Tests, Roles, Tasks, Page Objects) with strict separation of concerns and fluent API that makes generated code readable, allowing manual testers to review and validate AI-generated tests while learning the codebase
+- Used Claude Code with MCP integration for AI-powered failure analysis, automatic locator updates when UI changes, and self-healing test capabilities that reduced test maintenance overhead
 
 **management:**
 - Established QA function as founding QA hire at early-stage startup prior to development kickoff, scaling team to two engineers while defining testing strategy, processes, and quality standards under startup budget constraints
-- Built testing infrastructure from scratch including framework architecture, CI/CD pipelines, and test data management
-- Integrated AI tools (Claude Code, GPT-5, Gemini, Copilot) into team workflows to accelerate test development, eliminate documentation bottlenecks, and improve quality
+- Built custom MCP server with 11 specialized tools integrating Claude Code directly into test automation workflows, enabling natural language test generation where QA describes scenarios in plain English and AI generates complete test code with automated element discovery and page object generation
+- Designed 4-layer test automation architecture (Tests, Roles, Tasks, Page Objects) with strict separation of concerns and fluent API that makes generated code readable, allowing manual testers to review and validate AI-generated tests while learning the codebase
+- Used Claude Code with MCP integration for AI-powered failure analysis, automatic locator updates when UI changes, and self-healing test capabilities that reduced test maintenance overhead
 
 ---
 
@@ -253,9 +254,10 @@ Production grade test automation framework showcasing enterprise architecture an
 **Tags:** `ai_tools`
 
 - Claude Code (Anthropic) - AI-assisted development
+- Model Context Protocol (MCP) - AI tool integration for test automation
 - GPT-5 (OpenAI) - Multi-LLM integration
 - Claude, Gemini - LLM integration
-- Prompt Engineering/Context Engineering - Multi-agent workflows
+- Prompt Engineering/Context Engineering - AI workflows
 - AI-Assisted Development Workflows
 
 ### Automation Platforms
@@ -279,7 +281,9 @@ Production grade test automation framework showcasing enterprise architecture an
 - Selenium WebDriver - UI automation
 - pytest - Python testing framework
 - Cypress - JavaScript E2E testing
+- 4-Layer Architecture - Tests → Roles → Tasks → Pages pattern
 - Custom Framework Architecture - Page Object Model, data-driven design
+- MCP Server Development - Custom AI tool integration
 - Page Object Model - Design pattern implementation
 - Screenplay - Test Automation Framework
 
@@ -362,6 +366,11 @@ Production grade test automation framework showcasing enterprise architecture an
 - ✅ Technical details belong in Skills and Experience sections, not summary
 
 **Example Professional Summary Patterns:**
+
+**Pattern (AI-focused roles):**
+```
+Integrating coding agents directly into QA workflows while most teams are still using AI as a chat assistant on the side. Building production systems with Claude Code and custom MCP servers that replace manual bottlenecks with intelligent automation. Background establishing quality functions from ground up across startups, government contracts, and enterprise healthcare.
+```
 
 **Pattern (Leadership roles):**
 ```
