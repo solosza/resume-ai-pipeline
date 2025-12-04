@@ -19,6 +19,9 @@ This file contains all resume content with tags and metadata for AI-powered resu
 - GitHub: https://github.com/solosza
 - LinkedIn: https://www.linkedin.com/in/alain-ignacio
 
+**Clearance:**
+- DoD Security Clearance (Inactive, eligible for reinstatement)
+
 ---
 
 ## Projects
