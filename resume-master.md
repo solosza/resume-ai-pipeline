@@ -154,18 +154,21 @@ Production grade test automation framework showcasing enterprise architecture an
 **Bullet Variants:**
 
 **ai_focused:**
+- Established quality assurance function as founding QA hire at early-stage startup prior to development kickoff, building AI-first testing approach from day one and scaling team to two engineers while working under startup budget constraints
 - Designed and built an AI-driven automation framework enabling coding agents to interpret user stories, analyze UI structure, and autonomously generate executable test logic within a scalable Python/Selenium architecture
 - Developed an MCP-based agent interface that exposes test generation, page analysis, code synthesis, execution, and reporting as callable tools for multimodal AI agents such as Claude Code
 - Engineered an end-to-end agentic workflow where AI autonomously produces, executes, debugs, and refines automation code, demonstrating practical application of agentic systems and model-to-environment interaction
 - Released an open-source agentic automation platform showcasing expertise in AI tool orchestration, structured code generation, and applying emerging protocols (Model Context Protocol) to real-world software engineering workflows
 
 **technical:**
+- Established quality assurance function as founding QA hire at early-stage startup prior to development kickoff, building test automation framework from day one, establishing testing processes, and scaling team to two engineers while working under startup budget constraints
 - Architected a Python Selenium automation framework with a structured, layered design to support clean, maintainable, and extensible test code
 - Created an MCP-based automation server that allows a coding agent to interpret user stories and generate executable test automation aligned with the framework's conventions
 - Built a full automation workflow including agent-driven test creation, Pytest execution, report generation, and intelligent failure analysis
 - Delivered a public open-source project demonstrating advanced automation architecture and practical integration of coding agents via the Model Context Protocol
 
 **management:**
+- Established QA function as founding QA hire at early-stage startup prior to development kickoff, scaling team to two engineers while defining testing strategy, processes, and quality standards under startup budget constraints
 - Built a Python-based Selenium automation framework with a clear, scalable architecture that improves maintainability, readability, and onboarding for QA teams
 - Developed an MCP-powered automation server that enables a coding agent to generate production-ready test automation from user stories and UI analysis
 - Implemented an end-to-end automation pipeline supporting agent-generated tests, Pytest execution, reporting, and automated failure insights
@@ -201,7 +204,7 @@ Production grade test automation framework showcasing enterprise architecture an
 
 ---
 
-### HMSA (Hawaii Medical Service Association) - QA Lead
+### HMSA (Hawaii Medical Service Association) - Test Manager
 **Location:** Honolulu, HI
 **Dates:** May 2013 - Nov 2022
 **Tags:** `qa`, `technical`, `api`, `automation`
@@ -365,35 +368,22 @@ Production grade test automation framework showcasing enterprise architecture an
 - ✅ Show: types of organizations (startups/enterprise), impact, breadth of experience
 - ✅ Technical details belong in Skills and Experience sections, not summary
 
-**Example Professional Summary Patterns:**
+**Professional Summary Variants:**
 
-**Pattern (AI-focused roles):**
+**ai_focused** (for AI engineer, AI residency, AI adoption roles):
 ```
 Integrating coding agents directly into QA workflows while most teams are still using AI as a chat assistant on the side. Building production systems with Claude Code and custom MCP servers that replace manual bottlenecks with intelligent automation. Background establishing quality functions from ground up across startups, government contracts, and enterprise healthcare.
 ```
 
-**Pattern (Leadership roles):**
+**technical** (for SDET, Automation Engineer, QA Engineer roles):
 ```
-Establishing [function] from ground up across [org types].
-Strong technical foundation in [general capability] combined with proven ability to [key achievements].
-Recently integrated AI tools (Claude Code, GPT-5, Gemini) into [workflows] to [benefits].
-Track record of [leadership impact] and delivering [infrastructure type] that supports [impact].
+Establishing test automation functions from ground up across startups, government contracts, and enterprise healthcare. Building custom frameworks with layered architecture that teams can maintain and extend. Recently integrated AI coding agents via MCP servers to automate test generation, failure analysis, and self-healing test maintenance.
 ```
 
-**Pattern (IC/Technical roles):**
+**management** (for QA Lead, QA Manager, Director roles):
 ```
-Hands on experience building [technical systems/capabilities].
-Demonstrated expertise in [skills] through practical projects and production deployments.
-Strong foundation in [technologies].
-[Domain] background with experience in [relevant systems].
-[Mindset/approach] focused on [outcomes].
+Establishing quality engineering functions from ground up across startups and enterprise organizations. Proven ability to build custom testing frameworks, scale engineering teams, and drive quality practices across complex system architectures. Recently integrated AI tools into team workflows to accelerate development and eliminate manual bottlenecks.
 ```
-
-**Good Example (Leadership role):**
-"Establishing quality engineering functions from ground up across startups and enterprise organizations. Strong technical foundation in test automation combined with proven ability to build custom testing frameworks, scale engineering teams, and drive quality practices across complex system architectures. Recently integrated AI tools (Claude Code, GPT-5, Gemini) into testing workflows to accelerate development and eliminate manual bottlenecks. Track record of mentoring engineers and delivering testing infrastructure that supports mission critical applications."
-
-**Good Example (IC/Technical role):**
-"Hands on experience building generative AI systems, multi agent architectures, and LLM integration workflows. Demonstrated expertise in prompt engineering, AI model implementation, and healthcare informatics through practical projects and production deployments. Strong foundation in Python development, API integration, and data architecture design. Healthcare industry background with claims processing systems, EDI transactions, and HL7 FHIR standards. Research oriented mindset focused on exploring emerging AI technologies and their practical applications in healthcare operations and treatment optimization."
 
 **Bad Example (DO NOT USE):**
 "Performance and Quality Engineering Lead with 15+ years building end-to-end testing frameworks and performance validation strategies for enterprise-scale applications using JMeter, LoadRunner, and Selenium. Expert in Python and JavaScript automation..."
