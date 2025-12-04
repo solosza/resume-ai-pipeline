@@ -186,12 +186,12 @@ Production grade test automation framework showcasing enterprise architecture an
 **Bullet Variants:**
 
 **ai_focused:**
-- Established test automation function from ground zero as founding automation hire after previous efforts failed, navigating strict Navy environment restrictions and lengthy software approval processes to implement Python/Selenium framework for PeopleSoft ERP testing across deployment, muster, leave, onboarding, and military pay workflows where only antiquated legacy tools were previously approved
+- Revived test automation function after previous efforts failed, navigating strict Navy environment restrictions and lengthy software approval processes to implement Python/Selenium framework for PeopleSoft ERP testing across deployment, muster, leave, onboarding, and military pay workflows where only antiquated legacy tools were previously approved
 - Built framework architecture that developers adopted for their own unit testing after UI-heavy testing became too tedious with existing tools, providing training and enablement that expanded framework impact beyond QA into development workflows
 - Designed custom automation framework from scratch implementing Page Object Model and data-driven testing to handle PeopleSoft's UI-only testing constraints with no API layer access, creating modular architecture with supporting utility libraries for data handling and system integration
 
 **technical:**
-- Established test automation function from ground zero as founding automation hire after previous efforts failed, navigating strict Navy environment restrictions and lengthy software approval processes to implement Python/Selenium framework for PeopleSoft ERP testing across deployment, muster, leave, onboarding, and military pay workflows where only antiquated legacy tools were previously approved
+- Revived test automation function after previous efforts failed, navigating strict Navy environment restrictions and lengthy software approval processes to implement Python/Selenium framework for PeopleSoft ERP testing across deployment, muster, leave, onboarding, and military pay workflows where only antiquated legacy tools were previously approved
 - Designed custom automation framework from scratch implementing Page Object Model and data-driven testing to handle PeopleSoft's UI-only testing constraints with no API layer access, creating modular architecture with supporting utility libraries for data handling and system integration
 - Built framework architecture that developers adopted for their own unit testing after UI-heavy testing became too tedious with existing tools, providing training and enablement that expanded framework impact beyond QA into development workflows
 - Established regression-first automation strategy prioritizing heavily used Navy workflows, running automated regression suites to provide quality validation and catch critical defects in mission-critical personnel operations
