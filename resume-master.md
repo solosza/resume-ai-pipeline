@@ -154,22 +154,22 @@ Production grade test automation framework showcasing enterprise architecture an
 **Bullet Variants:**
 
 **ai_focused:**
-- Established quality assurance function as founding QA hire at early-stage startup prior to development kickoff, building AI-first testing approach from day one using Claude Code and open-source tools to create test automation framework, establish testing processes, and scale team to two engineers while working under startup budget constraints
-- Built custom MCP server with 11 specialized tools integrating Claude Code directly into test automation workflows, enabling natural language test generation where QA describes scenarios in plain English and AI generates complete test code with automated element discovery and page object generation
-- Designed 4-layer test automation architecture (Tests, Roles, Tasks, Page Objects) with strict separation of concerns and fluent API that makes generated code readable, allowing manual testers to review and validate AI-generated tests while learning the codebase
-- Used Claude Code with MCP integration for AI-powered failure analysis, automatic locator updates when UI changes, and self-healing test capabilities that reduced test maintenance overhead
+- Designed and built an AI-driven automation framework enabling coding agents to interpret user stories, analyze UI structure, and autonomously generate executable test logic within a scalable Python/Selenium architecture
+- Developed an MCP-based agent interface that exposes test generation, page analysis, code synthesis, execution, and reporting as callable tools for multimodal AI agents such as Claude Code
+- Engineered an end-to-end agentic workflow where AI autonomously produces, executes, debugs, and refines automation code, demonstrating practical application of agentic systems and model-to-environment interaction
+- Released an open-source agentic automation platform showcasing expertise in AI tool orchestration, structured code generation, and applying emerging protocols (Model Context Protocol) to real-world software engineering workflows
 
 **technical:**
-- Established quality assurance function as founding QA hire at early-stage startup prior to development kickoff, building test automation framework from day one, establishing testing processes, and scaling team to two engineers while working under startup budget constraints
-- Built custom MCP server with 11 specialized tools integrating Claude Code directly into test automation workflows, enabling natural language test generation where QA describes scenarios in plain English and AI generates complete test code with automated element discovery and page object generation
-- Designed 4-layer test automation architecture (Tests, Roles, Tasks, Page Objects) with strict separation of concerns and fluent API that makes generated code readable, allowing manual testers to review and validate AI-generated tests while learning the codebase
-- Used Claude Code with MCP integration for AI-powered failure analysis, automatic locator updates when UI changes, and self-healing test capabilities that reduced test maintenance overhead
+- Architected a Python Selenium automation framework with a structured, layered design to support clean, maintainable, and extensible test code
+- Created an MCP-based automation server that allows a coding agent to interpret user stories and generate executable test automation aligned with the framework's conventions
+- Built a full automation workflow including agent-driven test creation, Pytest execution, report generation, and intelligent failure analysis
+- Delivered a public open-source project demonstrating advanced automation architecture and practical integration of coding agents via the Model Context Protocol
 
 **management:**
-- Established QA function as founding QA hire at early-stage startup prior to development kickoff, scaling team to two engineers while defining testing strategy, processes, and quality standards under startup budget constraints
-- Built custom MCP server with 11 specialized tools integrating Claude Code directly into test automation workflows, enabling natural language test generation where QA describes scenarios in plain English and AI generates complete test code with automated element discovery and page object generation
-- Designed 4-layer test automation architecture (Tests, Roles, Tasks, Page Objects) with strict separation of concerns and fluent API that makes generated code readable, allowing manual testers to review and validate AI-generated tests while learning the codebase
-- Used Claude Code with MCP integration for AI-powered failure analysis, automatic locator updates when UI changes, and self-healing test capabilities that reduced test maintenance overhead
+- Built a Python-based Selenium automation framework with a clear, scalable architecture that improves maintainability, readability, and onboarding for QA teams
+- Developed an MCP-powered automation server that enables a coding agent to generate production-ready test automation from user stories and UI analysis
+- Implemented an end-to-end automation pipeline supporting agent-generated tests, Pytest execution, reporting, and automated failure insights
+- Published an open-source portfolio project showcasing modern AI-assisted automation design and integration with emerging agentic technologies (MCP)
 
 ---
 
