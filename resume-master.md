@@ -162,7 +162,7 @@ Production grade test automation framework showcasing enterprise architecture an
 
 **technical:**
 - Established quality assurance function as founding QA hire at early-stage startup prior to development kickoff, building test automation framework from day one, establishing testing processes, and scaling team to two engineers while working under startup budget constraints
-- Architected a Python Selenium automation framework with a structured, layered design to support clean, maintainable, and extensible test code
+- Architected a Python Selenium automation framework with a structured, layered, data-driven design to support clean, maintainable, and scalable test code
 - Created an MCP-based automation server that allows a coding agent to interpret user stories and generate executable test automation aligned with the framework's conventions
 - Built a full automation workflow including agent-driven test creation, Pytest execution, report generation, and intelligent failure analysis
 - Delivered a public open-source project demonstrating advanced automation architecture and practical integration of coding agents via the Model Context Protocol
