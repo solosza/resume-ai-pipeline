@@ -251,6 +251,26 @@ Production grade test automation framework showcasing enterprise architecture an
 
 ---
 
+## RPA Developer Bullet Bank
+
+**Tags:** `rpa`, `automation`, `technical`, `ai`
+
+**Note:** These bullets are derived entirely from real experience and can be mixed/matched for RPA roles. Use in combination with existing experience bullets.
+
+- Designed and implemented automation frameworks that convert business workflows into repeatable, scriptable processes across ERP, healthcare, and startup environments, reducing manual effort and improving process reliability
+- Built Python and Selenium based UI automation for multi step, form heavy systems including PeopleSoft ERP, healthcare enrollment workflows, and startup onboarding flows, handling form and data processing patterns
+- Integrated coding agents through Model Context Protocol to analyze flows, extract UI structure, generate automation logic, and refine scripts based on failures, demonstrating practical agentic automation patterns applicable to process automation
+- Developed structured, layered automation architectures (Tests → Roles → Tasks → Pages) that align naturally with workflow segmentation, reusable components, selectors, and exception paths
+- Automated business processes involving multi page navigation, data entry, validation, and state management, similar to form filling, document processing, and intake workflows
+- Built custom data driven automation frameworks enabling dynamic input mapping, handling multiple data sources including JSON configuration, structured documents, and various input formats
+- Implemented robust error handling, retry logic, state checking, and automated failure analysis to increase end to end reliability of automated business processes
+- Created automation solutions in restricted federal environments (Navy contract) without access to APIs, requiring full UI driven workflow automation where system level integrations were unavailable
+- Collaborated with cross functional teams to identify high value workflows for automation, translating operational requirements into structured automation logic and reusable components
+- Demonstrated AI assisted development methodology by guiding coding agents through PRD → task breakdown → implementation cycles to build production ready automation systems
+- Delivered open source automation frameworks showcasing ability to design, build, and maintain scalable automation systems used across different business domains
+
+---
+
 ## Skills
 
 ### AI Tools & Platforms
@@ -331,6 +351,13 @@ Production grade test automation framework showcasing enterprise architecture an
 - Skills order: Methodologies → Testing → AI Tools → Programming
 - Section order: Header → About → Experience → Projects → Skills
 
+**For RPA/Intelligent Automation roles (rpa_developer, rpa_engineer, intelligent_automation):**
+- Projects order: Python Selenium Framework with MCP Integration, Real Estate Automation, Resume Generator
+- Experience bullets: Use `technical` variants + select from RPA Bullet Bank
+- Skills order: Automation Platforms → Testing → Programming → AI Tools → API
+- Section order: Header → About → Experience → Projects → Skills
+- Note: Mix RPA Bullet Bank bullets with existing experience bullets for best fit
+
 ### Tag Filtering Logic
 
 **Tags to filter by:**
@@ -383,6 +410,11 @@ Establishing test automation functions from ground up across startups, governmen
 **management** (for QA Lead, QA Manager, Director roles):
 ```
 Establishing quality engineering functions from ground up across startups and enterprise organizations. Proven ability to build custom testing frameworks, scale engineering teams, and drive quality practices across complex system architectures. Recently integrated AI tools into team workflows to accelerate development and eliminate manual bottlenecks.
+```
+
+**rpa_developer** (for RPA Developer, Intelligent Automation, Process Automation roles):
+```
+Integrating automation frameworks and coding agents to remove repetitive work from complex business workflows while optimizing accuracy and consistency. Experience building custom Python based UI automation systems for ERP, healthcare, and startup environments, then extending them with AI-assisted tooling through Model Context Protocol. Background spans enterprise grade test automation, data driven workflows, and AI assisted development patterns that map naturally to document and form driven processes.
 ```
 
 **Bad Example (DO NOT USE):**
