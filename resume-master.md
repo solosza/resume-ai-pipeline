@@ -161,21 +161,18 @@ Production grade test automation framework showcasing enterprise architecture an
 - Designed and built an AI-driven automation framework enabling coding agents to interpret user stories, analyze UI structure, and autonomously generate executable test logic within a scalable Python/Selenium architecture
 - Developed an MCP-based agent interface that exposes test generation, page analysis, code synthesis, execution, and reporting as callable tools for multimodal AI agents such as Claude Code
 - Engineered an end-to-end agentic workflow where AI autonomously produces, executes, debugs, and refines automation code, demonstrating practical application of agentic systems and model-to-environment interaction
-- Released an open-source agentic automation platform showcasing expertise in AI tool orchestration, structured code generation, and applying emerging protocols (Model Context Protocol) to real-world software engineering workflows
 
 **technical:**
 - Established quality assurance function as founding QA hire at early-stage startup prior to development kickoff, building test automation framework from day one, establishing testing processes, and scaling team to two engineers while working under startup budget constraints
 - Architected a Python Selenium automation framework with a structured, layered, data-driven design to support clean, maintainable, and scalable test code
 - Created an MCP-based automation server that allows a coding agent to interpret user stories and generate executable test automation aligned with the framework's conventions
 - Built a full automation workflow including agent-driven test creation, Pytest execution, report generation, and intelligent failure analysis
-- Delivered a public open-source project demonstrating advanced automation architecture and practical integration of coding agents via the Model Context Protocol
 
 **management:**
 - Established QA function as founding QA hire at early-stage startup prior to development kickoff, scaling team to two engineers while defining testing strategy, processes, and quality standards under startup budget constraints
 - Built a Python-based Selenium automation framework with a clear, scalable architecture that improves maintainability, readability, and onboarding for QA teams
 - Developed an MCP-powered automation server that enables a coding agent to generate production-ready test automation from user stories and UI analysis
 - Implemented an end-to-end automation pipeline supporting agent-generated tests, Pytest execution, reporting, and automated failure insights
-- Published an open-source portfolio project showcasing modern AI-assisted automation design and integration with emerging agentic technologies (MCP)
 
 ---
 
@@ -397,6 +394,15 @@ Production grade test automation framework showcasing enterprise architecture an
 - ✅ Emphasize: building from ground up, scaling teams, AI integration (for leadership roles)
 - ✅ Show: types of organizations (startups/enterprise), impact, breadth of experience
 - ✅ Technical details belong in Skills and Experience sections, not summary
+
+**Claude Code Inclusion Logic:**
+- **AI-forward roles** (JD mentions AI/LLM, AI agents, emerging tech, or asks for AI opinions): Include Claude Code prominently in professional summary and relevant bullets. These are the hiring managers who will recognize it.
+- **Traditional QA/SDET roles** (no AI emphasis in JD): Skip Claude Code mentions. Keep focus on frameworks, architecture, automation. May confuse or distract.
+- **Startup/Innovation roles** (even without explicit AI ask): Include if company culture suggests early adopter mindset. Signals you're ahead of the curve.
+- **Where to include when applicable:**
+  1. Professional summary: "using Claude Code and custom MCP servers"
+  2. Helios bullets already mention it in ai_focused variant
+  3. Skills section under AI Tools (always present, reader can ignore if unfamiliar)
 
 **Professional Summary Variants:**
 
