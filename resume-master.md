@@ -128,7 +128,7 @@ Production grade test automation framework showcasing enterprise architecture an
 **Bullets:**
 - Architected 4 layer test automation framework (Tests to Roles to Tasks to Pages to WebInterface) implementing enterprise patterns for separation of concerns, maintainability, and scalability across e commerce testing workflows
 - Built custom MCP server integrating AI assisted testing workflows including natural language test execution, automated failure analysis, test coverage reporting, and scenario discovery
-- Designed robust error handling with exponential backoff, smart waiting strategies, automatic screenshot capture on failures, and detailed HTML reporting with execution metrics
+- Designed robust error handling with configurable waits, smart waiting strategies, automatic screenshot capture on failures, and detailed HTML reporting with execution metrics
 - Established test data management system combining JSON configuration files with dynamic Faker library integration for flexible test data generation
 
 **Outcomes:**
@@ -394,6 +394,17 @@ Production grade test automation framework showcasing enterprise architecture an
 - ✅ Emphasize: building from ground up, scaling teams, AI integration (for leadership roles)
 - ✅ Show: types of organizations (startups/enterprise), impact, breadth of experience
 - ✅ Technical details belong in Skills and Experience sections, not summary
+
+**Header Links (ALWAYS include):**
+- ✅ ALWAYS include "Web Resume" link in header contact section
+- Format: `<a href="https://solosza.github.io/resume-ai-pipeline/resumes/[filename].html" target="_blank">Web Resume</a>`
+- Place after GitHub link in contact/links section
+- This allows recruiters to view the live, formatted version
+
+**Project Date Display:**
+- ❌ DO NOT include dates on personal projects in generated resumes
+- Projects section should show tech stack only, no date metadata
+- Dates are stored in master data for reference but omitted from output
 
 **Claude Code Inclusion Logic:**
 - **AI-forward roles** (JD mentions AI/LLM, AI agents, emerging tech, or asks for AI opinions): Include Claude Code prominently in professional summary and relevant bullets. These are the hiring managers who will recognize it.
