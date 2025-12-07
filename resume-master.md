@@ -395,6 +395,19 @@ Production grade test automation framework showcasing enterprise architecture an
 - ✅ Show: types of organizations (startups/enterprise), impact, breadth of experience
 - ✅ Technical details belong in Skills and Experience sections, not summary
 
+**Writing Flow & Structure (CRITICAL):**
+- ❌ DO NOT start sentences with gerunds alone ("Establishing...", "Building...", "Integrating...")
+- ✅ Start with proper subjects: "Experienced in establishing...", "This includes...", "Most recently,..."
+- ❌ DO NOT repeat "I" at the start of consecutive sentences ("I build... I recently... I have...")
+- ✅ Use transitional phrases to connect sentences naturally:
+  - "This includes..." (connects to previous statement)
+  - "Most recently,..." (temporal transition)
+  - "Background spans..." (summary closer)
+- ❌ DO NOT repeat the same information (e.g., listing domains in first AND last sentence)
+- ✅ Introduce general context first, then get specific at the end
+- ✅ Vary sentence structure for natural rhythm
+- ✅ Each sentence should flow logically from the previous one
+
 **Header Links (ALWAYS include):**
 - ✅ ALWAYS include "Web Resume" link in header contact section
 - Format: `<a href="https://solosza.github.io/resume-ai-pipeline/resumes/[filename].html" target="_blank">Web Resume</a>`
@@ -419,22 +432,22 @@ Production grade test automation framework showcasing enterprise architecture an
 
 **ai_focused** (for AI engineer, AI residency, AI adoption roles):
 ```
-Integrating coding agents directly into QA workflows while most teams are still using AI as a chat assistant on the side. Building production systems with Claude Code and custom MCP servers that replace manual bottlenecks with intelligent automation. Background establishing quality functions from ground up across startups, government contracts, and enterprise healthcare.
+Experienced in integrating coding agents directly into QA workflows while most teams are still using AI as a chat assistant on the side. This includes building production systems with Claude Code and custom MCP servers that replace manual bottlenecks with intelligent automation across startups, government contracts, and enterprise healthcare environments.
 ```
 
 **technical** (for SDET, Automation Engineer, QA Engineer roles):
 ```
-Establishing test automation functions from ground up across startups, government contracts, and enterprise healthcare. Building custom frameworks with layered architecture that teams can maintain and extend. Recently integrated AI coding agents via MCP servers to automate test generation, failure analysis, and self-healing test maintenance.
+Experienced in establishing test automation functions from scratch and designing automation frameworks across regulated healthcare, Navy ERP, and early stage startup environments. This includes building custom frameworks with layered architecture that teams adopted beyond QA into development workflows. Most recently, integrated AI coding agents via MCP servers to automate test generation, failure analysis, and reporting.
 ```
 
 **management** (for QA Lead, QA Manager, Director roles):
 ```
-Establishing quality engineering functions from ground up across startups and enterprise organizations. Proven ability to build custom testing frameworks, scale engineering teams, and drive quality practices across complex system architectures. Recently integrated AI tools into team workflows to accelerate development and eliminate manual bottlenecks.
+Experienced in establishing quality engineering functions from scratch across startups and enterprise organizations. This includes building custom testing frameworks that teams adopted beyond QA into development workflows, along with driving quality practices across complex system architectures. Most recently, integrated AI tools into team workflows to accelerate development and eliminate manual bottlenecks.
 ```
 
 **rpa_developer** (for RPA Developer, Intelligent Automation, Process Automation roles):
 ```
-Integrating automation frameworks and coding agents to remove repetitive work from complex business workflows while optimizing accuracy and consistency. Experience building custom Python based UI automation systems for ERP, healthcare, and startup environments, then extending them with AI-assisted tooling through Model Context Protocol. Background spans enterprise grade test automation, data driven workflows, and AI assisted development patterns that map naturally to document and form driven processes.
+Experienced in integrating automation frameworks and coding agents to remove repetitive work from complex business workflows. This includes building custom Python based UI automation systems for ERP, healthcare, and startup environments, then extending them with AI assisted tooling through Model Context Protocol. Background spans enterprise grade test automation, data driven workflows, and AI assisted development patterns that map naturally to document and form driven processes.
 ```
 
 **Bad Example (DO NOT USE):**
