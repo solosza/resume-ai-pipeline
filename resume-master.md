@@ -166,14 +166,20 @@ Production grade test automation framework showcasing enterprise architecture an
 **ai_focused:**
 - Established QA function as founding hire at early-stage startup, scaling team to two engineers while building test automation framework and defining quality standards under startup budget constraints
 - Built and deployed 4-layer Python/Selenium framework for web application testing, integrating AI-first approach into testing workflows through MCP server that enables coding agents to generate test code from plain English user stories
+- Established reporting infrastructure with detailed HTML reports and execution metrics for test visibility
+- Designed test data management system with configuration files and dynamic data generation for flexible test scenarios
 
 **technical:**
 - Established QA function as founding hire at early-stage startup, scaling team to two engineers while building test automation framework and defining quality standards under startup budget constraints
 - Built and deployed 4-layer Python/Selenium framework for web application testing, integrating AI-first approach into testing workflows through MCP server that enables coding agents to generate test code from plain English user stories
+- Established reporting infrastructure with detailed HTML reports and execution metrics for test visibility
+- Designed test data management system with configuration files and dynamic data generation for flexible test scenarios
 
 **management:**
 - Established QA function as founding hire at early-stage startup, scaling team to two engineers while defining testing strategy, processes, and quality standards under startup budget constraints
 - Built and deployed 4-layer Python/Selenium framework for web application testing, integrating AI-first approach into team workflows through MCP server that enables coding agents to generate test code from plain English user stories
+- Established reporting infrastructure with detailed HTML reports and execution metrics for stakeholder visibility
+- Designed test data management system with configuration files and dynamic data generation for flexible test scenarios
 
 ---
 
