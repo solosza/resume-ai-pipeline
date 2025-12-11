@@ -325,7 +325,6 @@ Production grade test automation framework showcasing enterprise architecture an
 - Agile - Scrum, Kanban
 - Test-Driven Development - Red-Green-Refactor cycle
 - AI-Assisted Development Workflows - PRD → Tasks → Implementation
-- CI/CD - Azure DevOps, GitHub Actions
 
 ---
 
@@ -369,6 +368,33 @@ Production grade test automation framework showcasing enterprise architecture an
 - `claude-code` - AI-assisted development
 - `python` - Python-heavy work
 - `api` - API testing and integration
+
+### Factual Constraints (NEVER Claim These)
+
+**CRITICAL: These are things Alain has NOT done. Never include these in any resume, professional summary, or experience bullet:**
+
+- ❌ **CI/CD pipeline integration** - Has not integrated tests into CI/CD pipelines (Azure DevOps, GitHub Actions, Jenkins, etc.)
+- ❌ **Parallel test execution** - Has not implemented parallel execution in frameworks
+- ❌ **Ecommerce experience** - Has not worked in ecommerce domain
+- ❌ **Performance/load testing** - Has not done JMeter, LoadRunner, k6, or similar
+- ❌ **Mobile testing** - Has not done Appium, mobile automation
+- ❌ **Cloud infrastructure** - Has not done AWS, Azure, GCP test infrastructure
+- ❌ **Kubernetes/Docker** - Has not containerized test frameworks
+- ❌ **Security testing** - Has not done penetration testing, OWASP, security scanning
+
+**What IS true:**
+- ✅ Built frameworks from scratch (Helios, Nakupuna)
+- ✅ Scaled teams (0 to 2 at Helios, 0 to 4 at Nakupuna)
+- ✅ AI integration via Claude Code and MCP
+- ✅ Python/Selenium/pytest infrastructure
+- ✅ Page Object Model, data-driven design
+- ✅ API testing with Postman
+- ✅ Healthcare domain (HMSA)
+- ✅ Government/Navy ERP (Nakupuna)
+- ✅ Startup environment (Helios)
+- ✅ Reporting infrastructure (pytest-html, custom dashboards)
+
+---
 
 ### Professional Summary Guidelines
 
