@@ -133,10 +133,10 @@ Production grade test automation framework showcasing enterprise architecture an
 **Tech Stack:** Python, Selenium WebDriver, Pytest, Model Context Protocol (MCP), Faker, pytest html
 
 **Bullets:**
-- Architected 4 layer test automation framework (Tests to Roles to Tasks to Pages to WebInterface) implementing enterprise patterns for separation of concerns, maintainability, and scalability across e commerce testing workflows
-- Built custom MCP server integrating AI assisted testing workflows including natural language test execution, automated failure analysis, test coverage reporting, and scenario discovery
-- Designed robust error handling with configurable waits, smart waiting strategies, automatic screenshot capture on failures, and detailed HTML reporting with execution metrics
-- Established test data management system combining JSON configuration files with dynamic Faker library integration for flexible test data generation
+- Architected 4-layer test automation framework (Tests to Roles to Tasks to Pages to WebInterface) using pure composition over inheritance, enabling clean separation where each layer has a single responsibility
+- Built MCP server with 6-tool pipeline enabling AI agents to generate framework-compliant test code from plain English user stories through bottom-up code generation (discover elements to generate POM to Task to Role to Test)
+- Designed prompt-driven AI orchestration where the coding agent follows defined rules to control the tool chain, accumulate metadata context through each step, and decide on code reuse vs generation while tools remain stateless
+- Implemented fluent API pattern in Page Objects with state-check methods (is_*, has_*, get_*) separating UI actions from test assertions for cleaner test architecture
 
 **Outcomes:**
 - Production ready framework architecture demonstrating enterprise test automation patterns
@@ -164,22 +164,22 @@ Production grade test automation framework showcasing enterprise architecture an
 **Bullet Variants:**
 
 **ai_focused:**
-- Established quality assurance function as founding QA hire at early-stage startup prior to development kickoff, building AI-first testing approach from day one and scaling team to two engineers while working under startup budget constraints
-- Designed and built an AI-driven automation framework enabling coding agents to interpret user stories, analyze UI structure, and autonomously generate executable test logic within a scalable Python/Selenium architecture
-- Developed an MCP-based agent interface that exposes test generation, page analysis, code synthesis, execution, and reporting as callable tools for multimodal AI agents such as Claude Code
-- Engineered an end-to-end agentic workflow where AI autonomously produces, executes, debugs, and refines automation code, demonstrating practical application of agentic systems and model-to-environment interaction
+- Established QA function as founding hire at early-stage startup, scaling team to two engineers while building AI-first testing approach and defining quality standards under startup budget constraints
+- Built and deployed 4-layer Python/Selenium framework for web application testing, integrating MCP server to enable AI agents to generate test code from plain English user stories
+- Designed prompt-driven AI orchestration where coding agents follow defined rules to control the tool chain and decide on code reuse vs generation
+- Established testing processes covering authentication, data management, and end-to-end user workflows
 
 **technical:**
-- Established quality assurance function as founding QA hire at early-stage startup prior to development kickoff, building test automation framework from day one, establishing testing processes, and scaling team to two engineers while working under startup budget constraints
-- Architected a Python Selenium automation framework with a structured, layered, data-driven design to support clean, maintainable, and scalable test code
-- Created an MCP-based automation server that allows a coding agent to interpret user stories and generate executable test automation aligned with the framework's conventions
-- Built a full automation workflow including agent-driven test creation, Pytest execution, report generation, and intelligent failure analysis
+- Established QA function as founding hire at early-stage startup, scaling team to two engineers while building test automation framework and defining quality standards under startup budget constraints
+- Built and deployed 4-layer Python/Selenium framework for web application testing with clean separation of concerns and composition over inheritance
+- Integrated MCP server enabling AI agents to generate framework-compliant test code from plain English user stories
+- Established testing processes covering authentication, data management, and end-to-end user workflows
 
 **management:**
-- Established QA function as founding QA hire at early-stage startup prior to development kickoff, scaling team to two engineers while defining testing strategy, processes, and quality standards under startup budget constraints
-- Built a Python-based Selenium automation framework with a clear, scalable architecture that improves maintainability, readability, and onboarding for QA teams
-- Developed an MCP-powered automation server that enables a coding agent to generate production-ready test automation from user stories and UI analysis
-- Implemented an end-to-end automation pipeline supporting agent-generated tests, Pytest execution, reporting, and automated failure insights
+- Established QA function as founding hire at early-stage startup, scaling team to two engineers while defining testing strategy, processes, and quality standards under startup budget constraints
+- Built and deployed 4-layer Python/Selenium framework for web application testing with architecture that improves maintainability and onboarding for QA teams
+- Integrated AI tools (MCP, Claude Code) into team workflows to accelerate test development and reduce manual bottlenecks
+- Established testing processes and quality gates covering authentication, data management, and end-to-end user workflows
 
 ---
 
