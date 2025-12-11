@@ -18,6 +18,13 @@ This file contains all resume content with tags and metadata for AI-powered resu
 **Links:**
 - GitHub: https://github.com/solosza
 - LinkedIn: https://www.linkedin.com/in/alain-ignacio
+- Web Resume: https://solosza.github.io/resume-ai-pipeline/resumes/[FILENAME].html
+
+**IMPORTANT: Web Resume Link Rule:**
+- ALWAYS include Web Resume link in header contact section of every generated resume
+- Replace [FILENAME] with the actual resume filename (e.g., trafilea-senior-qa-specialist)
+- Format in HTML: `<a href="https://solosza.github.io/resume-ai-pipeline/resumes/[filename].html" target="_blank">Web Resume</a>`
+- Place after LinkedIn link
 
 **Clearance:**
 - DoD Security Clearance (Inactive, eligible for reinstatement)
@@ -373,7 +380,7 @@ Production grade test automation framework showcasing enterprise architecture an
 
 **CRITICAL: These are things Alain has NOT done. Never include these in any resume, professional summary, or experience bullet:**
 
-- ⚠️ **CI/CD pipeline integration** - Limited experience: integrated API tests into Azure DevOps pipelines, but not extensive. Do NOT position as a core strength or lead with it.
+- ⚠️ **CI/CD pipeline integration** - Limited experience: integrated API tests into Azure DevOps pipelines, but not extensive. Do NOT position as a core strength or lead with it. Note: GitHub (version control, repos, PRs) is NOT the same as GitHub Actions (CI/CD automation). Has not used GitHub Actions.
 - ❌ **Parallel test execution** - Has not implemented parallel execution in frameworks
 - ❌ **Ecommerce experience** - Has not worked in ecommerce domain
 - ❌ **Performance/load testing** - Has not done JMeter, LoadRunner, k6, or similar
