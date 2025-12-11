@@ -566,6 +566,19 @@ Experienced in integrating automation frameworks and coding agents to remove rep
 - Don't remove bullets without replacing them
 - Current approved bullets cover: founding/scaling, framework/AI, reporting, test data
 
+**Python Selenium Framework Project (ALWAYS use these exact bullets):**
+- NEVER shorten or simplify these bullets
+- ALWAYS include all 4 bullets with MCP and AI orchestration details
+- This is the flagship project showing technical depth and AI integration
+
+Approved bullets:
+1. "Architected 4 layer test automation framework (Tests to Roles to Tasks to Pages to WebInterface) using pure composition over inheritance, enabling clean separation where each layer has a single responsibility"
+2. "Built MCP server with 6 tool pipeline enabling AI agents to generate framework compliant test code from plain English user stories through bottom up code generation (discover elements to generate POM to Task to Role to Test)"
+3. "Designed prompt driven AI orchestration where the coding agent follows defined rules to control the tool chain, accumulate metadata context through each step, and decide on code reuse vs generation while tools remain stateless"
+4. "Implemented fluent API pattern in Page Objects with state check methods (is_*, has_*, get_*) separating UI actions from test assertions for cleaner test architecture"
+
+Tech stack: Python, Selenium WebDriver, Pytest, Model Context Protocol (MCP), Faker, pytest html
+
 **Language That Works:**
 - ✅ "Comfortable digging into code" - natural, shows initiative
 - ✅ "Focus on finding issues before users do" - shows mindset
