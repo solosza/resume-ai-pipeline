@@ -577,3 +577,24 @@ Experienced in integrating automation frameworks and coding agents to remove rep
 - ❌ "When the team is ready" - sounds hesitant, removes urgency
 - ❌ "Self motivated learner who picks up new technologies quickly" - too generic, parrot of JD
 - ❌ "Go getter mentality" - cliche, obvious JD parrot
+
+**Approved Professional Summary Examples:**
+
+✅ **Generic QA/SQA (use as template):**
+"SQA background spanning healthcare, government ERP, and startup environments. Comfortable digging into code to understand system behavior and coordinating with developers to resolve issues before release. Background includes Microsoft stack environments. Can also bring automation framework design and AI integration into QA workflows to accelerate testing coverage."
+
+✅ **Manual Testing Focus:**
+"QA background spanning healthcare, government ERP, and startup environments with a focus on finding issues before users do. Comfortable digging into code to understand system behavior and identify edge cases. Can also bring automation framework design and AI integration into QA workflows to accelerate testing coverage."
+
+**Bad Professional Summary Example (DO NOT USE):**
+
+❌ **Arrow JD Parrot (what NOT to do):**
+"SQA background spanning healthcare, government ERP, and startup environments with experience developing test plans, executing test scripts, and tracking defects through resolution. Comfortable interfacing with development teams to communicate and resolve issues before product release. Background includes Microsoft stack environments with Visual Studio, Azure, and REST APIs. Experience mentoring junior engineers and leading defect review meetings."
+
+**Why it's bad - JD words copied verbatim:**
+- "developing test plans" (JD: "Develop...test plans")
+- "executing test scripts" (JD: "execute test plans and test scripts")
+- "tracking defects through resolution" (JD: "track any product issues...ensure that they are resolved")
+- "interfacing with development teams" (JD: "Interface with...Development")
+- "communicate and resolve issues before product release" (JD: "communicate and resolve all reported issues...before the gaming product is released")
+- "mentoring junior engineers" (JD: "Mentor new Associate SQA Engineers")
