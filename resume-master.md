@@ -408,6 +408,7 @@ Production grade test automation framework showcasing enterprise architecture an
 
 **CRITICAL - Avoid These Mistakes:**
 - ❌ DO NOT mimic job description language verbatim
+- ❌ DO NOT parrot JD keywords back (if JD says "white box testing, self-motivated, go-getter" don't use those exact phrases)
 - ❌ DO NOT start with ANY job title or role label (not "QA Leader", "AI Developer", "Quality Engineer", "Principal Engineer", etc.)
 - ❌ DO NOT use the job title from the JD anywhere in the summary
 - ❌ DO NOT include years of experience (e.g., "15+ years") - AI tell
@@ -420,6 +421,8 @@ Production grade test automation framework showcasing enterprise architecture an
 - ❌ DO NOT use dashes " - " anywhere in resume content (AI-generated content indicator)
   - Use colons ":" instead: "Claude Code (Anthropic: AI-assisted development)"
   - Not dashes: "Claude Code (Anthropic - AI-assisted development)"
+- ❌ DO NOT say "brings automation frameworks" - unclear what that means
+- ❌ DO NOT add qualifiers like "when the team is ready" - sounds hesitant
 
 **DO Use These Principles:**
 - ✅ Start directly with experience and capabilities, NOT with a job title or role label
@@ -537,3 +540,40 @@ Experienced in integrating automation frameworks and coding agents to remove rep
 - Nakupuna: ALL management bullets
 - HMSA: 2-3 management bullets
 - IBM: 2-3 management bullets
+
+---
+
+### Resume Design Rules (Learned from Iterations)
+
+**Role-Specific Positioning:**
+
+**For Manual Testing roles (when JD emphasizes manual over automation):**
+- Lead summary with manual testing experience, not automation
+- Position automation/AI as value-add, not primary skill
+- Experience bullets should lead with test case writing, scope determination, troubleshooting
+- Automation mentioned as "accelerating" or "supporting" manual workflows
+- Example summary pattern: "QA background spanning [domains] with a focus on finding issues before users do. Comfortable digging into code to understand system behavior and identify edge cases. Can also bring automation framework design and AI integration into QA workflows to accelerate testing coverage."
+
+**Experience vs Project Separation:**
+- Experience section = business impact, team outcomes, what you delivered
+- Projects section = technical architecture, how you built it
+- Don't repeat the same technical details in both sections
+- Experience: "Built and deployed framework for web application testing"
+- Project: "Architected 4-layer framework using composition over inheritance..."
+
+**Helios Bullets Consistency:**
+- All variants should have 4 bullets
+- Don't remove bullets without replacing them
+- Current approved bullets cover: founding/scaling, framework/AI, reporting, test data
+
+**Language That Works:**
+- ✅ "Comfortable digging into code" - natural, shows initiative
+- ✅ "Focus on finding issues before users do" - shows mindset
+- ✅ "Can bring automation framework design and AI integration into QA workflows" - clear value prop
+- ✅ "Accelerate testing coverage" - concrete benefit
+
+**Language That Doesn't Work:**
+- ❌ "Brings automation frameworks" - vague, unclear
+- ❌ "When the team is ready" - sounds hesitant, removes urgency
+- ❌ "Self motivated learner who picks up new technologies quickly" - too generic, parrot of JD
+- ❌ "Go getter mentality" - cliche, obvious JD parrot
