@@ -164,22 +164,16 @@ Production grade test automation framework showcasing enterprise architecture an
 **Bullet Variants:**
 
 **ai_focused:**
-- Established QA function as founding hire at early-stage startup, scaling team to two engineers while building AI-first testing approach and defining quality standards under startup budget constraints
-- Built and deployed 4-layer Python/Selenium framework for web application testing, integrating MCP server to enable AI agents to generate test code from plain English user stories
-- Designed prompt-driven AI orchestration where coding agents follow defined rules to control the tool chain and decide on code reuse vs generation
-- Established testing processes covering authentication, data management, and end-to-end user workflows
+- Established QA function as founding hire at early-stage startup, scaling team to two engineers while building test automation framework and defining quality standards under startup budget constraints
+- Built and deployed 4-layer Python/Selenium framework for web application testing, integrating AI-first approach into testing workflows through MCP server that enables coding agents to generate test code from plain English user stories
 
 **technical:**
 - Established QA function as founding hire at early-stage startup, scaling team to two engineers while building test automation framework and defining quality standards under startup budget constraints
-- Built and deployed 4-layer Python/Selenium framework for web application testing with clean separation of concerns and composition over inheritance
-- Integrated MCP server enabling AI agents to generate framework-compliant test code from plain English user stories
-- Established testing processes covering authentication, data management, and end-to-end user workflows
+- Built and deployed 4-layer Python/Selenium framework for web application testing, integrating AI-first approach into testing workflows through MCP server that enables coding agents to generate test code from plain English user stories
 
 **management:**
 - Established QA function as founding hire at early-stage startup, scaling team to two engineers while defining testing strategy, processes, and quality standards under startup budget constraints
-- Built and deployed 4-layer Python/Selenium framework for web application testing with architecture that improves maintainability and onboarding for QA teams
-- Integrated AI tools (MCP, Claude Code) into team workflows to accelerate test development and reduce manual bottlenecks
-- Established testing processes and quality gates covering authentication, data management, and end-to-end user workflows
+- Built and deployed 4-layer Python/Selenium framework for web application testing, integrating AI-first approach into team workflows through MCP server that enables coding agents to generate test code from plain English user stories
 
 ---
 
