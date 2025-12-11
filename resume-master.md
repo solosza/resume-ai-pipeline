@@ -373,7 +373,7 @@ Production grade test automation framework showcasing enterprise architecture an
 
 **CRITICAL: These are things Alain has NOT done. Never include these in any resume, professional summary, or experience bullet:**
 
-- ❌ **CI/CD pipeline integration** - Has not integrated tests into CI/CD pipelines (Azure DevOps, GitHub Actions, Jenkins, etc.)
+- ⚠️ **CI/CD pipeline integration** - Limited experience: integrated API tests into Azure DevOps pipelines, but not extensive. Do NOT position as a core strength or lead with it.
 - ❌ **Parallel test execution** - Has not implemented parallel execution in frameworks
 - ❌ **Ecommerce experience** - Has not worked in ecommerce domain
 - ❌ **Performance/load testing** - Has not done JMeter, LoadRunner, k6, or similar
@@ -393,6 +393,7 @@ Production grade test automation framework showcasing enterprise architecture an
 - ✅ Government/Navy ERP (Nakupuna)
 - ✅ Startup environment (Helios)
 - ✅ Reporting infrastructure (pytest-html, custom dashboards)
+- ✅ Azure DevOps (user stories, test management, basic CI/CD for API tests)
 
 ---
 
