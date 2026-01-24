@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alain Ignacio - Director of Quality Assurance Resume</title>
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --text-primary: #212529;
+            --text-secondary: #6c757d;
+            --accent: #0066cc;
+            --border: #dee2e6;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2d2d2d;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent: #4da6ff;
+            --border: #404040;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', 'Segoe UI', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        #darkModeToggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1000;
+            transition: opacity 0.3s ease;
+        }
+
+        #darkModeToggle:hover {
+            opacity: 0.8;
+        }
+
+        header {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .contact a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .clearance {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--text-primary);
+        }
+
+        h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .meta {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .tech-stack {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .about p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .leadership-highlight {
+            background-color: var(--bg-secondary);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .leadership-highlight p {
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 767px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+
+            .contact {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            #darkModeToggle {
+                top: 10px;
+                right: 10px;
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+        }
+
+        @media print {
+            #darkModeToggle {
+                display: none;
+            }
+
+            footer {
+                display: none;
+            }
+
+            body {
+                background-color: white;
+                color: black;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+
+    <div class="container">
+        <header>
+            <h1>Alain Ignacio</h1>
+            <div class="contact">
+                <span>📧 solosza@yahoo.com</span>
+                <span>📱 808.354.4526</span>
+                <span>📍 Las Vegas, NV</span>
+            </div>
+            <div class="contact">
+                <a href="https://github.com/solosza" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/alain-ignacio" target="_blank">LinkedIn</a>
+                <a href="https://solosza.github.io/resume-ai-pipeline/resumes/fueled-director-qa.html" target="_blank">Web Resume</a>
+            </div>
+            <div class="clearance">DoD Security Clearance (Inactive, eligible for reinstatement)</div>
+        </header>
+
+        <section class="about">
+            <h2>Professional Summary</h2>
+            <p>Senior QA Engineer and Quality Platform Builder with deep experience designing and operating test automation systems that enforce standards, scale senior-level judgment, and reduce dependency on manual review. Proven track record building automation frameworks from zero in regulated and startup environments, integrating AI-assisted workflows to accelerate onboarding, improve correctness, and operationalize quality at scale. Specialized in Python, Selenium, pytest, and AI-guided test automation.</p>
+        </section>
+
+        <section class="leadership">
+            <h2>Quality Engineering Leadership</h2>
+            <div class="leadership-highlight">
+                <p>Designed and operated internal QA Center of Excellence practices by encoding standards, workflows, and escalation rules directly into automation frameworks, reducing onboarding time and automation drift.</p>
+            </div>
+        </section>
+
+        <section class="experience">
+            <h2>Experience</h2>
+
+            <div>
+                <h3>Helios Digital - QA Manager</h3>
+                <div class="meta">Remote | May 2025 - Present</div>
+                <ul>
+                    <li>Built and operated an internal QA automation platform enforcing standardized test design, execution order, and validation gates</li>
+                    <li>Designed role-task-page architecture to encode quality standards directly into automation workflows, preventing invalid or low-quality tests from entering the suite</li>
+                    <li>Integrated AI-assisted workflows to accelerate test scaffolding, scenario discovery, and failure analysis while enforcing mandatory human review before execution</li>
+                    <li>Established automation function as founding QA hire at early-stage startup, building framework from zero while integrating Claude Code into daily workflows</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Nakupuna Consulting - Senior QA Automation Engineer</h3>
+                <div class="meta">Remote (Navy contract) | Nov 2022 - May 2025</div>
+                <ul>
+                    <li>Scaled automation team from zero to four engineers within six months while operating under Navy procurement and security restrictions, establishing coding standards, peer review processes, and structured onboarding that maintained quality despite limited tool options</li>
+                    <li>Built framework architecture that developers adopted for their own unit testing, providing training and enablement that expanded framework impact beyond QA into development workflows</li>
+                    <li>Navigated Navy bureaucracy and technical restrictions to deliver functional automation infrastructure supporting critical ERP deployment across deployment, muster, leave, onboarding, and military pay workflows</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>HMSA (Hawaii Medical Service Association) - Test Manager</h3>
+                <div class="meta">Honolulu, HI | May 2013 - Nov 2022</div>
+                <ul>
+                    <li>Led multiple projects in test automation and manual testing, developing test strategies, cases, and scenarios for complex healthcare systems</li>
+                    <li>Managed development and execution of test plans, scenarios, and scripts, maintaining manual test scripts in TFS</li>
+                    <li>Established testing standards for Healthcare Claims Processing, EDI, Membership, Billing, Enrollment, HL7-FHIR, and RESTful services across multiple development teams in Agile environment</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>IBM - Senior Test Analyst</h3>
+                <div class="meta">Honolulu, HI | July 2008 - May 2013</div>
+                <ul>
+                    <li>Managed 18-member team of onshore and offshore resources on Sprint/Nextel Pre-Paid account</li>
+                    <li>Monitored testing progress, working closely with senior project managers and offshore teams to manage timelines, budgets, and contingency plans</li>
+                    <li>Oversaw UAT, black box (functional), and end-to-end testing for multiple releases</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2>Projects</h2>
+
+            <div>
+                <h3>Quality Automation Platform with AI-Guided Enforcement</h3>
+                <div class="tech-stack">Python, Selenium WebDriver, Pytest, Model Context Protocol (MCP), pytest-html</div>
+                <p>Production-grade quality automation platform combining enterprise test architecture with AI-guided enforcement. Encodes test automation best practices as executable workflows, enforcing correctness and human-in-the-loop decision points.</p>
+                <ul>
+                    <li>Designed an AI-guided quality enforcement layer that encodes test automation best practices as executable workflows, enforcing correctness, escalation, and human-in-the-loop decision points across Selenium-based automation</li>
+                    <li>Architected 4-layer test automation framework (Tests to Roles to Tasks to Pages to WebInterface) using pure composition over inheritance, enabling clean separation where each layer has a single responsibility</li>
+                    <li>Built MCP server with 6-tool pipeline enabling AI agents to generate framework-compliant test code from plain English user stories through bottom-up code generation (discover elements to generate POM to Task to Role to Test)</li>
+                    <li>Designed prompt-driven AI orchestration where the coding agent follows defined rules to control the tool chain, accumulate metadata context through each step, and decide on code reuse vs generation while tools remain stateless</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>AI-Powered Resume Generation System</h3>
+                <div class="tech-stack">Claude Code, Markdown, HTML/CSS, Git/GitHub, GitHub Pages</div>
+                <p>AI-powered resume generation system using Claude Code for intelligent job analysis and content optimization. Demonstrates practical AI workflow design and system architecture.</p>
+                <ul>
+                    <li>Designed data-driven AI workflow where Claude Code analyzes job descriptions and generates optimized HTML resumes from structured master data with tag-based filtering</li>
+                    <li>Architected master data structure with tags and metadata enabling AI reasoning to select relevant projects and experience bullets based on role requirements</li>
+                    <li>Demonstrated AI system design through prompt engineering, reusable workflow templates, and reproducible generation process deployed to GitHub Pages</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Multi-Phase AI Agent System</h3>
+                <div class="tech-stack">Make.com, Relevance AI, OpenAI API, Claude API, Multi-agent communication</div>
+                <p>Real estate lead automation system using multi-agent architecture with Make.com orchestration and Relevance AI agent implementation.</p>
+                <ul>
+                    <li>Designed and prototyped 6-phase AI agent system using Make.com as orchestration platform and Relevance AI for agent implementation, successfully deploying Phase 1 document analyzer and filter agents with data pipeline integration</li>
+                    <li>Built structured multi-step AI workflows integrating prompt chains, agent-to-agent communication protocols, and contextual decision-making using OpenAI and Claude APIs</li>
+                    <li>Demonstrated practical AI-ops implementation with hands-on experience in agent design, prompt chaining, workflow debugging, and production deployment</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2>Skills</h2>
+
+            <h4>Test Automation & Frameworks</h4>
+            <p>Selenium WebDriver, pytest, Cypress, 4-Layer Architecture (Tests → Roles → Tasks → Pages pattern), Custom Framework Architecture (Page Object Model, data-driven design), MCP Server Development (Custom AI tool integration), Page Object Model, Screenplay</p>
+
+            <h4>AI Tools & Platforms</h4>
+            <p>Claude Code (Anthropic: AI-assisted development), Model Context Protocol (MCP: AI tool integration for test automation), GPT-5 (OpenAI: Multi-LLM integration), Claude, Gemini (LLM integration), Prompt Engineering/Context Engineering (AI workflows), AI-Assisted Development Workflows</p>
+
+            <h4>Programming Languages & Tools</h4>
+            <p>Python (Primary language), JavaScript (UI automation, API testing), SQL (Database testing, queries), Git/GitHub (Version control, CI/CD)</p>
+
+            <h4>Development Methodologies</h4>
+            <p>Agile (Scrum, Kanban), Test-Driven Development (Red-Green-Refactor cycle), AI-Assisted Development Workflows (PRD → Tasks → Implementation)</p>
+
+            <h4>API & Integration</h4>
+            <p>REST API (Testing and integration), Postman (API development and testing), JSON (Data formats), HL7-FHIR (Healthcare standards), Web scraping (Data extraction)</p>
+
+            <h4>Automation Platforms</h4>
+            <p>Make.com (Workflow orchestration), Relevance AI (Agent platform), Zapier (Integration automation)</p>
+        </section>
+
+        <footer>
+            <p>Generated using my custom <a href="https://github.com/solosza/resume-ai-pipeline" target="_blank">AI-Powered Resume Generation System</a> | <a href="https://solosza.github.io/resume-ai-pipeline/resumes/fueled-director-qa.html" target="_blank">View Live Demo</a></p>
+        </footer>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            html.setAttribute('data-theme', 'dark');
+            toggleButton.textContent = '☀️ Light Mode';
+        }
+
+        // Toggle theme
+        toggleButton.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                html.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                toggleButton.textContent = '🌙 Dark Mode';
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                toggleButton.textContent = '☀️ Light Mode';
+            }
+        });
+    </script>
+</body>
+</html>
