@@ -211,8 +211,8 @@ Test automation framework with layered architecture proven in government ERP env
 - Integrated pytest reporting framework with custom HTML dashboards and continuously optimized framework performance through parallel execution and smart test selection while adapting to PeopleSoft system updates and evolving Navy security requirements
 
 **management:**
-- Scaled automation team from zero to four engineers within six months while operating under Navy procurement and security restrictions, establishing coding standards, peer review processes, and structured onboarding that maintained quality despite limited tool options
-- Built framework architecture that developers adopted for their own unit testing, providing training and enablement that expanded framework impact beyond QA into development workflows
+- Scaled automation team from zero to four engineers within six months, conducting tool assessments and proof-of-concepts to get Python/Selenium approved in restrictive Navy environment where only legacy tools were previously authorized
+- Built framework architecture that development team adopted over PeopleSoft Test Framework (PTF) for their unit testing, providing training and enablement that expanded framework impact beyond QA
 - Navigated Navy bureaucracy and technical restrictions to deliver functional automation infrastructure supporting critical ERP deployment across deployment, muster, leave, onboarding, and military pay workflows
 
 ---
@@ -237,7 +237,7 @@ Test automation framework with layered architecture proven in government ERP env
 **management:**
 - Led multiple projects in test automation and manual testing, developing test strategies, cases, and scenarios for complex healthcare systems
 - Managed development and execution of test plans, scenarios, and scripts, maintaining manual test scripts in TFS
-- Established testing standards for Healthcare Claims Processing, EDI, Membership, Billing, Enrollment, HL7-FHIR, and RESTful services across multiple development teams in Agile environment
+- Defined QA strategy and testing standards across multiple development teams covering Healthcare Claims Processing, EDI, Membership, Billing, Enrollment, HL7-FHIR, and RESTful services
 
 ---
 
