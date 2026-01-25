@@ -199,14 +199,14 @@ Test automation framework with layered architecture proven in government ERP env
 **Bullet Variants:**
 
 **ai_focused:**
-- Revived test automation function after previous efforts failed, navigating strict Navy environment restrictions and lengthy software approval processes to implement Python/Selenium framework for PeopleSoft ERP testing across deployment, muster, leave, onboarding, and military pay workflows where only antiquated legacy tools were previously approved
-- Built framework architecture that developers adopted for their own unit testing after UI-heavy testing became too tedious with existing tools, providing training and enablement that expanded framework impact beyond QA into development workflows
+- Scaled automation team from zero to four engineers within six months, conducting tool assessments and proof-of-concepts to get Python/Selenium approved in restrictive Navy environment where only legacy tools were previously authorized
+- Built framework architecture that development team adopted over PeopleSoft Test Framework (PTF) for their unit testing, providing training and enablement that expanded framework impact beyond QA
 - Designed custom automation framework from scratch implementing Page Object Model and data-driven testing to handle PeopleSoft's UI-only testing constraints with no API layer access, creating modular architecture with supporting utility libraries for data handling and system integration
 
 **technical:**
-- Revived test automation function after previous efforts failed, navigating strict Navy environment restrictions and lengthy software approval processes to implement Python/Selenium framework for PeopleSoft ERP testing across deployment, muster, leave, onboarding, and military pay workflows where only antiquated legacy tools were previously approved
+- Scaled automation team from zero to four engineers within six months, conducting tool assessments and proof-of-concepts to get Python/Selenium approved in restrictive Navy environment where only legacy tools were previously authorized
 - Designed custom automation framework from scratch implementing Page Object Model and data-driven testing to handle PeopleSoft's UI-only testing constraints with no API layer access, creating modular architecture with supporting utility libraries for data handling and system integration
-- Built framework architecture that developers adopted for their own unit testing after UI-heavy testing became too tedious with existing tools, providing training and enablement that expanded framework impact beyond QA into development workflows
+- Built framework architecture that development team adopted over PeopleSoft Test Framework (PTF) for their unit testing, providing training and enablement that expanded framework impact beyond QA
 - Established regression-first automation strategy prioritizing heavily used Navy workflows, running automated regression suites to provide quality validation and catch critical defects in mission-critical personnel operations
 - Integrated pytest reporting framework with custom HTML dashboards and continuously optimized framework performance through parallel execution and smart test selection while adapting to PeopleSoft system updates and evolving Navy security requirements
 
@@ -227,7 +227,7 @@ Test automation framework with layered architecture proven in government ERP env
 **Bullet Variants:**
 
 **technical:**
-- Established testing standards for Healthcare Claims Processing, EDI, Membership, Billing, Enrollment, HL7-FHIR, and RESTful services in Agile (Kanban) environment
+- Defined QA strategy and testing standards across multiple development teams covering Healthcare Claims Processing, EDI, Membership, Billing, Enrollment, HL7-FHIR, and RESTful services
 - Conducted API automation using Postman, Fiddler, SOAP UI, and WCFTest Client to validate SaaS (Informatica) environments
 - Developed comprehensive automation scripts for HL7-FHIR APIs using Postman for integration, functional, and UAT testing
 - Created RESTful web service testing with assertions using Postman Sandbox for JSON payload validation, schema validation, data mapping, status codes, workflows
