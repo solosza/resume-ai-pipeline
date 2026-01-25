@@ -473,7 +473,7 @@ Experienced in establishing quality engineering functions from scratch across st
 
 **center_of_excellence** (for Quality Platform, Center of Excellence, Governance, Director roles):
 ```
-Built quality functions from scratch across government ERP and startup environments. Comfortable establishing standards, scaling distributed teams, and integrating AI into testing workflows without losing the human judgment that matters. Most recently, extended automation frameworks with AI-assisted code generation using Claude Code and custom MCP servers, producing framework-compliant code that follows established design patterns. Reduces test development from days to under an hour for standard workflows.
+Built quality functions from scratch across government ERP and startup environments. Comfortable establishing standards, scaling distributed teams, and integrating AI into testing workflows without losing the human judgment that matters. Most recently, extended automation frameworks with AI-assisted code generation using Claude Code and custom MCP servers, producing framework-compliant code that follows established design patterns. Reduces test development from days to hours for standard workflows.
 ```
 
 **ai_mcp** (for AI-driven testing, MCP integration, AI tooling roles):
