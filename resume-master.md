@@ -161,13 +161,7 @@ Test automation framework with layered architecture proven in government ERP env
 - **For IC roles (Senior QA Engineer, Principal QA Engineer, SDET, etc.):** Use "Senior QA Engineer"
 - **For Manager+ roles (QA Manager, Director, etc.):** Use "QA Manager"
 
-**Bullet Variants:**
-
-**ai_focused:**
-- Built and operated a QA Center of Excellence enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
-- Partnered with Head of Development and Product Manager throughout SDLC, from requirements gathering through implementation, aligning quality gates with delivery milestones
-- Integrated AI-assisted workflows for code generation, scenario discovery, and failure analysis, reducing new engineer onboarding from 3 weeks to 1 week through AI-enforced patterns
-- Established automation function as founding QA hire at early-stage startup, building framework from zero while integrating Claude Code into daily workflows
+**Bullet Variants (3 Templates):**
 
 **technical:**
 - Built and operated a QA Center of Excellence enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
@@ -181,7 +175,7 @@ Test automation framework with layered architecture proven in government ERP env
 - Integrated AI-assisted workflows for code generation, scenario discovery, and failure analysis, reducing new engineer onboarding from 3 weeks to 1 week through AI-enforced patterns
 - Established automation function as founding QA hire at early-stage startup, building framework from zero while integrating Claude Code into daily workflows
 
-**center_of_excellence:**
+**ai_forward:**
 - Built and operated a QA Center of Excellence enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
 - Partnered with Head of Development and Product Manager throughout SDLC, from requirements gathering through implementation, aligning quality gates with delivery milestones
 - Integrated AI-assisted workflows for code generation, scenario discovery, and failure analysis, reducing new engineer onboarding from 3 weeks to 1 week through AI-enforced patterns
@@ -196,12 +190,7 @@ Test automation framework with layered architecture proven in government ERP env
 
 **Context:** Established test automation function from scratch for Navy PeopleSoft ERP project in highly restrictive environment.
 
-**Bullet Variants:**
-
-**ai_focused:**
-- Scaled automation team from zero to four engineers within six months, conducting tool assessments and proof-of-concepts to get Python/Selenium approved in restrictive Navy environment where only legacy tools were previously authorized
-- Built framework architecture that development team adopted over PeopleSoft Test Framework (PTF) for their unit testing, providing training and enablement that expanded framework impact beyond QA
-- Designed custom automation framework from scratch implementing Page Object Model and data-driven testing to handle PeopleSoft's UI-only testing constraints with no API layer access, creating modular architecture with supporting utility libraries for data handling and system integration
+**Bullet Variants (3 Templates):**
 
 **technical:**
 - Scaled automation team from zero to four engineers within six months, conducting tool assessments and proof-of-concepts to get Python/Selenium approved in restrictive Navy environment where only legacy tools were previously authorized
@@ -215,6 +204,11 @@ Test automation framework with layered architecture proven in government ERP env
 - Built framework architecture that development team adopted over PeopleSoft Test Framework (PTF) for their unit testing, providing training and enablement that expanded framework impact beyond QA
 - Navigated Navy bureaucracy and technical restrictions to deliver functional automation infrastructure, providing weekly progress updates and demos to Navy test team leadership while aligning script development roadmap with overall project schedule
 
+**ai_forward:**
+- Scaled automation team from zero to four engineers within six months, conducting tool assessments and proof-of-concepts to get Python/Selenium approved in restrictive Navy environment where only legacy tools were previously authorized
+- Built framework architecture that development team adopted over PeopleSoft Test Framework (PTF) for their unit testing, providing training and enablement that expanded framework impact beyond QA
+- Designed custom automation framework from scratch implementing Page Object Model and data-driven testing to handle PeopleSoft's UI-only testing constraints with no API layer access, creating modular architecture with supporting utility libraries for data handling and system integration
+
 ---
 
 ### HMSA (Hawaii Medical Service Association) - Test Manager
@@ -224,7 +218,7 @@ Test automation framework with layered architecture proven in government ERP env
 
 **Context:** 9-year tenure at Hawaii's largest health insurer, progressing from QA Analyst to QA Lead.
 
-**Bullet Variants:**
+**Bullet Variants (technical and management only - ai_forward uses technical):**
 
 **technical:**
 - Defined QA strategy and testing standards across multiple development teams covering Healthcare Claims Processing, EDI, Membership, Billing, Enrollment, HL7-FHIR, and RESTful services
@@ -248,7 +242,7 @@ Test automation framework with layered architecture proven in government ERP env
 
 **Context:** Early career QA leadership on enterprise billing platforms for telecommunications clients.
 
-**Bullet Variants:**
+**Bullet Variants (technical and management only - ai_forward uses technical or omits):**
 
 **technical:**
 - Led QA and testing for Virgin Mobile USA's mission-critical billing platform across multiple channels including website, CRM, WAP platform, and charging/rating systems
@@ -271,7 +265,7 @@ Test automation framework with layered architecture proven in government ERP env
 
 **Context:** 4-year tenure at MVNO, progressing from tester to lead for billing platform.
 
-**Bullet Variants:**
+**Bullet Variants (technical and management only - ai_forward may omit):**
 
 **technical:**
 - Led testing for WAP and billing systems across handheld devices for MVNO pay-as-you-go services
@@ -290,7 +284,7 @@ Test automation framework with layered architecture proven in government ERP env
 
 **Context:** 5-year tenure at Sony, progressing from tester to lead for handheld devices.
 
-**Bullet Variants:**
+**Bullet Variants (technical and management only - ai_forward may omit):**
 
 **technical:**
 - Led testing for bundled applications across VAIO desktop and laptop product lines
@@ -363,33 +357,32 @@ Test automation framework with layered architecture proven in government ERP env
 
 ## Notes for AI Resume Generation
 
-### Content Selection Guidelines
+### Content Selection Guidelines (3 Templates)
 
-**For AI-focused roles (ai_specialist, ai_engineer, ml_engineer, ai_residency):**
-- Projects order: Resume Generator, Multi-Agent System, Real Estate Automation
-- Experience bullets: Use `ai_focused` variants
-- Skills order: AI Tools → Automation Platforms → Programming → Testing
-- Section order: Header → About → Projects → Experience → Skills
-
-**For QA/Automation roles (qa_engineer, sdet, automation_engineer):**
-- Projects order: Real Estate Automation, Resume Generator, Multi-Agent System
+**TEMPLATE 1: technical** (for SDET, QA Engineer, Automation Engineer IC roles)
+- Professional summary: Use `technical` variant (framework architecture + AI-assisted development)
+- Projects order: Test Automation Framework, Resume Generator, Multi-Agent System
 - Experience bullets: Use `technical` variants
 - Skills order: Testing → Programming → API → AI Tools
 - Section order: Header → About → Experience → Projects → Skills
+- Helios title: "Senior QA Engineer"
 
-**For Technical Leadership roles (qa_lead, engineering_manager):**
-- Projects order: Resume Generator, Multi-Agent System, Real Estate Automation
+**TEMPLATE 2: management** (for QA Lead, QA Manager, Director, CoE roles)
+- Professional summary: Use `management` variant
+- Projects order: Test Automation Framework, Resume Generator, Multi-Agent System
 - Experience bullets: Use `management` variants
 - Skills order: Methodologies → Testing → AI Tools → Programming
 - Section order: Header → About → Experience → Projects → Skills
+- Helios title: "QA Manager"
+- Includes CoE language in Helios bullets
 
-**For Center of Excellence roles (quality_platform, governance, center_of_excellence):**
-- Professional summary: Use `center_of_excellence` variant
-- Projects order: Test Automation Framework with AI-Assisted Code Generation, Resume Generator, Multi-Agent System
-- Experience bullets: Use `center_of_excellence` for Helios, `technical` for others
-- Skills order: Quality Engineering → Test Automation → AI-Assisted Development → Technical Foundation
-- Section order: Header → About → Experience → Projects → Skills
-- Trigger keywords: "center of excellence," "quality governance," "enforce standards," "scale quality," "reduce manual review," "quality platform," "automation governance," "onboarding + quality"
+**TEMPLATE 3: ai_forward** (for AI engineer, AI residency, AI adoption, innovation roles)
+- Professional summary: Use `ai_forward` variant
+- Projects order: Resume Generator, Multi-Agent System, Test Automation Framework
+- Experience bullets: Use `ai_forward` variants
+- Skills order: AI Tools → Automation Platforms → Programming → Testing
+- Section order: Header → About → Projects → Experience → Skills
+- Helios title: "QA Manager" or "Senior QA Engineer" based on role level
 
 ### Tag Filtering Logic
 
@@ -489,32 +482,22 @@ Test automation framework with layered architecture proven in government ERP env
 - **Startup/Innovation roles** (even without explicit AI ask): Include if company culture suggests early adopter mindset. Signals you're ahead of the curve.
 - **Where to include when applicable:**
   1. Professional summary: "using Claude Code and custom MCP servers"
-  2. Helios bullets already mention it in ai_focused variant
+  2. Helios bullets already mention it in ai_forward variant
   3. Skills section under AI Tools (always present, reader can ignore if unfamiliar)
 
-**Professional Summary Variants:**
+**Professional Summary Variants (3 Templates):**
 
-**ai_focused** (for AI engineer, AI residency, AI adoption roles):
+**technical** (for SDET, Automation Engineer, QA Engineer IC roles):
+```
+Designs test automation architectures and leverages AI-assisted development to implement them at production quality. Built quality functions from scratch across government ERP and startup environments. Framework-first thinking with AI as the implementation accelerator. Most recently, extended automation frameworks with AI-assisted code generation using Claude Code and custom MCP servers, with built-in quality controls that prevent non-compliant output rather than catching it after the fact. Reduces test development from days to hours for standard workflows.
+```
+
+**management** (for QA Lead, QA Manager, Director, CoE roles):
 ```
 Built quality functions from scratch across government ERP and startup environments. Comfortable establishing standards, scaling distributed teams, and integrating AI into testing workflows without losing the human judgment that matters. Most recently, extended automation frameworks with AI-assisted code generation using Claude Code and custom MCP servers, with built-in quality controls that prevent non-compliant output rather than catching it after the fact. Reduces test development from days to hours for standard workflows.
 ```
 
-**technical** (for SDET, Automation Engineer, QA Engineer roles):
-```
-Built quality functions from scratch across government ERP and startup environments. Comfortable establishing standards, scaling distributed teams, and integrating AI into testing workflows without losing the human judgment that matters. Most recently, extended automation frameworks with AI-assisted code generation using Claude Code and custom MCP servers, with built-in quality controls that prevent non-compliant output rather than catching it after the fact. Reduces test development from days to hours for standard workflows.
-```
-
-**management** (for QA Lead, QA Manager, Director roles):
-```
-Built quality functions from scratch across government ERP and startup environments. Comfortable establishing standards, scaling distributed teams, and integrating AI into testing workflows without losing the human judgment that matters. Most recently, extended automation frameworks with AI-assisted code generation using Claude Code and custom MCP servers, with built-in quality controls that prevent non-compliant output rather than catching it after the fact. Reduces test development from days to hours for standard workflows.
-```
-
-**center_of_excellence** (for Quality Platform, Center of Excellence, Governance, Director roles):
-```
-Built quality functions from scratch across government ERP and startup environments. Comfortable establishing standards, scaling distributed teams, and integrating AI into testing workflows without losing the human judgment that matters. Most recently, extended automation frameworks with AI-assisted code generation using Claude Code and custom MCP servers, with built-in quality controls that prevent non-compliant output rather than catching it after the fact. Reduces test development from days to hours for standard workflows.
-```
-
-**ai_mcp** (for AI-driven testing, MCP integration, AI tooling roles):
+**ai_forward** (for AI engineer, AI residency, AI adoption, innovation roles):
 ```
 Built quality functions from scratch across government ERP and startup environments. Comfortable establishing standards, scaling distributed teams, and integrating AI into testing workflows without losing the human judgment that matters. Most recently, extended automation frameworks with AI-assisted code generation using Claude Code and custom MCP servers, with built-in quality controls that prevent non-compliant output rather than catching it after the fact. Reduces test development from days to hours for standard workflows.
 ```
@@ -534,11 +517,11 @@ Built quality functions from scratch across government ERP and startup environme
 **Bullet Point Selection by Role:**
 
 **Helios Digital (May 2025 - Present):**
-- Use ALL bullets from selected variant (ai_focused, technical, or management)
+- Use ALL bullets from selected variant (ai_forward, technical, or management)
 - This is the most recent and most impressive role - showcase it fully
 
 **Nakupuna Consulting (Nov 2022 - May 2025):**
-- Use ALL bullets from selected variant (ai_focused, technical, or management)
+- Use ALL bullets from selected variant (ai_forward, technical, or management)
 - Second most recent role - demonstrate depth and impact
 
 **HMSA (May 2013 - Nov 2022):**
@@ -553,25 +536,31 @@ Built quality functions from scratch across government ERP and startup environme
 - For technical roles: include technical variant bullets
 - May omit entirely if resume length is tight and role isn't relevant
 
-**Variant Selection by Role Type:**
+**Variant Selection by Role Type (3 Templates):**
 
-**For AI-focused roles (ai_specialist, ai_engineer, ml_engineer, ai_residency):**
-- Helios: ALL ai_focused bullets
-- Nakupuna: ALL ai_focused bullets
-- HMSA: 2-3 technical bullets (API, automation focus)
-- IBM: 1-2 bullets or omit
-
-**For QA/Automation roles (qa_engineer, sdet, automation_engineer):**
-- Helios: ALL technical bullets
+**TEMPLATE 1: technical** (SDET, QA Engineer, Automation Engineer):
+- Helios: ALL technical bullets, title "Senior QA Engineer"
 - Nakupuna: ALL technical bullets
 - HMSA: 3-4 technical bullets (automation, API, framework focus)
 - IBM: 2-3 technical bullets
+- Virgin Mobile: technical bullets
+- Sony: technical bullets
 
-**For Technical Leadership roles (qa_lead, engineering_manager):**
-- Helios: ALL management bullets
+**TEMPLATE 2: management** (QA Lead, QA Manager, Director, CoE):
+- Helios: ALL management bullets, title "QA Manager"
 - Nakupuna: ALL management bullets
 - HMSA: 2-3 management bullets
 - IBM: 2-3 management bullets
+- Virgin Mobile: management bullets
+- Sony: management bullets
+
+**TEMPLATE 3: ai_forward** (AI engineer, AI residency, AI adoption, innovation):
+- Helios: ALL ai_forward bullets
+- Nakupuna: ALL ai_forward bullets
+- HMSA: 2-3 technical bullets (API, automation focus)
+- IBM: 1-2 bullets or omit
+- Virgin Mobile: may omit for brevity
+- Sony: may omit for brevity
 
 ---
 
