@@ -165,25 +165,25 @@ Test automation framework with layered architecture proven in government ERP env
 
 **ai_focused:**
 - Built and operated a QA Center of Excellence enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
-- Designed role-task-page architecture to encode quality standards directly into automation workflows, preventing invalid or low-quality tests from entering the suite
+- Partnered with Head of Development and Product Manager throughout SDLC, from requirements gathering through implementation, aligning quality gates with delivery milestones
 - Integrated AI-assisted workflows for code generation, scenario discovery, and failure analysis, reducing new engineer onboarding from 3 weeks to 1 week through AI-enforced patterns
 - Established automation function as founding QA hire at early-stage startup, building framework from zero while integrating Claude Code into daily workflows
 
 **technical:**
 - Built and operated a QA Center of Excellence enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
-- Designed role-task-page architecture to encode quality standards directly into automation workflows, preventing invalid or low-quality tests from entering the suite
+- Partnered with Head of Development and Product Manager throughout SDLC, from requirements gathering through implementation, aligning quality gates with delivery milestones
 - Integrated AI-assisted workflows for code generation, scenario discovery, and failure analysis, reducing new engineer onboarding from 3 weeks to 1 week through AI-enforced patterns
 - Established automation function as founding QA hire at early-stage startup, building framework from zero while integrating Claude Code into daily workflows
 
 **management:**
 - Built and operated a QA Center of Excellence enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
-- Designed role-task-page architecture to encode quality standards directly into automation workflows, preventing invalid or low-quality tests from entering the suite
+- Partnered with Head of Development and Product Manager throughout SDLC, from requirements gathering through implementation, aligning quality gates with delivery milestones
 - Integrated AI-assisted workflows for code generation, scenario discovery, and failure analysis, reducing new engineer onboarding from 3 weeks to 1 week through AI-enforced patterns
 - Established automation function as founding QA hire at early-stage startup, building framework from zero while integrating Claude Code into daily workflows
 
 **center_of_excellence:**
 - Built and operated a QA Center of Excellence enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
-- Designed role-task-page architecture to encode quality standards directly into automation workflows, preventing invalid or low-quality tests from entering the suite
+- Partnered with Head of Development and Product Manager throughout SDLC, from requirements gathering through implementation, aligning quality gates with delivery milestones
 - Integrated AI-assisted workflows for code generation, scenario discovery, and failure analysis, reducing new engineer onboarding from 3 weeks to 1 week through AI-enforced patterns
 - Established automation function as founding QA hire at early-stage startup, building framework from zero while integrating Claude Code into daily workflows
 
