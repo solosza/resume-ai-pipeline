@@ -264,6 +264,44 @@ Test automation framework with layered architecture proven in government ERP env
 
 ---
 
+### Virgin Mobile USA - QA Lead
+**Location:** Walnut Creek, CA
+**Dates:** 2004 - 2008
+**Tags:** `qa`, `technical`, `management`, `telecom`, `mobile`
+
+**Context:** 4-year tenure at MVNO, progressing from tester to lead for billing platform.
+
+**Bullet Variants:**
+
+**technical:**
+- Led testing for WAP and billing systems across handheld devices for MVNO pay-as-you-go services
+- Developed and executed test strategies for consumer-facing mobile services
+
+**management:**
+- Promoted from tester to lead for billing platform, overseeing testing for MVNO pay-as-you-go services across handheld devices
+- Led testing for WAP and billing systems, ensuring quality across consumer-facing mobile services
+
+---
+
+### Sony Electronics - QA Lead
+**Location:** San Jose, CA
+**Dates:** 1999 - 2004
+**Tags:** `qa`, `technical`, `management`, `consumer-electronics`, `hardware`
+
+**Context:** 5-year tenure at Sony, progressing from tester to lead for handheld devices.
+
+**Bullet Variants:**
+
+**technical:**
+- Led testing for bundled applications across VAIO desktop and laptop product lines
+- Tested handheld devices (Cleo, Music Clip) in pre-smartphone era
+
+**management:**
+- Promoted from tester to lead for handheld devices (Cleo, Music Clip) in pre-smartphone era
+- Led testing for bundled applications across VAIO desktop and laptop product lines
+
+---
+
 ---
 
 ## Skills
