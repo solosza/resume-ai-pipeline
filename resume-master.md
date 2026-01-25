@@ -130,7 +130,7 @@ Production-grade development framework (CLAUDE.md v1.6.0) serving as a reusable 
 **Description:**
 Test automation framework with layered architecture proven in government ERP environments. Extended with AI-assisted code generation layer validated in startup context.
 
-**Tech Stack:** Python, Selenium WebDriver, Pytest, Model Context Protocol (MCP)
+**Tech Stack:** Python, Selenium WebDriver, Pytest, Claude Code, Model Context Protocol (MCP)
 
 **Bullets:**
 - Designed layered test automation architecture using composition over inheritance, deployed and scaled across Navy ERP systems
@@ -271,7 +271,7 @@ Test automation framework with layered architecture proven in government ERP env
 **Include when:** `center_of_excellence` variant is selected. Place after Professional Summary in generated resume.
 
 **Content:**
-Designed and operated internal QA Center of Excellence practices by encoding standards, workflows, and escalation rules directly into automation frameworks, reducing onboarding time and automation drift.
+Designed and operated internal QA Center of Excellence practices by encoding standards and workflows directly into automation frameworks. Extended with AI-assisted code generation using Claude Code and custom MCP servers, producing framework-compliant code that follows established design patterns while maintaining human oversight.
 
 ---
 
@@ -581,7 +581,7 @@ Approved bullets:
 3. "Implemented human-in-the-loop checkpoints ensuring AI-generated code meets quality standards before execution"
 4. "Created standardized patterns that reduced onboarding time for new team members joining the automation effort"
 
-Tech stack: Python, Selenium WebDriver, Pytest, Model Context Protocol (MCP)
+Tech stack: Python, Selenium WebDriver, Pytest, Claude Code, Model Context Protocol (MCP)
 
 **Language That Works:**
 - ✅ "Comfortable digging into code" - natural, shows initiative
