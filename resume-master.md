@@ -136,7 +136,7 @@ Test automation framework with layered architecture proven in government ERP env
 - Designed layered test automation architecture using composition over inheritance, deployed and scaled across Navy ERP systems
 - Extended framework with MCP server integration enabling AI agents to generate framework-compliant test code, validated in startup environment
 - Implemented human-in-the-loop checkpoints ensuring AI-generated code meets quality standards before execution
-- Created standardized patterns that reduced onboarding time for new team members joining the automation effort
+- Created standardized patterns that reduced onboarding time and cut PR approval time from days to hours through AI-enforced conventions
 
 **Outcomes:**
 - Framework proven in regulated government environment, then extended with AI capabilities
@@ -182,9 +182,9 @@ Test automation framework with layered architecture proven in government ERP env
 - Designed test data management system with configuration files and dynamic data generation for flexible test scenarios
 
 **center_of_excellence:**
-- Built and operated an internal QA automation platform enforcing standardized test design, execution order, and validation gates
+- Built and operated an internal QA automation platform enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
 - Designed role-task-page architecture to encode quality standards directly into automation workflows, preventing invalid or low-quality tests from entering the suite
-- Integrated AI-assisted workflows to accelerate test scaffolding, scenario discovery, and failure analysis while enforcing mandatory human review before execution
+- Integrated AI-assisted workflows for code generation, scenario discovery, and failure analysis, reducing new engineer onboarding from 3 weeks to 1 week through AI-enforced patterns
 - Established automation function as founding QA hire at early-stage startup, building framework from zero while integrating Claude Code into daily workflows
 
 ---
@@ -569,7 +569,7 @@ Approved bullets:
 1. "Designed layered test automation architecture using composition over inheritance, deployed and scaled across Navy ERP systems"
 2. "Extended framework with MCP server integration enabling AI agents to generate framework-compliant test code, validated in startup environment"
 3. "Implemented human-in-the-loop checkpoints ensuring AI-generated code meets quality standards before execution"
-4. "Created standardized patterns that reduced onboarding time for new team members joining the automation effort"
+4. "Created standardized patterns that reduced onboarding time and cut PR approval time from days to hours through AI-enforced conventions"
 
 Tech stack: Python, Selenium WebDriver, Pytest, Claude Code, Model Context Protocol (MCP)
 
