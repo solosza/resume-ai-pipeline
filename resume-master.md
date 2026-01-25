@@ -164,22 +164,22 @@ Test automation framework with layered architecture proven in government ERP env
 **Bullet Variants:**
 
 **ai_focused:**
-- Established QA function as founding hire at early-stage startup, scaling team to two engineers while building test automation framework and defining quality standards under startup budget constraints
-- Built and deployed 4-layer Python/Selenium framework for web application testing, integrating AI-first approach into testing workflows through MCP server that enables coding agents to generate test code from plain English user stories
-- Established reporting infrastructure with detailed HTML reports and execution metrics for test visibility
-- Designed test data management system with configuration files and dynamic data generation for flexible test scenarios
+- Built and operated an internal QA automation platform enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
+- Designed role-task-page architecture to encode quality standards directly into automation workflows, preventing invalid or low-quality tests from entering the suite
+- Integrated AI-assisted workflows for code generation, scenario discovery, and failure analysis, reducing new engineer onboarding from 3 weeks to 1 week through AI-enforced patterns
+- Established automation function as founding QA hire at early-stage startup, building framework from zero while integrating Claude Code into daily workflows
 
 **technical:**
-- Established QA function as founding hire at early-stage startup, scaling team to two engineers while building test automation framework and defining quality standards under startup budget constraints
-- Built and deployed 4-layer Python/Selenium framework for web application testing, integrating AI-first approach into testing workflows through MCP server that enables coding agents to generate test code from plain English user stories
-- Established reporting infrastructure with detailed HTML reports and execution metrics for test visibility
-- Designed test data management system with configuration files and dynamic data generation for flexible test scenarios
+- Built and operated an internal QA automation platform enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
+- Designed role-task-page architecture to encode quality standards directly into automation workflows, preventing invalid or low-quality tests from entering the suite
+- Integrated AI-assisted workflows for code generation, scenario discovery, and failure analysis, reducing new engineer onboarding from 3 weeks to 1 week through AI-enforced patterns
+- Established automation function as founding QA hire at early-stage startup, building framework from zero while integrating Claude Code into daily workflows
 
 **management:**
-- Established QA function as founding hire at early-stage startup, scaling team to two engineers while defining testing strategy, processes, and quality standards under startup budget constraints
-- Built and deployed 4-layer Python/Selenium framework for web application testing, integrating AI-first approach into team workflows through MCP server that enables coding agents to generate test code from plain English user stories
-- Established reporting infrastructure with detailed HTML reports and execution metrics for stakeholder visibility
-- Designed test data management system with configuration files and dynamic data generation for flexible test scenarios
+- Built and operated an internal QA automation platform enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
+- Designed role-task-page architecture to encode quality standards directly into automation workflows, preventing invalid or low-quality tests from entering the suite
+- Integrated AI-assisted workflows for code generation, scenario discovery, and failure analysis, reducing new engineer onboarding from 3 weeks to 1 week through AI-enforced patterns
+- Established automation function as founding QA hire at early-stage startup, building framework from zero while integrating Claude Code into daily workflows
 
 **center_of_excellence:**
 - Built and operated an internal QA automation platform enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
@@ -458,17 +458,17 @@ Test automation framework with layered architecture proven in government ERP env
 
 **ai_focused** (for AI engineer, AI residency, AI adoption roles):
 ```
-Experienced in integrating coding agents directly into QA workflows while most teams are still using AI as a chat assistant on the side. This includes building production systems with Claude Code and custom MCP servers that replace manual bottlenecks with intelligent automation across startups, government contracts, and enterprise healthcare environments.
+Built quality functions from scratch across government ERP and startup environments. Comfortable establishing standards, scaling distributed teams, and integrating AI into testing workflows without losing the human judgment that matters. Most recently, extended automation frameworks with AI-assisted code generation using Claude Code and custom MCP servers, producing framework-compliant code that follows established design patterns. Reduces test development from days to hours for standard workflows.
 ```
 
 **technical** (for SDET, Automation Engineer, QA Engineer roles):
 ```
-Experienced in establishing test automation functions from scratch and designing automation frameworks across regulated healthcare, Navy ERP, and early stage startup environments. This includes building custom frameworks with layered architecture that teams adopted beyond QA into development workflows. Most recently, integrated AI coding agents via MCP servers to automate test generation, failure analysis, and reporting.
+Built quality functions from scratch across government ERP and startup environments. Comfortable establishing standards, scaling distributed teams, and integrating AI into testing workflows without losing the human judgment that matters. Most recently, extended automation frameworks with AI-assisted code generation using Claude Code and custom MCP servers, producing framework-compliant code that follows established design patterns. Reduces test development from days to hours for standard workflows.
 ```
 
 **management** (for QA Lead, QA Manager, Director roles):
 ```
-Experienced in establishing quality engineering functions from scratch across startups and enterprise organizations. This includes building custom testing frameworks that teams adopted beyond QA into development workflows, along with driving quality practices across complex system architectures. Most recently, integrated AI tools into team workflows to accelerate development and eliminate manual bottlenecks.
+Built quality functions from scratch across government ERP and startup environments. Comfortable establishing standards, scaling distributed teams, and integrating AI into testing workflows without losing the human judgment that matters. Most recently, extended automation frameworks with AI-assisted code generation using Claude Code and custom MCP servers, producing framework-compliant code that follows established design patterns. Reduces test development from days to hours for standard workflows.
 ```
 
 **center_of_excellence** (for Quality Platform, Center of Excellence, Governance, Director roles):
@@ -478,7 +478,7 @@ Built quality functions from scratch across government ERP and startup environme
 
 **ai_mcp** (for AI-driven testing, MCP integration, AI tooling roles):
 ```
-Integrating AI agents directly into test automation workflows through custom MCP servers that expose test generation, execution, and reporting as callable tools. Experience building layered frameworks where AI generates compliant code by following defined architectural rules. Track record establishing automation functions from zero. Experienced in healthcare, DoD, telecom, and startup domains.
+Built quality functions from scratch across government ERP and startup environments. Comfortable establishing standards, scaling distributed teams, and integrating AI into testing workflows without losing the human judgment that matters. Most recently, extended automation frameworks with AI-assisted code generation using Claude Code and custom MCP servers, producing framework-compliant code that follows established design patterns. Reduces test development from days to hours for standard workflows.
 ```
 
 **Bad Example (DO NOT USE):**
