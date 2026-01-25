@@ -124,24 +124,24 @@ Production-grade development framework (CLAUDE.md v1.6.0) serving as a reusable 
 
 ---
 
-### Project 5: Python Selenium Framework with MCP Integration
-**Tags:** `qa`, `technical`, `python`, `selenium`, `automation`, `ai`, `framework-building`, `pytest`, `mcp`
+### Project 5: Quality Automation Platform with AI-Guided Enforcement
+**Tags:** `qa`, `technical`, `python`, `selenium`, `automation`, `ai`, `framework-building`, `pytest`, `mcp`, `governance`, `enforcement`
 
 **Description:**
-Production grade test automation framework showcasing enterprise architecture and AI integration through Model Context Protocol (MCP). Demonstrates QA leadership level skills in framework design combined with forward thinking AI integration.
+Production-grade quality automation platform combining enterprise test architecture with AI-guided enforcement. Encodes test automation best practices as executable workflows, enforcing correctness and human-in-the-loop decision points.
 
-**Tech Stack:** Python, Selenium WebDriver, Pytest, Model Context Protocol (MCP), Faker, pytest html
+**Tech Stack:** Python, Selenium WebDriver, Pytest, Model Context Protocol (MCP), pytest-html
 
 **Bullets:**
+- Designed an AI-guided quality enforcement layer that encodes test automation best practices as executable workflows, enforcing correctness, escalation, and human-in-the-loop decision points across Selenium-based automation
 - Architected 4-layer test automation framework (Tests to Roles to Tasks to Pages to WebInterface) using pure composition over inheritance, enabling clean separation where each layer has a single responsibility
 - Built MCP server with 6-tool pipeline enabling AI agents to generate framework-compliant test code from plain English user stories through bottom-up code generation (discover elements to generate POM to Task to Role to Test)
 - Designed prompt-driven AI orchestration where the coding agent follows defined rules to control the tool chain, accumulate metadata context through each step, and decide on code reuse vs generation while tools remain stateless
-- Implemented fluent API pattern in Page Objects with state-check methods (is_*, has_*, get_*) separating UI actions from test assertions for cleaner test architecture
 
 **Outcomes:**
-- Production ready framework architecture demonstrating enterprise test automation patterns
-- MCP integration showcasing AI tool integration in QA workflows (not autonomous AI testing)
-- Clean 4 layer separation enabling maintainable, scalable test automation
+- Production-grade quality enforcement platform demonstrating enterprise test automation patterns
+- MCP integration showcasing AI tool integration in QA workflows with human-in-the-loop controls
+- Clean 4-layer separation enabling maintainable, scalable test automation
 - Portfolio piece proving ability to build frameworks from scratch using industry best practices
 
 **Date:** January 2025 (In Development)
@@ -180,6 +180,12 @@ Production grade test automation framework showcasing enterprise architecture an
 - Built and deployed 4-layer Python/Selenium framework for web application testing, integrating AI-first approach into team workflows through MCP server that enables coding agents to generate test code from plain English user stories
 - Established reporting infrastructure with detailed HTML reports and execution metrics for stakeholder visibility
 - Designed test data management system with configuration files and dynamic data generation for flexible test scenarios
+
+**center_of_excellence:**
+- Built and operated an internal QA automation platform enforcing standardized test design, execution order, and validation gates
+- Designed role-task-page architecture to encode quality standards directly into automation workflows, preventing invalid or low-quality tests from entering the suite
+- Integrated AI-assisted workflows to accelerate test scaffolding, scenario discovery, and failure analysis while enforcing mandatory human review before execution
+- Established automation function as founding QA hire at early-stage startup, building framework from zero while integrating Claude Code into daily workflows
 
 ---
 
@@ -258,23 +264,14 @@ Production grade test automation framework showcasing enterprise architecture an
 
 ---
 
-## RPA Developer Bullet Bank
+## Quality Engineering Leadership
 
-**Tags:** `rpa`, `automation`, `technical`, `ai`
+**Tags:** `center_of_excellence`, `governance`
 
-**Note:** These bullets are derived entirely from real experience and can be mixed/matched for RPA roles. Use in combination with existing experience bullets.
+**Include when:** `center_of_excellence` variant is selected. Place after Professional Summary in generated resume.
 
-- Designed and implemented automation frameworks that convert business workflows into repeatable, scriptable processes across ERP, healthcare, and startup environments, reducing manual effort and improving process reliability
-- Built Python and Selenium based UI automation for multi step, form heavy systems including PeopleSoft ERP, healthcare enrollment workflows, and startup onboarding flows, handling form and data processing patterns
-- Integrated coding agents through Model Context Protocol to analyze flows, extract UI structure, generate automation logic, and refine scripts based on failures, demonstrating practical agentic automation patterns applicable to process automation
-- Developed structured, layered automation architectures (Tests → Roles → Tasks → Pages) that align naturally with workflow segmentation, reusable components, selectors, and exception paths
-- Automated business processes involving multi page navigation, data entry, validation, and state management, similar to form filling, document processing, and intake workflows
-- Built custom data driven automation frameworks enabling dynamic input mapping, handling multiple data sources including JSON configuration, structured documents, and various input formats
-- Implemented robust error handling, retry logic, state checking, and automated failure analysis to increase end to end reliability of automated business processes
-- Created automation solutions in restricted federal environments (Navy contract) without access to APIs, requiring full UI driven workflow automation where system level integrations were unavailable
-- Collaborated with cross functional teams to identify high value workflows for automation, translating operational requirements into structured automation logic and reusable components
-- Demonstrated AI assisted development methodology by guiding coding agents through PRD → task breakdown → implementation cycles to build production ready automation systems
-- Delivered open source automation frameworks showcasing ability to design, build, and maintain scalable automation systems used across different business domains
+**Content:**
+Designed and operated internal QA Center of Excellence practices by encoding standards, workflows, and escalation rules directly into automation frameworks, reducing onboarding time and automation drift.
 
 ---
 
@@ -357,12 +354,14 @@ Production grade test automation framework showcasing enterprise architecture an
 - Skills order: Methodologies → Testing → AI Tools → Programming
 - Section order: Header → About → Experience → Projects → Skills
 
-**For RPA/Intelligent Automation roles (rpa_developer, rpa_engineer, intelligent_automation):**
-- Projects order: Python Selenium Framework with MCP Integration, Real Estate Automation, Resume Generator
-- Experience bullets: Use `technical` variants + select from RPA Bullet Bank
-- Skills order: Automation Platforms → Testing → Programming → AI Tools → API
-- Section order: Header → About → Experience → Projects → Skills
-- Note: Mix RPA Bullet Bank bullets with existing experience bullets for best fit
+**For Center of Excellence roles (quality_platform, governance, center_of_excellence):**
+- Professional summary: Use `center_of_excellence` variant
+- Projects order: Quality Automation Platform with AI-Guided Enforcement, Resume Generator, Multi-Agent System
+- Experience bullets: Use `center_of_excellence` for Helios, `technical` for others
+- Skills order: Quality Engineering → Test Automation → AI-Assisted Development → Technical Foundation
+- Section order: Header → About → Quality Engineering Leadership → Experience → Projects → Skills
+- Include: Quality Engineering Leadership section (after Professional Summary)
+- Trigger keywords: "center of excellence," "quality governance," "enforce standards," "scale quality," "reduce manual review," "quality platform," "automation governance," "onboarding + quality"
 
 ### Tag Filtering Logic
 
@@ -482,9 +481,14 @@ Experienced in establishing test automation functions from scratch and designing
 Experienced in establishing quality engineering functions from scratch across startups and enterprise organizations. This includes building custom testing frameworks that teams adopted beyond QA into development workflows, along with driving quality practices across complex system architectures. Most recently, integrated AI tools into team workflows to accelerate development and eliminate manual bottlenecks.
 ```
 
-**rpa_developer** (for RPA Developer, Intelligent Automation, Process Automation roles):
+**center_of_excellence** (for Quality Platform, Center of Excellence, Governance, Director roles):
 ```
-Experienced in integrating automation frameworks and coding agents to remove repetitive work from complex business workflows. This includes building custom Python based UI automation systems for ERP, healthcare, and startup environments, then extending them with AI assisted tooling through Model Context Protocol. Background spans enterprise grade test automation, data driven workflows, and AI assisted development patterns that map naturally to document and form driven processes.
+Built quality functions from scratch across government ERP and startup environments. Comfortable establishing standards, scaling distributed teams, and integrating AI into testing workflows without losing the human judgment that matters.
+```
+
+**ai_mcp** (for AI-driven testing, MCP integration, AI tooling roles):
+```
+Integrating AI agents directly into test automation workflows through custom MCP servers that expose test generation, execution, and reporting as callable tools. Experience building layered frameworks where AI generates compliant code by following defined architectural rules. Track record establishing automation functions from zero. Experienced in healthcare, DoD, telecom, and startup domains.
 ```
 
 **Bad Example (DO NOT USE):**
@@ -566,18 +570,18 @@ Experienced in integrating automation frameworks and coding agents to remove rep
 - Don't remove bullets without replacing them
 - Current approved bullets cover: founding/scaling, framework/AI, reporting, test data
 
-**Python Selenium Framework Project (ALWAYS use these exact bullets):**
+**Quality Automation Platform Project (ALWAYS use these exact bullets):**
 - NEVER shorten or simplify these bullets
-- ALWAYS include all 4 bullets with MCP and AI orchestration details
-- This is the flagship project showing technical depth and AI integration
+- ALWAYS include all 4 bullets with enforcement and AI orchestration details
+- This is the flagship project showing technical depth, AI integration, and quality enforcement
 
 Approved bullets:
-1. "Architected 4 layer test automation framework (Tests to Roles to Tasks to Pages to WebInterface) using pure composition over inheritance, enabling clean separation where each layer has a single responsibility"
-2. "Built MCP server with 6 tool pipeline enabling AI agents to generate framework compliant test code from plain English user stories through bottom up code generation (discover elements to generate POM to Task to Role to Test)"
-3. "Designed prompt driven AI orchestration where the coding agent follows defined rules to control the tool chain, accumulate metadata context through each step, and decide on code reuse vs generation while tools remain stateless"
-4. "Implemented fluent API pattern in Page Objects with state check methods (is_*, has_*, get_*) separating UI actions from test assertions for cleaner test architecture"
+1. "Designed an AI-guided quality enforcement layer that encodes test automation best practices as executable workflows, enforcing correctness, escalation, and human-in-the-loop decision points across Selenium-based automation"
+2. "Architected 4-layer test automation framework (Tests to Roles to Tasks to Pages to WebInterface) using pure composition over inheritance, enabling clean separation where each layer has a single responsibility"
+3. "Built MCP server with 6-tool pipeline enabling AI agents to generate framework-compliant test code from plain English user stories through bottom-up code generation (discover elements to generate POM to Task to Role to Test)"
+4. "Designed prompt-driven AI orchestration where the coding agent follows defined rules to control the tool chain, accumulate metadata context through each step, and decide on code reuse vs generation while tools remain stateless"
 
-Tech stack: Python, Selenium WebDriver, Pytest, Model Context Protocol (MCP), Faker, pytest html
+Tech stack: Python, Selenium WebDriver, Pytest, Model Context Protocol (MCP), pytest-html
 
 **Language That Works:**
 - ✅ "Comfortable digging into code" - natural, shows initiative
