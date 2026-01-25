@@ -213,7 +213,7 @@ Test automation framework with layered architecture proven in government ERP env
 **management:**
 - Scaled automation team from zero to four engineers within six months, conducting tool assessments and proof-of-concepts to get Python/Selenium approved in restrictive Navy environment where only legacy tools were previously authorized
 - Built framework architecture that development team adopted over PeopleSoft Test Framework (PTF) for their unit testing, providing training and enablement that expanded framework impact beyond QA
-- Navigated Navy bureaucracy and technical restrictions to deliver functional automation infrastructure supporting critical ERP deployment across deployment, muster, leave, onboarding, and military pay workflows
+- Navigated Navy bureaucracy and technical restrictions to deliver functional automation infrastructure, providing weekly progress updates and demos to Navy test team leadership while aligning script development roadmap with overall project schedule
 
 ---
 
@@ -258,7 +258,7 @@ Test automation framework with layered architecture proven in government ERP env
 - Managed production support by coordinating with operations on defect triage and executing patch release testing
 
 **management:**
-- Managed 18-member team of onshore and offshore resources on Sprint/Nextel Pre-Paid account
+- Served as client-facing consultant managing 18-member team of onshore and offshore resources on Sprint/Nextel Pre-Paid account
 - Monitored testing progress, working closely with senior project managers and offshore teams to manage timelines, budgets, and contingency plans
 - Oversaw UAT, black box (functional), and end-to-end testing for multiple releases
 
