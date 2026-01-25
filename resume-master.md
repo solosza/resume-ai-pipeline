@@ -124,27 +124,27 @@ Production-grade development framework (CLAUDE.md v1.6.0) serving as a reusable 
 
 ---
 
-### Project 5: Quality Automation Platform with AI-Guided Enforcement
-**Tags:** `qa`, `technical`, `python`, `selenium`, `automation`, `ai`, `framework-building`, `pytest`, `mcp`, `governance`, `enforcement`
+### Project 5: Test Automation Framework with AI-Assisted Code Generation
+**Tags:** `qa`, `technical`, `python`, `selenium`, `automation`, `ai`, `framework-building`, `pytest`, `mcp`
 
 **Description:**
-Production-grade quality automation platform combining enterprise test architecture with AI-guided enforcement. Encodes test automation best practices as executable workflows, enforcing correctness and human-in-the-loop decision points.
+Test automation framework with layered architecture proven in government ERP environments. Extended with AI-assisted code generation layer validated in startup context.
 
-**Tech Stack:** Python, Selenium WebDriver, Pytest, Model Context Protocol (MCP), pytest-html
+**Tech Stack:** Python, Selenium WebDriver, Pytest, Model Context Protocol (MCP)
 
 **Bullets:**
-- Designed an AI-guided quality enforcement layer that encodes test automation best practices as executable workflows, enforcing correctness, escalation, and human-in-the-loop decision points across Selenium-based automation
-- Architected 4-layer test automation framework (Tests to Roles to Tasks to Pages to WebInterface) using pure composition over inheritance, enabling clean separation where each layer has a single responsibility
-- Built MCP server with 6-tool pipeline enabling AI agents to generate framework-compliant test code from plain English user stories through bottom-up code generation (discover elements to generate POM to Task to Role to Test)
-- Designed prompt-driven AI orchestration where the coding agent follows defined rules to control the tool chain, accumulate metadata context through each step, and decide on code reuse vs generation while tools remain stateless
+- Designed layered test automation architecture using composition over inheritance, deployed and scaled across Navy ERP systems
+- Extended framework with MCP server integration enabling AI agents to generate framework-compliant test code, validated in startup environment
+- Implemented human-in-the-loop checkpoints ensuring AI-generated code meets quality standards before execution
+- Created standardized patterns that reduced onboarding time for new team members joining the automation effort
 
 **Outcomes:**
-- Production-grade quality enforcement platform demonstrating enterprise test automation patterns
-- MCP integration showcasing AI tool integration in QA workflows with human-in-the-loop controls
-- Clean 4-layer separation enabling maintainable, scalable test automation
-- Portfolio piece proving ability to build frameworks from scratch using industry best practices
+- Framework proven in regulated government environment, then extended with AI capabilities
+- MCP integration enabling AI-assisted test generation with human oversight
+- Reduced onboarding time through standardized patterns
+- Portfolio piece demonstrating framework evolution from traditional to AI-assisted
 
-**Date:** January 2025 (In Development)
+**Date:** January 2025
 
 ---
 
@@ -356,7 +356,7 @@ Designed and operated internal QA Center of Excellence practices by encoding sta
 
 **For Center of Excellence roles (quality_platform, governance, center_of_excellence):**
 - Professional summary: Use `center_of_excellence` variant
-- Projects order: Quality Automation Platform with AI-Guided Enforcement, Resume Generator, Multi-Agent System
+- Projects order: Test Automation Framework with AI-Assisted Code Generation, Resume Generator, Multi-Agent System
 - Experience bullets: Use `center_of_excellence` for Helios, `technical` for others
 - Skills order: Quality Engineering → Test Automation → AI-Assisted Development → Technical Foundation
 - Section order: Header → About → Quality Engineering Leadership → Experience → Projects → Skills
@@ -570,18 +570,18 @@ Integrating AI agents directly into test automation workflows through custom MCP
 - Don't remove bullets without replacing them
 - Current approved bullets cover: founding/scaling, framework/AI, reporting, test data
 
-**Quality Automation Platform Project (ALWAYS use these exact bullets):**
-- NEVER shorten or simplify these bullets
-- ALWAYS include all 4 bullets with enforcement and AI orchestration details
-- This is the flagship project showing technical depth, AI integration, and quality enforcement
+**Test Automation Framework Project (ALWAYS use these exact bullets):**
+- Use these bullets for ALL resume templates (not just leadership roles)
+- These bullets protect IP while showing competence
+- This is the flagship project showing framework evolution and AI integration
 
 Approved bullets:
-1. "Designed an AI-guided quality enforcement layer that encodes test automation best practices as executable workflows, enforcing correctness, escalation, and human-in-the-loop decision points across Selenium-based automation"
-2. "Architected 4-layer test automation framework (Tests to Roles to Tasks to Pages to WebInterface) using pure composition over inheritance, enabling clean separation where each layer has a single responsibility"
-3. "Built MCP server with 6-tool pipeline enabling AI agents to generate framework-compliant test code from plain English user stories through bottom-up code generation (discover elements to generate POM to Task to Role to Test)"
-4. "Designed prompt-driven AI orchestration where the coding agent follows defined rules to control the tool chain, accumulate metadata context through each step, and decide on code reuse vs generation while tools remain stateless"
+1. "Designed layered test automation architecture using composition over inheritance, deployed and scaled across Navy ERP systems"
+2. "Extended framework with MCP server integration enabling AI agents to generate framework-compliant test code, validated in startup environment"
+3. "Implemented human-in-the-loop checkpoints ensuring AI-generated code meets quality standards before execution"
+4. "Created standardized patterns that reduced onboarding time for new team members joining the automation effort"
 
-Tech stack: Python, Selenium WebDriver, Pytest, Model Context Protocol (MCP), pytest-html
+Tech stack: Python, Selenium WebDriver, Pytest, Model Context Protocol (MCP)
 
 **Language That Works:**
 - ✅ "Comfortable digging into code" - natural, shows initiative
