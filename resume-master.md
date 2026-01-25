@@ -264,15 +264,6 @@ Test automation framework with layered architecture proven in government ERP env
 
 ---
 
-## Quality Engineering Leadership
-
-**Tags:** `center_of_excellence`, `governance`
-
-**Include when:** `center_of_excellence` variant is selected. Place after Professional Summary in generated resume.
-
-**Content:**
-Designed and operated internal QA Center of Excellence practices by encoding standards and workflows directly into automation frameworks. Extended with AI-assisted code generation using Claude Code and custom MCP servers, producing framework-compliant code that follows established design patterns while maintaining human oversight.
-
 ---
 
 ## Skills
@@ -359,8 +350,7 @@ Designed and operated internal QA Center of Excellence practices by encoding sta
 - Projects order: Test Automation Framework with AI-Assisted Code Generation, Resume Generator, Multi-Agent System
 - Experience bullets: Use `center_of_excellence` for Helios, `technical` for others
 - Skills order: Quality Engineering → Test Automation → AI-Assisted Development → Technical Foundation
-- Section order: Header → About → Quality Engineering Leadership → Experience → Projects → Skills
-- Include: Quality Engineering Leadership section (after Professional Summary)
+- Section order: Header → About → Experience → Projects → Skills
 - Trigger keywords: "center of excellence," "quality governance," "enforce standards," "scale quality," "reduce manual review," "quality platform," "automation governance," "onboarding + quality"
 
 ### Tag Filtering Logic
@@ -483,7 +473,7 @@ Experienced in establishing quality engineering functions from scratch across st
 
 **center_of_excellence** (for Quality Platform, Center of Excellence, Governance, Director roles):
 ```
-Built quality functions from scratch across government ERP and startup environments. Comfortable establishing standards, scaling distributed teams, and integrating AI into testing workflows without losing the human judgment that matters.
+Built quality functions from scratch across government ERP and startup environments. Comfortable establishing standards, scaling distributed teams, and integrating AI into testing workflows without losing the human judgment that matters. Most recently, extended automation frameworks with AI-assisted code generation using Claude Code and custom MCP servers, producing framework-compliant code that follows established design patterns. Reduces test development from days to under an hour for standard workflows.
 ```
 
 **ai_mcp** (for AI-driven testing, MCP integration, AI tooling roles):
