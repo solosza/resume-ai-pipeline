@@ -164,25 +164,25 @@ Test automation framework with layered architecture proven in government ERP env
 **Bullet Variants:**
 
 **ai_focused:**
-- Built and operated an internal QA automation platform enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
+- Built and operated a QA Center of Excellence enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
 - Designed role-task-page architecture to encode quality standards directly into automation workflows, preventing invalid or low-quality tests from entering the suite
 - Integrated AI-assisted workflows for code generation, scenario discovery, and failure analysis, reducing new engineer onboarding from 3 weeks to 1 week through AI-enforced patterns
 - Established automation function as founding QA hire at early-stage startup, building framework from zero while integrating Claude Code into daily workflows
 
 **technical:**
-- Built and operated an internal QA automation platform enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
+- Built and operated a QA Center of Excellence enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
 - Designed role-task-page architecture to encode quality standards directly into automation workflows, preventing invalid or low-quality tests from entering the suite
 - Integrated AI-assisted workflows for code generation, scenario discovery, and failure analysis, reducing new engineer onboarding from 3 weeks to 1 week through AI-enforced patterns
 - Established automation function as founding QA hire at early-stage startup, building framework from zero while integrating Claude Code into daily workflows
 
 **management:**
-- Built and operated an internal QA automation platform enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
+- Built and operated a QA Center of Excellence enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
 - Designed role-task-page architecture to encode quality standards directly into automation workflows, preventing invalid or low-quality tests from entering the suite
 - Integrated AI-assisted workflows for code generation, scenario discovery, and failure analysis, reducing new engineer onboarding from 3 weeks to 1 week through AI-enforced patterns
 - Established automation function as founding QA hire at early-stage startup, building framework from zero while integrating Claude Code into daily workflows
 
 **center_of_excellence:**
-- Built and operated an internal QA automation platform enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
+- Built and operated a QA Center of Excellence enforcing standardized test design, enabling 4-5x improvement in test velocity per engineer
 - Designed role-task-page architecture to encode quality standards directly into automation workflows, preventing invalid or low-quality tests from entering the suite
 - Integrated AI-assisted workflows for code generation, scenario discovery, and failure analysis, reducing new engineer onboarding from 3 weeks to 1 week through AI-enforced patterns
 - Established automation function as founding QA hire at early-stage startup, building framework from zero while integrating Claude Code into daily workflows
