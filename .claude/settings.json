@@ -1,0 +1,6 @@
+{
+  "$schema": "https://code.claude.com/schemas/settings.json",
+  "permissions": {
+    "defaultMode": "default"
+  }
+}
