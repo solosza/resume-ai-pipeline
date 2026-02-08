@@ -4,7 +4,7 @@
 
 **Date:** 2026-02-07
 **Severity:** Medium
-**Status:** OPEN
+**Status:** RESOLVED
 
 ### What Happened
 Agent hit hook block (state mismatch: `protocol_anchored` vs `anchored`). Agent debugged, found issue, fixed state. But did NOT invoke `/kernel/learn` to record the lesson.
@@ -32,7 +32,29 @@ Agent fixed and moved on. No lesson recorded. Same mistake can recur.
 3. **Command chaining** — Anchor command auto-invokes learn if `last_action: "fix"`
 
 ### Resolution
-TBD
+**RESOLVED 2026-02-07** — Implemented Option 2 with enhancements:
+
+1. **Hook enforcement via `needs_learn` flag:**
+   - PreToolUse hook detects direct state edits → sets `needs_learn: true`
+   - PostToolUse hook detects test failures → sets `needs_learn: true`
+   - Next Write/Edit blocked until `/kernel/learn` invoked
+
+2. **Added `/kernel/validate` command:**
+   - Self-check against protocol every 5 files
+   - Catches violations hook can't detect
+   - Violations trigger `/kernel/learn`
+
+3. **Updated CLAUDE.md:**
+   - Documents learn triggers
+   - Shows updated loop with validate
+
+Files modified:
+- `.claude/hooks/universal-gate-enforcer.py` — Added needs_learn detection and blocking
+- `.claude/hooks/test-failure-detector.py` — New PostToolUse hook for test failures
+- `.claude/commands/kernel/validate.md` — New command
+- `.claude/commands/kernel/learn.md` — Clears needs_learn flag
+- `.claude/settings.local.json` — Added PostToolUse hook config
+- `CLAUDE.md` — Updated loop documentation
 
 ---
 
@@ -40,7 +62,7 @@ TBD
 
 **Date:** 2026-02-07
 **Severity:** Medium
-**Status:** OPEN
+**Status:** RESOLVED
 
 ### What Happened
 Anchor command set `protocol_anchored: true` in state. Universal gate enforcer checks for `anchored: true`. Mismatch caused hook to block writes even after anchoring.
@@ -67,7 +89,7 @@ No contract between anchor command and universal gate enforcer on state key name
 3. **State schema enforcement** — Document required keys in state-schema.md
 
 ### Resolution
-TBD
+**RESOLVED 2026-02-07** — anchor.md already uses `anchored: true`. The mismatch occurred because agent didn't follow the command exactly. With DEF-001 fix, if agent manually edits state, `needs_learn` triggers and lesson is captured.
 
 ---
 
@@ -75,7 +97,7 @@ TBD
 
 **Date:** 2026-02-07
 **Severity:** Low
-**Status:** OPEN
+**Status:** RESOLVED
 
 ### What Happened
 Session state set `domain: "playwright-automation"`. Workflow file created as `playwright_workflow.json`. Hook looks for `{domain}_workflow.json` → looked for `playwright-automation_workflow.json` → didn't find it.
@@ -105,7 +127,16 @@ No validation that domain-setup creates workflow file matching session domain na
 3. **Validation gate** — Hook validates domain name matches before checking state
 
 ### Resolution
-TBD
+**RESOLVED 2026-02-07** — Implemented Option 1:
+
+Added "Step 0: Normalize Domain Name" to `/kernel/domain-setup`:
+- Lowercase
+- Replace hyphens with underscores
+- Remove special characters
+- Explicit instruction that session_state.json domain MUST match workflow filename prefix
+
+Files modified:
+- `.claude/commands/kernel/domain-setup.md` — Added Step 0 and explicit sync instructions
 
 ---
 

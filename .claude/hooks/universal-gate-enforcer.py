@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """
-Universal Gate Enforcer (Minimal) - Smart gate that blocks AND provides fix data.
+Universal Gate Enforcer - Smart gate that blocks AND provides fix data.
 
-Checks two things:
+Checks:
 1. session_started = true
 2. anchored = true
+3. needs_learn = false (must learn after fix)
 
-That's it. Minimum viable enforcement.
+Also detects:
+- Direct state edits → sets needs_learn = true
 """
 
 import json
@@ -28,6 +30,11 @@ def read_state(state_file: Path) -> dict:
         return json.loads(state_file.read_text())
     except:
         return {}
+
+
+def write_state(state_file: Path, state: dict):
+    state_file.parent.mkdir(parents=True, exist_ok=True)
+    state_file.write_text(json.dumps(state, indent=2))
 
 
 def smart_block(missing: str, fix_command: str, fix_description: str):
@@ -58,7 +65,21 @@ def main():
 
     file_path = tool_input.get('file_path', '').replace('\\', '/')
 
-    # Skip kernel infrastructure
+    # Read session state
+    session_state = read_state(SESSION_STATE)
+
+    # DETECT: Direct state edit (agent manually fixing state)
+    # This triggers needs_learn requirement
+    if '/state/' in file_path and file_path.endswith('.json'):
+        if '/.claude/state/' in file_path or file_path.startswith('.claude/state/'):
+            # Agent is editing state directly - flag for learning
+            session_state['needs_learn'] = True
+            session_state['needs_learn_reason'] = 'direct_state_edit'
+            write_state(SESSION_STATE, session_state)
+            # Allow the edit to proceed, but flag is now set
+            sys.exit(0)
+
+    # Skip kernel infrastructure (commands, hooks, settings)
     if '/.claude/' in file_path or file_path.startswith('.claude/'):
         sys.exit(0)
 
@@ -67,7 +88,6 @@ def main():
         sys.exit(0)
 
     # Gate 1: Session started?
-    session_state = read_state(SESSION_STATE)
     if not session_state.get('session_started'):
         smart_block(
             missing="Session not started",
@@ -75,7 +95,16 @@ def main():
             fix_description="This initializes the session"
         )
 
-    # Gate 2: Anchored?
+    # Gate 2: Needs learn? (must invoke learn before continuing)
+    if session_state.get('needs_learn'):
+        reason = session_state.get('needs_learn_reason', 'unknown')
+        smart_block(
+            missing=f"Lesson not recorded (trigger: {reason})",
+            fix_command="/kernel/learn",
+            fix_description="Record what you learned from the fix"
+        )
+
+    # Gate 3: Anchored?
     domain = session_state.get('domain')
     if domain:
         domain_state = read_state(get_domain_state_file(domain))

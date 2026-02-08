@@ -1,0 +1,44 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(kernel:session-start)",
+      "Skill(kernel:domain-setup)",
+      "Skill(kernel:anchor)",
+      "Skill(kernel:validate)",
+      "Skill(kernel:learn)",
+      "Skill(kernel:complete)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(npx playwright:*)",
+      "Bash(npm test:*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/universal-gate-enforcer.py"
+          },
+          {
+            "type": "command",
+            "command": "python .claude/hooks/playwright-gate-enforcer.py"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/test-failure-detector.py"
+          }
+        ]
+      }
+    ]
+  }
+}

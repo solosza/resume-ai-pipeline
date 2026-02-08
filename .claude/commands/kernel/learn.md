@@ -37,6 +37,16 @@ Update protocol AND hooks after fixing any failure. Make the same mistake imposs
    - Create `.claude/commands/[domain]-check-[issue].md`
 
 5. **Update state:**
+
+   Update `.claude/state/session_state.json`:
+   ```json
+   {
+     "needs_learn": false,
+     "needs_learn_reason": null
+   }
+   ```
+
+   Update `.claude/state/[domain]_workflow.json`:
    ```json
    {
      "lesson_recorded": true,

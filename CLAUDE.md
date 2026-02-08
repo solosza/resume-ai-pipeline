@@ -15,10 +15,31 @@ When user gives any task or says "continue":
 ## The Loop
 
 ```
-session-start → anchor → WORK → complete
-                   ↓
-         failure? → anchor → fix → learn
+session-start → anchor → WORK → validate → complete
+                   ↓           ↓
+         failure? → fix → learn (MANDATORY)
 ```
+
+### Work Loop Details
+
+```
+WORK:
+  1. Write/Edit code
+  2. Every 5 files → /kernel/validate
+  3. Run tests
+  4. If test fails → fix → /kernel/learn
+  5. Repeat until done
+  6. /kernel/complete
+```
+
+### Learn Triggers (Enforced by Hook)
+
+You MUST invoke `/kernel/learn` after:
+- **Direct state edit** — You edited `.claude/state/*.json` manually
+- **Test failure** — Bash test command returned non-zero exit
+- **Validate violation** — `/kernel/validate` found protocol violation
+
+Hook will BLOCK your next write until you invoke `/kernel/learn`.
 
 ## Commands
 
@@ -27,7 +48,8 @@ session-start → anchor → WORK → complete
 ├── session-start.md   ← Check state, resume
 ├── domain-setup.md    ← Create protocol + hooks (first time)
 ├── anchor.md          ← Re-read protocol (before work, after failure)
-├── learn.md           ← Update protocol + hooks (after fix)
+├── validate.md        ← Check work against protocol (every 5 files)
+├── learn.md           ← Update protocol + hooks (after fix) - CLEARS BLOCK
 └── complete.md        ← Final gate (before done)
 ```
 
@@ -36,14 +58,14 @@ session-start → anchor → WORK → complete
 Hook blocks writes if state is missing. Tells you how to fix:
 
 ```
-BLOCKED: Protocol not anchored.
+BLOCKED: Lesson not recorded (trigger: test_failure)
 
 FIX:
-1. Invoke /kernel/anchor
-2. This reads protocol and updates state
+1. Invoke /kernel/learn
+2. Record what you learned from the fix
 3. Then retry your write
 
-Command: /kernel/anchor
+Command: /kernel/learn
 ```
 
 ## Principles

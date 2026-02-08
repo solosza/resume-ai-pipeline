@@ -4,6 +4,21 @@ Create complete enforcement for a new domain. Invoke when starting work in a new
 
 ## Instructions
 
+### Step 0: Normalize Domain Name
+
+**CRITICAL:** Domain name MUST be normalized before use:
+- Lowercase
+- Replace hyphens with underscores
+- Remove special characters
+
+Example: `playwright-automation` → `playwright_automation`
+
+This ensures consistency between:
+- `session_state.json` domain field
+- `[domain]_workflow.json` filename
+- `[domain]-protocol.md` filename
+- `[domain]-*.md` command filenames
+
 ### Step 1: Create Protocol File
 
 Create `docs/protocols/[domain]-protocol.md` with:
@@ -111,9 +126,17 @@ Create `.claude/state/` if not exists.
 
 ### Step 6: Update State
 
+Update `.claude/state/session_state.json`:
 ```json
 {
-  "domain": "[domain]",
+  "domain": "[normalized_domain]"
+}
+```
+
+Create `.claude/state/[normalized_domain]_workflow.json`:
+```json
+{
+  "domain": "[normalized_domain]",
   "setup_complete": true,
   "protocol_created": true,
   "commands_created": true,
@@ -121,6 +144,8 @@ Create `.claude/state/` if not exists.
   "timestamp": "..."
 }
 ```
+
+**IMPORTANT:** The domain value in session_state.json MUST match the workflow filename prefix.
 
 ### Step 7: Report
 
