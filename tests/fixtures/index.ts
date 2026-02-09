@@ -1,21 +1,30 @@
 import { test as base } from '@playwright/test';
-import { LoginPage, HomePage } from '../pages';
+import {
+  LoginPage,
+  AccountsOverviewPage,
+  OpenAccountPage,
+  TransferFundsPage
+} from '../pages';
 
-type Pages = {
+type Fixtures = {
   loginPage: LoginPage;
-  homePage: HomePage;
+  accountsOverviewPage: AccountsOverviewPage;
+  openAccountPage: OpenAccountPage;
+  transferFundsPage: TransferFundsPage;
 };
 
-export const test = base.extend<Pages>({
-  loginPage: async ({ page, context }, use) => {
-    // Clear cookies for test isolation
-    await context.clearCookies();
-    const loginPage = new LoginPage(page);
-    await use(loginPage);
+export const test = base.extend<Fixtures>({
+  loginPage: async ({ page }, use) => {
+    await use(new LoginPage(page));
   },
-  homePage: async ({ page }, use) => {
-    const homePage = new HomePage(page);
-    await use(homePage);
+  accountsOverviewPage: async ({ page }, use) => {
+    await use(new AccountsOverviewPage(page));
+  },
+  openAccountPage: async ({ page }, use) => {
+    await use(new OpenAccountPage(page));
+  },
+  transferFundsPage: async ({ page }, use) => {
+    await use(new TransferFundsPage(page));
   },
 });
 

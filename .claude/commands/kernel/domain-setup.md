@@ -141,23 +141,57 @@ Create `.claude/state/[normalized_domain]_workflow.json`:
   "protocol_created": true,
   "commands_created": true,
   "hooks_created": true,
+  "anchored": false,
+  "files_since_validate": 0,
+  "files_limit": 5,
   "timestamp": "..."
 }
 ```
 
+**Counter Fields:**
+- `files_since_validate`: Agent increments after each file write
+- `files_limit`: Configurable limit (default 5) before validate required
+
 **IMPORTANT:** The domain value in session_state.json MUST match the workflow filename prefix.
 
-### Step 7: Report
+### Step 7: Report & Restart Requirement
+
+Hooks are loaded at Claude Code startup. New hooks require restart.
+
+Update `.claude/state/session_state.json`:
+```json
+{
+  "needs_restart": true,
+  "resume_after_restart": "anchor"
+}
+```
+
+Then report:
 
 ```
-REPORT: Setup Complete
+REPORT: Setup Complete - RESTART REQUIRED
 
 Created enforcement for [domain]:
 
-Protocol: docs/protocols/[domain]-protocol.md
-Commands: .claude/commands/[domain]-*.md
-Hooks: .claude/hooks/[domain]-gate-enforcer.py
-Settings: .claude/settings.local.json
+┌──────────┬───────────────────────────────────────────┐
+│  Asset   │                   Path                    │
+├──────────┼───────────────────────────────────────────┤
+│ Protocol │ docs/protocols/[domain]-protocol.md       │
+│ Commands │ .claude/commands/[domain]-*.md            │
+│ Hooks    │ .claude/hooks/[domain]-gate-enforcer.py   │
+│ Settings │ .claude/settings.local.json               │
+│ State    │ .claude/state/[domain]_workflow.json      │
+└──────────┴───────────────────────────────────────────┘
 
-Proceeding with work.
+⚠️  RESTART REQUIRED
+
+Hooks load at startup. Domain hook is NOT active yet.
+
+1. Restart Claude Code now
+2. After restart, say "continue"
+3. I will resume from /kernel/anchor
+
+Waiting for restart...
 ```
+
+**STOP. Do not proceed until user restarts and says "continue".**

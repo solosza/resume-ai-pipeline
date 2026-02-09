@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """
-Playwright Gate Enforcer - Blocks test writes without protocol anchor.
+Playwright Gate Enforcer - Blocks writes without gate validation.
 """
 import json
 import sys
 from pathlib import Path
 
-# Paths that require anchoring before writes
 PROTECTED_PATHS = {
-    'tests/': 'protocol_anchored',
+    'tests/e2e/': 'anchored',
+    'tests/pages/': 'anchored',
+    'tests/fixtures/': 'anchored',
+    'playwright.config': 'anchored',
 }
 
 STATE_FILE = Path('.claude/state/playwright_workflow.json')
@@ -16,7 +18,7 @@ STATE_FILE = Path('.claude/state/playwright_workflow.json')
 def main():
     try:
         data = json.load(sys.stdin)
-    except:
+    except Exception:
         sys.exit(0)
 
     tool_name = data.get('tool_name', '')
@@ -28,25 +30,40 @@ def main():
     for prefix, key in PROTECTED_PATHS.items():
         if prefix in file_path:
             if not STATE_FILE.exists():
-                print(f"""BLOCKED: Protocol not anchored.
-
-FIX:
-1. Invoke /kernel/anchor
-2. This reads protocol and updates state
-3. Then retry your write
-
-Command: /kernel/anchor""", file=sys.stderr)
+                print("BLOCKED: No Playwright state.", file=sys.stderr)
+                print("", file=sys.stderr)
+                print("FIX:", file=sys.stderr)
+                print("1. Invoke /kernel/anchor", file=sys.stderr)
+                print("2. Re-read the Playwright protocol", file=sys.stderr)
+                print("3. Then retry your write", file=sys.stderr)
+                print("", file=sys.stderr)
+                print("Command: /kernel/anchor", file=sys.stderr)
                 sys.exit(2)
 
             state = json.loads(STATE_FILE.read_text())
+
             if not state.get(key):
-                print(f"""BLOCKED: {key} not set.
+                print(f"BLOCKED: {key} not set.", file=sys.stderr)
+                print("", file=sys.stderr)
+                print("FIX:", file=sys.stderr)
+                print("1. Invoke /kernel/anchor", file=sys.stderr)
+                print("2. Re-read the Playwright protocol", file=sys.stderr)
+                print("3. Then retry your write", file=sys.stderr)
+                print("", file=sys.stderr)
+                print("Command: /kernel/anchor", file=sys.stderr)
+                sys.exit(2)
 
-FIX:
-1. Invoke /kernel/anchor
-2. Then retry your write
-
-Command: /kernel/anchor""", file=sys.stderr)
+            # Check for pending lesson (test failure not recorded)
+            if state.get('pending_lesson'):
+                trigger = state.get('pending_lesson_trigger', 'unknown')
+                print(f"BLOCKED: Lesson not recorded (trigger: {trigger})", file=sys.stderr)
+                print("", file=sys.stderr)
+                print("FIX:", file=sys.stderr)
+                print("1. Invoke /kernel/learn", file=sys.stderr)
+                print("2. Record what you learned from the fix", file=sys.stderr)
+                print("3. Then retry your write", file=sys.stderr)
+                print("", file=sys.stderr)
+                print("Command: /kernel/learn", file=sys.stderr)
                 sys.exit(2)
 
     sys.exit(0)

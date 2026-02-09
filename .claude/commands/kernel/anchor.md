@@ -24,11 +24,24 @@ Re-read protocol and re-center. Invoke before any work.
    - How does it fit the protocol?
 
 5. **Update state:**
+
+   Update `.claude/state/[domain]_workflow.json`:
    ```json
    {
      "anchored": true,
      "anchor_timestamp": "...",
-     "files_since_anchor": 0
+     "files_since_anchor": 0,
+     "files_since_validate": 0
+   }
+   ```
+
+   Note: Both counters reset on anchor (re-centering point).
+
+   If resuming from restart, also update `.claude/state/session_state.json`:
+   ```json
+   {
+     "needs_restart": false,
+     "resume_after_restart": null
    }
    ```
 

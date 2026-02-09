@@ -140,6 +140,148 @@ Files modified:
 
 ---
 
+## DEF-004: Agent creates new domain instead of extending existing
+
+**Date:** 2026-02-07
+**Severity:** Medium
+**Status:** RESOLVED
+
+### What Happened
+Agent was asked to add API testing support to existing project. Instead of extending the "playwright" domain, agent tried to create a new "api" domain via `/kernel/domain-setup`.
+
+### Expected Behavior
+Agent should recognize that API testing is part of the same project and extend the existing domain's protocol to cover new capabilities.
+
+### Actual Behavior
+- Agent saw "API testing" ≠ "playwright"
+- Concluded new domain needed
+- Invoked `/kernel/domain-setup` for new domain
+- Would have created separate protocol, hooks, state
+
+### Root Cause
+`/kernel/session-start` has no logic for:
+1. "Same project, different capability" detection
+2. Domain extension vs domain creation decision
+3. Single domain per project rule
+
+### Impact
+- Protocol fragmentation (multiple protocols per project)
+- State fragmentation (multiple workflow files)
+- Lessons not shared across "domains" in same project
+- Unnecessary complexity
+
+### Proposed Fix Options
+1. **Generic domain name** — Rename "playwright" to "qa" or "automation" (covers UI + API)
+2. **Domain extension logic** — session-start checks if new work is related to existing domain
+3. **Single domain per project** — One domain per project, period. Protocol grows to cover capabilities.
+
+### Resolution
+**RESOLVED 2026-02-07** — Implemented Option 3:
+
+Added "Domain persistence rule (CRITICAL)" to `/kernel/session-start`:
+- If domain exists → USE IT (never create new)
+- One project = one domain = one protocol
+- New capabilities extend existing protocol via `/kernel/learn`
+- Only `/kernel/domain-setup` if NO domain exists
+
+Also added `/kernel/fix` command for mandatory impact assessment before any kernel fixes.
+
+Files modified:
+- `.claude/commands/kernel/session-start.md` — Added domain persistence rule
+- `.claude/commands/kernel/fix.md` — New command for impact assessment
+- `CLAUDE.md` — Updated commands list
+
+---
+
+## DEF-005: PostToolUse hook removed during debugging
+
+**Date:** 2026-02-08
+**Severity:** Medium
+**Status:** OPEN
+
+### What Happened
+Test failure enforcement not working. Agent ran tests, tests failed, but no `needs_learn` block fired. Agent voluntarily invoked `/kernel/fix` but wasn't enforced.
+
+### Expected Behavior
+PostToolUse hook detects test failure → sets `needs_learn: true` → blocks next write until `/kernel/learn` invoked.
+
+### Actual Behavior
+- `test-failure-detector.py` deleted from working directory
+- `PostToolUse` section removed from `settings.local.json`
+- No enforcement on test failure
+
+### Root Cause
+During "circular trap" debugging in previous session, these were removed to work around issues. Never restored.
+
+Committed HEAD has correct config:
+- `test-failure-detector.py` exists
+- `PostToolUse` hook configured for Bash matcher
+
+### Impact
+- Test failure enforcement broken
+- Agent can continue after test failures without learning
+- Self-improvement loop not enforced
+
+### Proposed Fix
+Restore from HEAD:
+```bash
+git checkout HEAD -- .claude/hooks/test-failure-detector.py .claude/settings.local.json
+```
+
+Or re-add PostToolUse config to current settings.local.json.
+
+### Resolution
+TBD
+
+---
+
+## DEF-006: Anchor and Validate redundancy
+
+**Date:** 2026-02-08
+**Severity:** Low
+**Status:** OPEN
+
+### What Happened
+5-file enforcement triggers `/kernel/validate`. But anchor already re-centers on protocol. If agent re-anchors and reviews recent work, validate is redundant.
+
+### Expected Behavior
+Single re-centering action that includes reviewing recent files.
+
+### Actual Behavior
+- Anchor = refresh rules (before work)
+- Validate = check work (after work)
+- Two separate commands for related purpose
+
+### Root Cause
+Design assumed anchor and validate serve distinct purposes. But re-anchoring naturally includes noticing drift in recent work.
+
+### Impact
+- Extra command when one would suffice
+- Confusing distinction between anchor and validate
+- 5-file checkpoint could be simpler
+
+### Proposed Fix
+Enhance anchor to include "review recent files":
+```
+ANCHOR (enhanced):
+1. Re-read protocol
+2. Review files since last anchor (if any)
+3. Check: Do recent files match protocol?
+4. If violations: fix → learn
+5. State current task
+6. Reset counter
+```
+
+Then:
+- 5-file limit triggers anchor (not validate)
+- Validate reserved for final gate before complete
+- Simpler loop
+
+### Resolution
+TBD
+
+---
+
 ## Template
 
 ```markdown

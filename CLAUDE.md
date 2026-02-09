@@ -25,31 +25,43 @@ session-start → anchor → WORK → validate → complete
 ```
 WORK:
   1. Write/Edit code
-  2. Every 5 files → /kernel/validate
-  3. Run tests
-  4. If test fails → fix → /kernel/learn
-  5. Repeat until done
-  6. /kernel/complete
+  2. Increment files_since_validate counter in domain state
+  3. Every 5 files → /kernel/validate (resets counter)
+  4. Run tests
+  5. If test fails → fix → /kernel/learn
+  6. Repeat until done
+  7. /kernel/complete
 ```
+
+**Counter Tracking:** Agent MUST update `files_since_validate` in domain state after each file write. Hook blocks at 5 files (configurable via `files_limit`).
 
 ### Learn Triggers (Enforced by Hook)
 
 You MUST invoke `/kernel/learn` after:
-- **Direct state edit** — You edited `.claude/state/*.json` manually
-- **Test failure** — Bash test command returned non-zero exit
+- **Test failure** — Bash test command returned non-zero exit (PostToolUse hook)
 - **Validate violation** — `/kernel/validate` found protocol violation
 
 Hook will BLOCK your next write until you invoke `/kernel/learn`.
+
+### Restart Requirement
+
+After `/kernel/domain-setup` creates new hooks:
+1. Hooks load at Claude Code startup
+2. New hooks are NOT active until restart
+3. Agent sets `needs_restart: true` and stops
+4. User restarts Claude Code, says "continue"
+5. Agent resumes from `/kernel/anchor`
 
 ## Commands
 
 ```
 .claude/commands/kernel/
-├── session-start.md   ← Check state, resume
-├── domain-setup.md    ← Create protocol + hooks (first time)
+├── session-start.md   ← Check state, resume (domain persistence rule)
+├── domain-setup.md    ← Create protocol + hooks (ONLY if no domain exists)
 ├── anchor.md          ← Re-read protocol (before work, after failure)
 ├── validate.md        ← Check work against protocol (every 5 files)
 ├── learn.md           ← Update protocol + hooks (after fix) - CLEARS BLOCK
+├── fix.md             ← Impact assessment before any fix (MANDATORY)
 └── complete.md        ← Final gate (before done)
 ```
 

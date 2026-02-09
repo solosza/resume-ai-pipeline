@@ -12,9 +12,11 @@ Check state and resume if needed. Always invoke first.
    - Look for `.claude/state/[domain]_workflow.json`
    - If exists, summarize current progress
 
-3. **If no state exists:**
-   - This is a fresh session
-   - Proceed to `/kernel/domain-setup` if new domain
+3. **Domain persistence rule (CRITICAL):**
+   - **If domain exists → USE IT** (never create new)
+   - One project = one domain = one protocol
+   - New capabilities (API, UI, etc.) extend existing protocol via `/kernel/learn`
+   - Only invoke `/kernel/domain-setup` if NO domain exists at all
 
 4. **Update session state:**
    ```json

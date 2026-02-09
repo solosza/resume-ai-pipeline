@@ -7,8 +7,9 @@ Checks:
 2. anchored = true
 3. needs_learn = false (must learn after fix)
 
-Also detects:
-- Direct state edits → sets needs_learn = true
+Learn triggers (set by other mechanisms):
+- Test failure (PostToolUse hook on Bash)
+- Validate violation (self-catch via /kernel/validate)
 """
 
 import json
@@ -30,11 +31,6 @@ def read_state(state_file: Path) -> dict:
         return json.loads(state_file.read_text())
     except:
         return {}
-
-
-def write_state(state_file: Path, state: dict):
-    state_file.parent.mkdir(parents=True, exist_ok=True)
-    state_file.write_text(json.dumps(state, indent=2))
 
 
 def smart_block(missing: str, fix_command: str, fix_description: str):
@@ -68,18 +64,9 @@ def main():
     # Read session state
     session_state = read_state(SESSION_STATE)
 
-    # DETECT: Direct state edit (agent manually fixing state)
-    # This triggers needs_learn requirement
-    if '/state/' in file_path and file_path.endswith('.json'):
-        if '/.claude/state/' in file_path or file_path.startswith('.claude/state/'):
-            # Agent is editing state directly - flag for learning
-            session_state['needs_learn'] = True
-            session_state['needs_learn_reason'] = 'direct_state_edit'
-            write_state(SESSION_STATE, session_state)
-            # Allow the edit to proceed, but flag is now set
-            sys.exit(0)
-
-    # Skip kernel infrastructure (commands, hooks, settings)
+    # Skip all .claude/ paths (state, commands, hooks, settings)
+    # State-edit detection removed - can't distinguish kernel commands from manual edits
+    # Learn triggers now: test failure (PostToolUse) + validate (self-catch)
     if '/.claude/' in file_path or file_path.startswith('.claude/'):
         sys.exit(0)
 
@@ -113,6 +100,16 @@ def main():
                 missing="Protocol not anchored",
                 fix_command="/kernel/anchor",
                 fix_description="This reads protocol and updates state"
+            )
+
+        # Gate 4: 5-file limit (configurable via files_limit, default 5)
+        files_limit = domain_state.get('files_limit', 5)
+        files_since = domain_state.get('files_since_validate', 0)
+        if files_since >= files_limit:
+            smart_block(
+                missing=f"{files_limit} files since last validate ({files_since} files)",
+                fix_command="/kernel/validate",
+                fix_description="This checks work against protocol and resets counter"
             )
 
     sys.exit(0)
