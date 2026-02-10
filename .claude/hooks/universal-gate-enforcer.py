@@ -100,12 +100,9 @@ def main():
     # For Write/Edit: get file path
     file_path = tool_input.get('file_path', '').replace('\\', '/')
 
-    # Skip all .claude/ paths (state, commands, hooks, settings)
+    # Skip all .claude/ paths (state, commands, hooks, settings, protocols)
     if tool_name in ('Write', 'Edit'):
         if '/.claude/' in file_path or file_path.startswith('.claude/'):
-            sys.exit(0)
-        # Skip protocol files
-        if '/protocols/' in file_path or file_path.startswith('docs/protocols/'):
             sys.exit(0)
 
     # Read session state

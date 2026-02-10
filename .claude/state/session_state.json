@@ -1,9 +1,0 @@
-{
-  "session_started": true,
-  "timestamp": "2026-02-07T00:00:00Z",
-  "resumed_from": "anchor",
-  "domain": "playwright",
-  "setup_complete": true,
-  "needs_restart": false,
-  "resume_after_restart": null
-}

@@ -19,7 +19,7 @@ Check work against protocol. Invoke every 5 files or when unsure.
 ## Instructions
 
 1. **Read protocol:**
-   - Open `docs/protocols/[domain]-protocol.md`
+   - Open `.claude/protocols/[domain]-protocol.md`
    - Focus on: Anti-Patterns, Quality Gates
 
 2. **Review recent work:**

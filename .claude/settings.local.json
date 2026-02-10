@@ -3,7 +3,7 @@
     "allow": [
       "Bash(cat:*)",
       "Bash(find:*)",
-      "Skill(kernel:complete)"
+      "Skill(kernel:*)"
     ]
   },
   "hooks": {
@@ -14,10 +14,6 @@
           {
             "type": "command",
             "command": "python .claude/hooks/universal-gate-enforcer.py"
-          },
-          {
-            "type": "command",
-            "command": "python .claude/hooks/playwright-gate-enforcer.py"
           }
         ]
       }

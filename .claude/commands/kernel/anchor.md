@@ -7,7 +7,7 @@ Re-center on protocol. Invoke at session start, every 5 actions, or when context
 ### Part A: Refresh Protocol
 
 1. **Read protocol:**
-   - Open `docs/protocols/[domain]-protocol.md`
+   - Open `.claude/protocols/[domain]-protocol.md`
    - Read entire file
 
 2. **Summarize key points:**

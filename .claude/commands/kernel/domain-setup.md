@@ -21,7 +21,7 @@ This ensures consistency between:
 
 ### Step 1: Create Protocol File
 
-Create `docs/protocols/[domain]-protocol.md` with:
+Create `.claude/protocols/[domain]-protocol.md` with:
 
 ```markdown
 # [Domain] Protocol
@@ -232,7 +232,7 @@ Created enforcement for [domain]:
 ┌───────────────┬───────────────────────────────────────────┐
 │     Asset     │                   Path                    │
 ├───────────────┼───────────────────────────────────────────┤
-│ Protocol      │ docs/protocols/[domain]-protocol.md       │
+│ Protocol      │ .claude/protocols/[domain]-protocol.md    │
 │ Commands      │ .claude/commands/[domain]-*.md            │
 │ Hooks         │ .claude/hooks/[domain]-gate-enforcer.py   │
 │ Settings      │ .claude/settings.json (created)           │

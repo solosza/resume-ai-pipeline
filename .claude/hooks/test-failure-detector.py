@@ -29,6 +29,8 @@ TEST_COMMAND_PATTERNS = (
     'dotnet test',
     'mvn test',
     'gradle test',
+    'playwright test',
+    'npx playwright',
 )
 
 

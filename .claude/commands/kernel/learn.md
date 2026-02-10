@@ -11,7 +11,7 @@ Update protocol AND hooks after fixing any failure. Make the same mistake imposs
 
 2. **Update protocol:**
 
-   Open `docs/protocols/[domain]-protocol.md` and add to "Lessons Learned":
+   Open `.claude/protocols/[domain]-protocol.md` and add to "Lessons Learned":
 
    ```markdown
    ### [Date] [Issue Name]
