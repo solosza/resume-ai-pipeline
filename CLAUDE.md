@@ -15,31 +15,33 @@ When user gives any task or says "continue":
 ## The Loop
 
 ```
-session-start → anchor → WORK → validate → complete
-                   ↓           ↓
-         failure? → fix → learn (MANDATORY)
+session-start → anchor → WORK ─────────────────→ complete
+                   ↑         ↓                       ↑
+                   └─ every 5 actions ←──────────────┘
+                             ↓
+                   failure? → fix → learn (MANDATORY)
 ```
 
 ### Work Loop Details
 
 ```
 WORK:
-  1. Write/Edit code
-  2. Increment files_since_validate counter in domain state
-  3. Every 5 files → /kernel/validate (resets counter)
+  1. Write/Edit/Bash (any action)
+  2. Hook AUTO-INCREMENTS counter (you don't need to)
+  3. Every 5 actions → hook blocks → /kernel/anchor
   4. Run tests
   5. If test fails → fix → /kernel/learn
   6. Repeat until done
   7. /kernel/complete
 ```
 
-**Counter Tracking:** Agent MUST update `files_since_validate` in domain state after each file write. Hook blocks at 5 files (configurable via `files_limit`).
+**Auto Counter:** Hook automatically tracks Write, Edit, AND Bash. Blocks at 5 actions (configurable via `actions_limit`). You do NOT need to increment manually.
 
 ### Learn Triggers (Enforced by Hook)
 
 You MUST invoke `/kernel/learn` after:
-- **Test failure** — Bash test command returned non-zero exit (PostToolUse hook)
-- **Validate violation** — `/kernel/validate` found protocol violation
+- **Test failure** — Bash test command returned non-zero exit (PostToolUse hook sets `needs_learn: true`)
+- **Anchor violation** — `/kernel/anchor` Part B found protocol violation
 
 Hook will BLOCK your next write until you invoke `/kernel/learn`.
 
@@ -58,8 +60,8 @@ After `/kernel/domain-setup` creates new hooks:
 .claude/commands/kernel/
 ├── session-start.md   ← Check state, resume (domain persistence rule)
 ├── domain-setup.md    ← Create protocol + hooks (ONLY if no domain exists)
-├── anchor.md          ← Re-read protocol (before work, after failure)
-├── validate.md        ← Check work against protocol (every 5 files)
+├── anchor.md          ← Re-read protocol + check work (Part A + Part B)
+├── validate.md        ← DEPRECATED (merged into anchor Part B)
 ├── learn.md           ← Update protocol + hooks (after fix) - CLEARS BLOCK
 ├── fix.md             ← Impact assessment before any fix (MANDATORY)
 └── complete.md        ← Final gate (before done)

@@ -1,5 +1,19 @@
 # /kernel/validate
 
+## ⚠️ DEPRECATED
+
+**This command has been merged into `/kernel/anchor` (Part B).**
+
+- 5-action re-centering → use `/kernel/anchor`
+- Quality check before done → anchor Part B covers this
+- Final gate → use `/kernel/complete`
+
+**Do NOT use this command. It will be removed in a future version.**
+
+---
+
+## Original Documentation (for reference only)
+
 Check work against protocol. Invoke every 5 files or when unsure.
 
 ## Instructions

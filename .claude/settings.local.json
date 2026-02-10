@@ -1,23 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Skill(kernel:session-start)",
-      "Skill(kernel:anchor)",
-      "Skill(kernel:validate)",
-      "Bash(npm install)",
-      "Bash(npx playwright install chromium)",
-      "Bash(npx tsc:*)",
-      "Bash(npm install:*)",
-      "Skill(kernel:learn)",
-      "Bash(npm test:*)",
-      "Skill(kernel:fix)",
-      "WebFetch(domain:reqres.in)"
+      "Bash(cat:*)",
+      "Bash(find:*)",
+      "Skill(kernel:complete)"
     ]
   },
   "hooks": {
     "PreToolUse": [
       {
-        "matcher": "Edit|Write",
+        "matcher": "Edit|Write|Bash",
         "hooks": [
           {
             "type": "command",
@@ -26,6 +18,17 @@
           {
             "type": "command",
             "command": "python .claude/hooks/playwright-gate-enforcer.py"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/test-failure-detector.py"
           }
         ]
       }

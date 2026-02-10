@@ -197,7 +197,7 @@ Files modified:
 
 **Date:** 2026-02-08
 **Severity:** Medium
-**Status:** OPEN
+**Status:** RESOLVED
 
 ### What Happened
 Test failure enforcement not working. Agent ran tests, tests failed, but no `needs_learn` block fired. Agent voluntarily invoked `/kernel/fix` but wasn't enforced.
@@ -231,7 +231,11 @@ git checkout HEAD -- .claude/hooks/test-failure-detector.py .claude/settings.loc
 Or re-add PostToolUse config to current settings.local.json.
 
 ### Resolution
-TBD
+**RESOLVED 2026-02-10** — Recreated test-failure-detector.py and added PostToolUse hook to settings.local.json.
+
+Files modified:
+- `.claude/hooks/test-failure-detector.py` — Created with test command detection
+- `.claude/settings.local.json` — Added PostToolUse section for Bash matcher
 
 ---
 
@@ -239,7 +243,7 @@ TBD
 
 **Date:** 2026-02-08
 **Severity:** Low
-**Status:** OPEN
+**Status:** RESOLVED
 
 ### What Happened
 5-file enforcement triggers `/kernel/validate`. But anchor already re-centers on protocol. If agent re-anchors and reviews recent work, validate is redundant.
@@ -278,7 +282,109 @@ Then:
 - Simpler loop
 
 ### Resolution
-TBD
+**RESOLVED 2026-02-10** — Implemented proposed fix with full deprecation:
+
+1. Enhanced anchor.md with Part A (protocol refresh) + Part B (check recent work) + Part C (reset)
+2. Deprecated validate.md entirely (not even "before complete" - anchor + complete is enough)
+3. Updated domain-setup.md to remove validate from domain commands
+4. Updated CLAUDE.md commands list and learn triggers
+
+Files modified:
+- `.claude/commands/kernel/anchor.md` — Added Part B (work quality check)
+- `.claude/commands/kernel/validate.md` — Marked DEPRECATED
+- `.claude/commands/kernel/domain-setup.md` — Removed validate from Step 2
+- `CLAUDE.md` — Updated commands list and learn triggers
+
+---
+
+## DEF-010: Domain-setup overwrites universal gate enforcer
+
+**Date:** 2026-02-10
+**Severity:** High
+**Status:** RESOLVED
+
+### What Happened
+During `/kernel/domain-setup`, agent created new settings.local.json that only included the domain-specific hook (playwright-gate-enforcer.py), removing the pre-installed universal-gate-enforcer.py from the hook chain.
+
+### Expected Behavior
+Domain-setup should ADD the domain hook to settings, not REPLACE all hooks. Universal gate enforcer must always remain in the chain.
+
+### Actual Behavior
+- Before: settings had universal-gate-enforcer.py
+- After domain-setup: settings only has playwright-gate-enforcer.py
+- Universal gate enforcer still exists but is not triggered
+
+### Root Cause
+`/kernel/domain-setup` command writes entire settings.local.json instead of merging with existing hooks.
+
+### Impact
+- Session-start enforcement lost
+- Anchor enforcement lost (from universal hook)
+- Learn enforcement lost
+- Only domain-specific rules enforced
+- Core kernel protections bypassed
+
+### Proposed Fix
+1. domain-setup should READ existing settings first
+2. APPEND domain hook to existing hooks array
+3. Never overwrite universal-gate-enforcer.py
+
+### Resolution
+**FIX APPLIED 2026-02-10** — Updated `/kernel/domain-setup` Step 4:
+- Added "PRESERVE UNIVERSAL HOOK" warning
+- Explicit before/after JSON showing hook array append
+- Explanation of why universal hook is critical
+
+Also updated Step 6 to use unified counter fields (`actions_since_anchor`, `actions_limit`).
+
+**VERIFIED 2026-02-10** — Fresh kernel test confirmed universal hook preserved and blocking works.
+
+---
+
+## DEF-011: Hook syntax error - backslash escaping quote
+
+**Date:** 2026-02-10
+**Severity:** Critical
+**Status:** RESOLVED
+
+### What Happened
+Universal gate enforcer hook had a Python syntax error on line 101. The backslash in `.replace('\', '/')` was escaping the quote instead of being a literal backslash character. Python couldn't parse the file, so the hook never ran.
+
+### Expected Behavior
+Hook should run on every Write/Edit/Bash and increment action counter.
+
+### Actual Behavior
+- Hook failed to parse (SyntaxError: unterminated string literal)
+- `actions_since_anchor` stayed at 0 after 7+ writes
+- No re-centering block fired
+
+### Root Cause
+Line 101 had:
+```python
+file_path = tool_input.get('file_path', '').replace('\', '/')
+```
+
+Should be:
+```python
+file_path = tool_input.get('file_path', '').replace('\\', '/')
+```
+
+### Impact
+- All hook enforcement completely broken
+- Counter never incremented
+- Re-centering never triggered
+- Session-start/anchor/learn gates never checked
+
+### Resolution
+**FIX APPLIED 2026-02-10** — Changed `'\', '/'` to `'\\', '/'` on line 101.
+
+Verified with `python -m py_compile` - syntax now OK.
+
+**VERIFIED 2026-02-10** — Fresh kernel test confirmed:
+- Hook runs successfully
+- Counter increments (0→6)
+- Block fires at action 6
+- Agent re-anchors and continues
 
 ---
 

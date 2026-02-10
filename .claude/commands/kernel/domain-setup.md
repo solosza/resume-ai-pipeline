@@ -55,10 +55,11 @@ Create in `.claude/commands/`:
 | File | Purpose |
 |------|---------|
 | `[domain]-anchor.md` | Re-read protocol (calls /kernel/anchor) |
-| `[domain]-validate.md` | Check work (calls /kernel/validate) |
 | `[domain]-learn.md` | Record lesson (calls /kernel/learn) |
 
 Each domain command should reference the kernel command.
+
+**Note:** `/kernel/validate` is deprecated. Anchor Part B handles quality checks.
 
 ### Step 3: Create Hooks
 
@@ -107,18 +108,73 @@ if __name__ == '__main__':
 
 ### Step 4: Wire Up Settings
 
-Update `.claude/settings.local.json`:
+#### 4a: Create `.claude/settings.json`
+
+Create this file with:
 
 ```json
 {
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "defaultMode": "default"
+  }
+}
+```
+
+#### 4b: Update `.claude/settings.local.json` (PRESERVE KERNEL HOOKS)
+
+**CRITICAL:** Do NOT replace the entire settings file. You MUST preserve ALL kernel hooks:
+- `universal-gate-enforcer.py` (PreToolUse)
+- `test-failure-detector.py` (PostToolUse)
+
+1. **Read** existing `.claude/settings.local.json`
+2. **Append** domain hook to existing PreToolUse hooks array
+3. **Never** remove kernel hooks
+
+**Before (kernel hooks only):**
+```json
+{
+  "permissions": {
+    "allow": []
+  },
   "hooks": {
     "PreToolUse": [{
-      "matcher": "Edit|Write",
-      "hooks": [{"type": "command", "command": "python .claude/hooks/[domain]-gate-enforcer.py"}]
+      "matcher": "Edit|Write|Bash",
+      "hooks": [{"type": "command", "command": "python .claude/hooks/universal-gate-enforcer.py"}]
+    }],
+    "PostToolUse": [{
+      "matcher": "Bash",
+      "hooks": [{"type": "command", "command": "python .claude/hooks/test-failure-detector.py"}]
     }]
   }
 }
 ```
+
+**After (kernel + domain hooks):**
+```json
+{
+  "permissions": {
+    "allow": []
+  },
+  "hooks": {
+    "PreToolUse": [{
+      "matcher": "Edit|Write|Bash",
+      "hooks": [
+        {"type": "command", "command": "python .claude/hooks/universal-gate-enforcer.py"},
+        {"type": "command", "command": "python .claude/hooks/[domain]-gate-enforcer.py"}
+      ]
+    }],
+    "PostToolUse": [{
+      "matcher": "Bash",
+      "hooks": [{"type": "command", "command": "python .claude/hooks/test-failure-detector.py"}]
+    }]
+  }
+}
+```
+
+**WHY kernel hooks must stay:**
+- `universal-gate-enforcer.py` - Enforces session-start, anchor, learn, action limits
+- `test-failure-detector.py` - Detects test failures, sets needs_learn flag
 
 ### Step 5: Create State Directory
 
@@ -142,15 +198,15 @@ Create `.claude/state/[normalized_domain]_workflow.json`:
   "commands_created": true,
   "hooks_created": true,
   "anchored": false,
-  "files_since_validate": 0,
-  "files_limit": 5,
+  "actions_since_anchor": 0,
+  "actions_limit": 5,
   "timestamp": "..."
 }
 ```
 
 **Counter Fields:**
-- `files_since_validate`: Agent increments after each file write
-- `files_limit`: Configurable limit (default 5) before validate required
+- `actions_since_anchor`: Hook auto-increments on Write/Edit/Bash
+- `actions_limit`: Configurable limit (default 5) before anchor required
 
 **IMPORTANT:** The domain value in session_state.json MUST match the workflow filename prefix.
 
@@ -173,15 +229,16 @@ REPORT: Setup Complete - RESTART REQUIRED
 
 Created enforcement for [domain]:
 
-┌──────────┬───────────────────────────────────────────┐
-│  Asset   │                   Path                    │
-├──────────┼───────────────────────────────────────────┤
-│ Protocol │ docs/protocols/[domain]-protocol.md       │
-│ Commands │ .claude/commands/[domain]-*.md            │
-│ Hooks    │ .claude/hooks/[domain]-gate-enforcer.py   │
-│ Settings │ .claude/settings.local.json               │
-│ State    │ .claude/state/[domain]_workflow.json      │
-└──────────┴───────────────────────────────────────────┘
+┌───────────────┬───────────────────────────────────────────┐
+│     Asset     │                   Path                    │
+├───────────────┼───────────────────────────────────────────┤
+│ Protocol      │ docs/protocols/[domain]-protocol.md       │
+│ Commands      │ .claude/commands/[domain]-*.md            │
+│ Hooks         │ .claude/hooks/[domain]-gate-enforcer.py   │
+│ Settings      │ .claude/settings.json (created)           │
+│ Settings      │ .claude/settings.local.json (updated)     │
+│ State         │ .claude/state/[domain]_workflow.json      │
+└───────────────┴───────────────────────────────────────────┘
 
 ⚠️  RESTART REQUIRED
 

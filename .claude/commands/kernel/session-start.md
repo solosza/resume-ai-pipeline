@@ -27,7 +27,20 @@ Check state and resume if needed. Always invoke first.
    }
    ```
 
-5. **Report:**
+5. **Force anchor on fresh start:**
+
+   If NOT resuming from restart (i.e., `needs_restart` was false or missing):
+   - Set `anchored: false` in domain_workflow.json (if domain exists)
+   - This ensures hook blocks until anchor is invoked
+
+   ```json
+   // In [domain]_workflow.json:
+   {
+     "anchored": false
+   }
+   ```
+
+6. **Report:**
    ```
    Session started.
    - State: [fresh | resumed from X]
