@@ -12,12 +12,9 @@
 
 2. Open your project in Claude Code (or restart if already open)
 
-3. Give it a task:
-   ```
-   "Build test automation for this web application"
-   ```
+3. Give it a task. The kernel automatically runs `/kernel/session-start`, detects no domain exists, and kicks off `/kernel/domain-setup` — scanning your repo, building its own protocol, and creating enforcement hooks.
 
-4. The kernel takes over — the agent builds its own governance, follows it, and improves it when things go wrong.
+4. Restart Claude Code (new hooks need a reload), say "continue", and the agent picks up where it left off.
 
 ## What is Isagawa Kernel?
 
