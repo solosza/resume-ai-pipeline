@@ -20,7 +20,7 @@
 
 ## What is Isagawa Kernel?
 
-An open-source governance system for AI agents doing spec-driven development.
+An open-source governance system for Self-Driven Development (SDD) — where the agent builds, enforces, and improves its own specs.
 
 Current SDD frameworks give agents monolithic specs and hope they follow them. The Isagawa Kernel takes a different approach: the agent builds its own enforcement, and hooks mechanically ensure it can't skip the process.
 
