@@ -2,6 +2,10 @@
 
 **Self-building, self-improving, safety-first governance for AI agents.**
 
+AI agents drift. They ignore instructions, skip steps, make the same mistakes twice, and produce inconsistent output — especially on long or complex tasks. The more autonomy you give them, the worse it gets.
+
+The Isagawa Kernel solves this by giving the agent a governance loop it can't bypass. The agent builds its own protocols, enforces them through mechanical hooks, and improves them every time it fails. Structure that the agent actually follows — because it has no choice.
+
 ## Quick Start
 
 1. Copy the kernel into your project:
