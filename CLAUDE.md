@@ -17,7 +17,7 @@ When user gives any task or says "continue":
 ```
 session-start → anchor → WORK ─────────────────→ complete
                    ↑         ↓                       ↑
-                   └─ every 5 actions ←──────────────┘
+                   └─ every 10 actions ←─────────────┘
                              ↓
                    failure? → fix → learn (MANDATORY)
 ```
@@ -28,14 +28,14 @@ session-start → anchor → WORK ───────────────�
 WORK:
   1. Write/Edit/Bash (any action)
   2. Hook AUTO-INCREMENTS counter (you don't need to)
-  3. Every 5 actions → hook blocks → /kernel/anchor
+  3. Every 10 actions → hook blocks → /kernel/anchor
   4. Run tests
   5. If test fails → fix → /kernel/learn
   6. Repeat until done
   7. /kernel/complete
 ```
 
-**Auto Counter:** Hook automatically tracks Write, Edit, AND Bash. Blocks at 5 actions (configurable via `actions_limit`). You do NOT need to increment manually.
+**Auto Counter:** Hook automatically tracks Write, Edit, AND Bash. Blocks at 10 actions (configurable via `actions_limit`). You do NOT need to increment manually.
 
 ### Learn Triggers (Enforced by Hook)
 
@@ -61,10 +61,10 @@ After `/kernel/domain-setup` creates new hooks:
 ├── session-start.md   ← Check state, resume (domain persistence rule)
 ├── domain-setup.md    ← Create protocol + hooks (ONLY if no domain exists)
 ├── anchor.md          ← Re-read protocol + check work (Part A + Part B)
-├── validate.md        ← DEPRECATED (merged into anchor Part B)
 ├── learn.md           ← Update protocol + hooks (after fix) - CLEARS BLOCK
 ├── fix.md             ← Impact assessment before any fix (MANDATORY)
-└── complete.md        ← Final gate (before done)
+├── complete.md        ← Final gate (before done)
+└── reset.md           ← Dev tool: fresh state for testing
 ```
 
 ## Smart Gates
@@ -81,6 +81,33 @@ FIX:
 
 Command: /kernel/learn
 ```
+
+## Skills
+
+### Domain Setup Skill
+
+Location: `.claude/skills/kernel-domain-setup/`
+
+The `/kernel/domain-setup` command uses a modular skill-based approach:
+
+| Step | Action | Reference |
+|------|--------|-----------|
+| 1 | Verify prerequisites | `references/step-01-prerequisites.md` |
+| 2 | Discover repo structure | `references/step-02-discover.md` |
+| 3 | Read reference code | `references/step-03-read.md` |
+| 4 | Extract patterns | `references/step-04-extract.md` |
+| 5 | Understand enforcement | `references/step-05-enforcement.md` |
+| 6 | Read workflow | `references/step-06-workflow.md` |
+| 7 | Build protocol | `references/step-07-protocol.md` |
+| 8 | Wrap commands | `references/step-08-commands.md` |
+| 9 | Update state | `references/step-09-state.md` |
+| 10 | Report & restart | `references/step-10-report.md` |
+
+**Key Principles:**
+- Protocol = Index (point to files, don't duplicate)
+- 200-line threshold (extract to sub-files when sections grow)
+- Two-tier enforcement: Hooks (hard) + Protocol (soft)
+- Resume support via `resume_step` in session_state.json
 
 ## Principles
 
