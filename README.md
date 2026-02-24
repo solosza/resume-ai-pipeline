@@ -10,11 +10,13 @@
    cp CLAUDE.md your-project/CLAUDE.md
    ```
 
-2. Open your project in Claude Code (or restart if already open)
+2. **(Optional)** Add a domain pack to teach the agent your domain. Drop the skill files into `.claude/skills/`. See the [QA Platform Domain Pack](https://github.com/isagawa-qa/platform) for a working example.
 
-3. Give it a task. The kernel automatically runs `/kernel/session-start`, detects no domain exists, and kicks off `/kernel/domain-setup` — scanning your repo, building its own protocol, and creating enforcement hooks.
+3. Open your project in Claude Code (or restart if already open)
 
-4. Restart Claude Code (new hooks need a reload), say "continue", and the agent picks up where it left off.
+4. Give it a task. The kernel automatically runs `/kernel/session-start`, detects no domain exists, and kicks off `/kernel/domain-setup` — scanning your repo and any domain pack, building its own protocol, and creating enforcement hooks.
+
+5. Restart Claude Code (new hooks need a reload), say "continue", and the agent picks up where it left off.
 
 ## What is Isagawa Kernel?
 
