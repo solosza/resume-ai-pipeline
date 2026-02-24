@@ -22,7 +22,7 @@
 
 An open-source governance system for Self-Driven Development (SDD) — where the agent builds, enforces, and improves its own specs.
 
-Current SDD frameworks give agents monolithic specs and hope they follow them. The Isagawa Kernel takes a different approach: the agent builds its own enforcement, and hooks mechanically ensure it can't skip the process.
+Current spec-driven development frameworks give agents monolithic specs and hope they follow them. The Isagawa Kernel takes a different approach: the agent builds its own enforcement, and hooks mechanically ensure it can't skip the process.
 
 Drop it into any repo. No CLI to install. No IDE to switch to. No framework to adopt. Just markdown files and a Python hook.
 
