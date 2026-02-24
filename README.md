@@ -138,10 +138,6 @@ Command: /kernel/anchor
 
 No guessing. No confusion. Block + fix instruction.
 
-## Design
-
-For the full architecture and design decisions, see [KERNEL_DESIGN_v5.md](docs/design/KERNEL_DESIGN_v5.md).
-
 ## License
 
 [MIT](LICENSE)
