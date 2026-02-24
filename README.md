@@ -18,7 +18,7 @@
 
 5. Restart Claude Code (new hooks need a reload), say "continue", and the agent picks up where it left off.
 
-## What is Isagawa Kernel?
+## What is the Isagawa Kernel?
 
 An open-source governance system for Self-Driven Development, where the agent builds, enforces, and improves its own specs.
 
