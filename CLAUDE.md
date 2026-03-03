@@ -31,6 +31,19 @@ session-start → anchor → WORK ───────────────�
                    failure? → fix → learn (MANDATORY)
 ```
 
+### Cycling Mode
+
+When cycling through specs (autonomous task execution):
+
+```
+complete → update cycling state → pick next spec → WORK → complete
+   ↑                                                          │
+   └──────────────────────────────────────────────────────────┘
+   (until all specs done or skipped)
+```
+
+See: `.claude/skills/autonomous-cycling/` for cycling behavior spec.
+
 ### Work Loop Details
 
 ```
@@ -72,7 +85,7 @@ After `/kernel/domain-setup` creates new hooks:
 ├── anchor.md          ← Re-read protocol + check work (Part A + Part B)
 ├── learn.md           ← Update protocol + hooks (after fix) - CLEARS BLOCK
 ├── fix.md             ← Impact assessment before any fix (MANDATORY)
-├── complete.md        ← Final gate (before done)
+├── complete.md        ← Final gate (before done) + cycling continuation
 └── reset.md           ← Dev tool: fresh state for testing
 ```
 
@@ -107,10 +120,22 @@ The `/kernel/domain-setup` command uses a modular skill-based approach:
 | 4 | Extract patterns | `references/step-04-extract.md` |
 | 5 | Understand enforcement | `references/step-05-enforcement.md` |
 | 6 | Read workflow | `references/step-06-workflow.md` |
+| 6b | Build roadmap | `references/step-06b-roadmap.md` |
 | 7 | Build protocol | `references/step-07-protocol.md` |
 | 8 | Wrap commands | `references/step-08-commands.md` |
 | 9 | Update state | `references/step-09-state.md` |
 | 10 | Report & restart | `references/step-10-report.md` |
+
+### Autonomous Cycling Skill
+
+Location: `.claude/skills/autonomous-cycling/`
+
+Domain spec that teaches the agent to loop through numbered task specs autonomously. Drop this in as a domain spec or reference it from your protocol.
+
+| File | Purpose |
+|------|---------|
+| `SKILL.md` | Identity, philosophy, file index |
+| `workflow.md` | Loop behavior, state tracking, verification, error handling |
 
 **Key Principles:**
 - Protocol = Index (point to files, don't duplicate)
