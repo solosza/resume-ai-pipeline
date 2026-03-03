@@ -1,4 +1,4 @@
-# Step 6b: Build Roadmap
+# Step 7: Build Roadmap
 
 After reading the workflow (Step 6), decompose the user's domain spec into a numbered task roadmap in `specs/`.
 
@@ -55,4 +55,4 @@ specs/
 
 ## State Update
 
-After building the roadmap, update workflow state with roadmap fields (see step-09).
+After building the roadmap, update workflow state with roadmap fields (see step-10).
