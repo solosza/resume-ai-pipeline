@@ -61,7 +61,7 @@ Overwrite `.claude/settings.local.json` with:
 ### Step 3: Verify
 
 ```bash
-# Should show 9 kernel commands
+# Should show 8 kernel commands
 ls .claude/commands/kernel/ | wc -l
 
 # Should show only universal hook
@@ -87,7 +87,7 @@ Removed:
 - settings.local.json: Reset to universal hook only
 
 Verified:
-- Kernel commands: OK (9 files)
+- Kernel commands: OK (8 files)
 - Universal hook: OK
 - Design docs: OK
 - CLAUDE.md: OK

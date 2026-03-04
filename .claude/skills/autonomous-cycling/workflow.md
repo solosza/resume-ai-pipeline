@@ -15,8 +15,7 @@ Autonomous loop through numbered tasks.
 6. **Complete** — invoke `/kernel/complete` via the Skill tool (NOT by printing the format).
    The complete command is a gate — it checks state, updates cycling, commits.
    Printing "COMPLETE" without invoking the skill is a protocol violation.
-7. **Commit** — git add changed files, commit with task name, push to branch
-8. **Loop** — go to step 1
+7. **Loop** — go to step 1 (`/kernel/complete` handles the commit)
 
 ## Verification
 

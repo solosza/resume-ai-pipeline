@@ -22,7 +22,7 @@ Start autonomous cycling through tasks. User-invoked entry point.
    ```json
    {
      "cycling": true,
-     "total_tasks": "N",
+     "total_tasks": N,
      "current_task": "[lowest-numbered remaining]",
      "attempts_on_current": 0
    }

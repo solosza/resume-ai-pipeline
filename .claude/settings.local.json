@@ -43,7 +43,6 @@
       "Bash(npm --version)",
       "Bash(npx tsc *)",
       "Bash(npx tsc)",
-      "Bash(npx playwright *)",
       "Bash(pytest *)",
       "Bash(pytest)",
       "Bash(python -m pytest *)",
@@ -68,7 +67,6 @@
     ]
   },
   "enableAllProjectMcpServers": true,
-  "enabledMcpjsonServers": ["playwright"],
   "hooks": {
     "PreToolUse": [
       {

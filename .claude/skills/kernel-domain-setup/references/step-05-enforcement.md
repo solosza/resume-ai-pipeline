@@ -13,7 +13,7 @@ The universal hook (`.claude/hooks/universal-gate-enforcer.py`) enforces:
 | Anchor | `anchored = true` | `/kernel/anchor` |
 | Actions | `actions_since_anchor <= limit` | `/kernel/anchor` |
 
-The hook code is universal but **must be registered** in `.claude/settings.local.json` to fire. See step-09 for the registration template. An unregistered hook is dead code.
+The hook code is universal but **must be registered** in `.claude/settings.local.json` to fire. See step-10 for the registration template. An unregistered hook is dead code.
 
 ## Layer 2: Agent Self-Enforcement (via protocol)
 
