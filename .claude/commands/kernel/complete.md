@@ -40,12 +40,26 @@ Final gate before marking work done.
    Read `[domain]_workflow.json`.
 
    If `cycling: true`:
-   - Add current_spec to `completed_specs`
+   - Add current_task to `completed_tasks`
    - Reset `attempts_on_current` to 0
-   - Update `context` in `session_state.json` with completion summary
-   - Scan `specs/` for next incomplete spec (lowest-numbered not in completed_specs or skipped_specs)
-   - If found: announce it, set `current_spec`, continue working
-   - If none remain: announce "All N specs complete (M skipped)", set `cycling: false`
+   - Scan `tasks/` for next incomplete task (lowest-numbered not in completed_tasks or skipped_tasks)
+
+   **Dual state update (BOTH files MUST be updated):**
+
+   Update `[domain]_workflow.json`:
+   - `completed_tasks`: add current task
+   - `current_task`: next task (or null if done)
+   - `attempts_on_current`: 0
+
+   Update `session_state.json` context:
+   - Completion summary for the task just finished
+   - Next task name and what it requires
+   - Current cycling progress (e.g., "4/7 tasks complete")
+
+   Both files MUST be updated. Workflow tracks cycling state. Session tracks context for compaction recovery.
+
+   - If next task found: announce it, continue working
+   - If none remain: announce "All N tasks complete (M skipped)", set `cycling: false`
 
 ## When to Invoke
 

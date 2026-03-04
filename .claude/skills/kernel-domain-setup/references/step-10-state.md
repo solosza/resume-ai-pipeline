@@ -31,6 +31,54 @@ Create `.claude/state/[domain]_workflow.json`:
 }
 ```
 
+## Hook Registration
+
+Create/update `.claude/settings.local.json` to register hooks:
+
+```json
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/universal-gate-enforcer.py"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/test-failure-detector.py"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+**MERGE rule:** If `settings.local.json` already exists, merge the `hooks` key into it. Do NOT overwrite existing keys like `permissions`.
+
+## Commit Domain-Setup Output
+
+Before setting `needs_restart`, commit all domain-setup artifacts:
+
+```bash
+git add .claude/protocols/ .claude/lessons/ .claude/state/ tasks/
+git add .claude/commands/ .claude/hooks/ .claude/skills/ .claude/settings.local.json
+# Add any framework files, commands, or configs created during setup
+git commit -m "feat: domain-setup output for [domain]"
+```
+
+This ensures the project starts clean on restart — no untracked domain-setup files.
+
 ## State Fields
 
 | Field | Purpose |
