@@ -31,6 +31,21 @@ session-start → anchor → WORK ───────────────�
                    failure? → fix → learn (MANDATORY)
 ```
 
+### Cycling Mode
+
+When cycling through tasks (autonomous task execution):
+
+```
+/kernel/autonomous-cycle → pick task → WORK → /kernel/complete → next task
+                                                    ↑                  │
+                                                    └──────────────────┘
+                                                    (until all tasks done or skipped)
+```
+
+**Entry point:** `/kernel/autonomous-cycle` (user-invoked, never automatic).
+
+See: `.claude/skills/autonomous-cycling/` for cycling behavior spec.
+
 ### Work Loop Details
 
 ```
@@ -54,6 +69,13 @@ You MUST invoke `/kernel/learn` after:
 
 Hook will BLOCK your next write until you invoke `/kernel/learn`.
 
+### Learn Self-Enforcement (Protocol Rule)
+
+The hook is a SAFETY NET, not the only trigger. If a test fails (non-zero exit code),
+you MUST invoke `/kernel/learn` after fixing — even if `needs_learn` is not set in state.
+
+Self-enforce: test failed → fix → /kernel/learn. Always. Hook or no hook.
+
 ### Restart Requirement
 
 After `/kernel/domain-setup` creates new hooks:
@@ -67,13 +89,14 @@ After `/kernel/domain-setup` creates new hooks:
 
 ```
 .claude/commands/kernel/
-├── session-start.md   ← Check state, resume (domain persistence rule)
-├── domain-setup.md    ← Create protocol + hooks (ONLY if no domain exists)
-├── anchor.md          ← Re-read protocol + check work (Part A + Part B)
-├── learn.md           ← Update protocol + hooks (after fix) - CLEARS BLOCK
-├── fix.md             ← Impact assessment before any fix (MANDATORY)
-├── complete.md        ← Final gate (before done)
-└── reset.md           ← Dev tool: fresh state for testing
+├── session-start.md       ← Check state, resume (domain persistence rule)
+├── domain-setup.md        ← Create protocol + hooks (ONLY if no domain exists)
+├── anchor.md              ← Re-read protocol + check work (Part A + Part B)
+├── learn.md               ← Update protocol + hooks (after fix) - CLEARS BLOCK
+├── fix.md                 ← Impact assessment before any fix (MANDATORY)
+├── complete.md            ← Final gate (before done) + cycling continuation
+├── autonomous-cycle.md    ← Start cycling through tasks (user-invoked)
+└── reset.md               ← Dev tool: fresh state for testing
 ```
 
 ## Smart Gates
@@ -107,10 +130,22 @@ The `/kernel/domain-setup` command uses a modular skill-based approach:
 | 4 | Extract patterns | `references/step-04-extract.md` |
 | 5 | Understand enforcement | `references/step-05-enforcement.md` |
 | 6 | Read workflow | `references/step-06-workflow.md` |
-| 7 | Build protocol | `references/step-07-protocol.md` |
-| 8 | Wrap commands | `references/step-08-commands.md` |
-| 9 | Update state | `references/step-09-state.md` |
-| 10 | Report & restart | `references/step-10-report.md` |
+| 7 | Build roadmap | `references/step-07-roadmap.md` |
+| 8 | Build protocol | `references/step-08-protocol.md` |
+| 9 | Wrap commands | `references/step-09-commands.md` |
+| 10 | Update state | `references/step-10-state.md` |
+| 11 | Report & restart | `references/step-11-report.md` |
+
+### Autonomous Cycling Skill
+
+Location: `.claude/skills/autonomous-cycling/`
+
+Domain spec that teaches the agent to loop through numbered tasks autonomously. Drop this in as a domain spec or reference it from your protocol.
+
+| File | Purpose |
+|------|---------|
+| `SKILL.md` | Identity, philosophy, file index |
+| `workflow.md` | Loop behavior, state tracking, verification, error handling |
 
 **Key Principles:**
 - Protocol = Index (point to files, don't duplicate)
