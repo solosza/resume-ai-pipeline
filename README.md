@@ -90,22 +90,22 @@ Session 50+:  One-shot quality. The system has seen every failure mode.
 You have a web app. You want governed test automation. Here's what happens:
 
 ```bash
-# 1. Clone a release repo (kernel + Selenium spec bundled)
-git clone https://github.com/isagawa-qa/platform-selenium.git my-qa-project
+# 1. Clone a release repo (kernel + Playwright spec bundled)
+git clone https://github.com/isagawa-qa/platform-playwright.git my-qa-project
 cd my-qa-project
 
 # 2. Open in Claude Code
 claude
 ```
 
-**You say:** "Build Selenium tests for our login flow"
+**You say:** "Build Playwright tests for our login flow"
 
 **What the agent does (governed, not guessing):**
 
 ```
 Session Start  → Restores state from last session (or fresh start)
-Domain Setup   → Scans your repo + reads the Selenium QA spec
-                → Discovers: Python project, pytest, Page Object pattern expected
+Domain Setup   → Scans your repo + reads the Playwright QA spec
+                → Discovers: TypeScript project, fixtures, locator patterns
                 → Builds protocol: naming conventions, test structure, selectors
                 → Creates enforcement: quality gates for every test file
                 → Builds task queue: 12 tasks to cover the login flow
@@ -129,6 +129,18 @@ Complete → All 12 tasks done. Test suite follows spec. Governed end to end.
 **What you did:** Cloned a repo, opened it, said one sentence.
 
 **What you got:** A full test suite built to your domain's patterns, with every failure captured as a lesson that prevents the next one. Across sessions. Across tasks. Mechanically.
+
+### Try It Yourself
+
+The fastest way to see SDD in action:
+
+```bash
+git clone https://github.com/isagawa-qa/platform-playwright.git
+cd platform-playwright
+claude
+```
+
+Tell the agent to build tests for any web app. Watch it set up its own protocol, create enforcement, and start cycling through tasks — governed the entire time. That's the kernel + a domain spec working together.
 
 ---
 
