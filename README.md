@@ -136,7 +136,7 @@ Failure example:
 
 **What you did:** Cloned a repo, opened it, said one sentence.
 
-**What you got:** A full test suite built to the spec's 5-layer architecture — page objects, tasks, roles, and tests — with every failure captured as a permanent lesson. Across sessions. Across tasks. Mechanically.
+**What you got:** A governed test script built to the spec's 5-layer architecture — page objects, tasks, roles, and test — with every failure captured as a permanent lesson.
 
 ### Try It Yourself
 
