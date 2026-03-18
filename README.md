@@ -94,11 +94,8 @@ You have a web app. You want governed test automation. Here's what happens:
 git clone https://github.com/isagawa-qa/platform-playwright.git my-qa-project
 ```
 
-```
-# 2. Open my-qa-project in VS Code → open the Claude Code panel
-```
-
-**You say:** "Build Playwright tests for our login flow"
+2. Open `my-qa-project` in VS Code → open the Claude Code panel
+3. Invoke `/qa-workflow` — the spec's slash command that starts governed test codegen
 
 **What the agent does (governed, not guessing):**
 
