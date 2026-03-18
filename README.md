@@ -20,7 +20,7 @@ Every existing solution is **advisory**. Give the agent instructions, context, o
 
 ## The Solution
 
-The Isagawa Kernel introduces **Self-Driven Development (SDD)** — a framework where the agent builds, enforces, and improves its own governance. Not "spec-driven" where you write the spec and hope. Self-driven. The agent writes the spec, and then it mechanically can't violate it.
+The Isagawa Kernel introduces **Spec-Driven Development (SDD)** — a framework where the agent builds, enforces, and improves its own governance from a domain spec. The agent internalizes the spec, builds its own protocol and enforcement, and then it mechanically can't violate it.
 
 The agent physically cannot skip a quality check, ignore a failure, or proceed without recording what it learned. It's not "please follow this spec" — it's "you are blocked until you do."
 
@@ -34,13 +34,13 @@ You (drop kernel in) → Agent scans repo → Builds own protocol
 
 **You don't write the rules. The agent does. And then it can't break them.**
 
-### What is Self-Driven Development?
+### What is Spec-Driven Development?
 
 SDD flips the traditional relationship between developer and agent:
 
-| Traditional | Self-Driven Development |
+| Traditional | Spec-Driven Development |
 |-------------|------------------------|
-| You write the spec | Agent writes its own spec |
+| You write the spec and hope | Agent internalizes the spec and enforces it |
 | You enforce quality | Agent enforces its own quality |
 | You update after failures | Agent updates itself after failures |
 | Agent follows instructions (sometimes) | Agent follows its own rules (always — mechanically enforced) |
@@ -105,34 +105,45 @@ claude
 ```
 Session Start  → Restores state from last session (or fresh start)
 Domain Setup   → Scans your repo + reads the Playwright QA spec
-                → Discovers: TypeScript project, fixtures, locator patterns
-                → Builds protocol: naming conventions, test structure, selectors
-                → Creates enforcement: quality gates for every test file
-                → Builds task queue: 12 tasks to cover the login flow
+                → Reads reference files: page objects, tasks, roles, test specs
+                → Builds protocol: 5-layer architecture, selector priority, interface-first rules
+                → Creates enforcement: quality gates for every layer
+                → Builds task queue from your request
 
-Autonomous Cycle begins:
-  Task 001: Create base page object         → verify → complete ✓
-  Task 002: Create login page object         → verify → complete ✓
-  Task 003: Write happy-path login test      → verify → complete ✓
-  Task 004: Write invalid-credentials test   → fails (wrong selector pattern)
-            → blocked until lesson recorded
-            → learns: "use data-testid, not CSS classes"
-            → lesson encoded permanently
-            → retries → verify → complete ✓
-  Task 005: Write session-timeout test       → verify → complete ✓
-  ...
-  Task 012: Final test suite                 → verify → complete ✓
+QA Workflow begins (5-step, gate-enforced):
+  Step 1: Input       → Captures URL, persona, test type (UI/API/hybrid)
+  Step 2: Pre-flight  → Configures credentials, auth strategy
+  Step 3: Processing  → Generates BDD scenarios and expected states
+  Step 4: Construction (builds layer by layer, spec-governed):
+    → Page Objects    → framework/pages/login/login-page.ts
+                        (role-based selectors, BrowserInterface methods, atomic actions)
+    → Tasks           → framework/tasks/login/login-tasks.ts
+                        (composes page objects, @autologger decorator, void returns)
+    → Roles           → framework/roles/login/standard-user-role.ts
+                        (composes tasks, multi-step workflows)
+    → Tests           → tests/login/test-login.spec.ts
+                        (AAA pattern, one role call per test, POM state assertions)
+  Step 5: Execution   → npx playwright test --headed
+    → Pass? Done.
+    → Fail? Agent STOPS. Reports to user. Waits for decision.
+      → User picks: AI fix / manual fix / investigate / skip
+      → If fix → /kernel/learn records lesson → retry
 
-Complete → All 12 tasks done. Test suite follows spec. Governed end to end.
+Failure example:
+  Agent uses CSS class selector (.btn-primary) in page object
+  → Spec enforces: role-based selectors first (role=button[name="Log in"])
+  → Blocked until lesson recorded
+  → Learns: "use role selectors, CSS is last resort"
+  → Lesson encoded permanently → same mistake can't recur
 ```
 
 **What you did:** Cloned a repo, opened it, said one sentence.
 
-**What you got:** A full test suite built to your domain's patterns, with every failure captured as a lesson that prevents the next one. Across sessions. Across tasks. Mechanically.
+**What you got:** A full test suite built to the spec's 5-layer architecture — page objects, tasks, roles, and tests — with every failure captured as a permanent lesson. Across sessions. Across tasks. Mechanically.
 
 ### Try It Yourself
 
-The fastest way to see SDD in action:
+The fastest way to see Spec-Driven Development in action:
 
 ```bash
 git clone https://github.com/isagawa-qa/platform-playwright.git
@@ -334,7 +345,7 @@ The enforcement knows what's wrong and tells the agent exactly how to fix it. No
 
 ## Core Principles
 
-- **Self-Building** — The agent creates its own protocols and enforcement. You don't write specs for it.
+- **Self-Building** — The agent internalizes the spec and creates its own protocols and enforcement from it.
 - **Self-Improving** — Every failure updates the system. The same mistake can't happen twice.
 - **Safety-First** — Enforcement is mechanical, not advisory. Can't be bypassed or ignored.
 - **Autonomous** — The agent reports what it did, not asks what to do.
@@ -357,7 +368,7 @@ The enforcement knows what's wrong and tells the agent exactly how to fix it. No
 ## FAQ
 
 **What is SDD?**
-Self-Driven Development. A framework where the agent builds, enforces, and improves its own governance — instead of following specs you wrote. The kernel is the runtime that makes SDD work.
+Spec-Driven Development. A framework where the agent internalizes a domain spec, builds its own governance from it, and enforces compliance mechanically. The kernel is the runtime that makes SDD work.
 
 **Is this a framework?**
 SDD is the framework. The kernel is the implementation. It's a set of markdown files and one enforcement script. No imports, no APIs, no build step. Copy it in, start working.
