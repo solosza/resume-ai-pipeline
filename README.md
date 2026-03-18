@@ -92,10 +92,10 @@ You have a web app. You want governed test automation. Here's what happens:
 ```bash
 # 1. Clone a release repo (kernel + Playwright spec bundled)
 git clone https://github.com/isagawa-qa/platform-playwright.git my-qa-project
-cd my-qa-project
+```
 
-# 2. Open in Claude Code
-claude
+```
+# 2. Open my-qa-project in VS Code → open the Claude Code panel
 ```
 
 **You say:** "Build Playwright tests for our login flow"
@@ -147,11 +147,9 @@ The fastest way to see Spec-Driven Development in action:
 
 ```bash
 git clone https://github.com/isagawa-qa/platform-playwright.git
-cd platform-playwright
-claude
 ```
 
-Tell the agent to build tests for any web app. Watch it set up its own protocol, create enforcement, and start cycling through tasks — governed the entire time. That's the kernel + a domain spec working together.
+Open `platform-playwright` in VS Code with the Claude Code extension. Tell the agent to build tests for any web app. Watch it set up its own protocol, create enforcement, and start cycling through tasks — governed the entire time. That's the kernel + a domain spec working together.
 
 ---
 
@@ -159,7 +157,7 @@ Tell the agent to build tests for any web app. Watch it set up its own protocol,
 
 ### Prerequisites
 
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (CLI)
+- [VS Code](https://code.visualstudio.com/) with the [Claude Code extension](https://marketplace.visualstudio.com/items?itemName=anthropics.claude-code)
 - Python 3.8+
 - That's it. No database, no Docker, no cloud.
 
@@ -176,19 +174,15 @@ cp isagawa-kernel/CLAUDE.md your-project/CLAUDE.md
 
 ### First Run
 
-```bash
-cd your-project
-
-# Open in Claude Code and give it any task
-# The kernel auto-detects, scans your repo, and builds everything
-claude
-```
+1. Open `your-project` in VS Code
+2. Open the Claude Code panel (sidebar or `Ctrl+Shift+P` → "Claude Code")
+3. Give the agent any task
 
 The agent will:
 1. Detect no domain exists
 2. Scan your repo structure, code patterns, and conventions
 3. Build its own protocol and enforcement
-4. Ask you to restart (enforcement needs a reload)
+4. Ask you to restart the extension (enforcement hooks need a reload)
 5. Pick up where it left off — fully governed
 
 **That's it.** Five minutes from clone to governed agent.
@@ -262,8 +256,7 @@ cp -r selenium-spec/ your-project/.claude/skills/selenium-spec/
 
 # Option 2: Already bundled (kernel + spec ship together)
 git clone https://github.com/isagawa-qa/platform-selenium.git
-cd platform-selenium
-claude   # Kernel + spec already installed. Just start.
+# Open platform-selenium in VS Code → open Claude Code panel. Just start.
 ```
 
 The agent reads the domain spec during setup, merges it with what it discovers in your repo, and builds a protocol that covers both your codebase and your domain's requirements.
