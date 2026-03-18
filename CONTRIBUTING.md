@@ -4,16 +4,16 @@ Thanks for your interest in contributing.
 
 ## Ways to Contribute
 
-### Domain Packs
+### Domain Specs
 
-The highest-impact contribution is a new domain pack. A domain pack teaches the kernel how to work in a specific domain (QA automation, API development, data pipelines, etc.).
+The highest-impact contribution is a new domain spec. A domain spec teaches the kernel how to work in a specific domain (QA automation, API development, data pipelines, etc.).
 
-A domain pack is just markdown files:
+A domain spec is just markdown files:
 - `SKILL.md` — index pointing to reference files
 - `references/` — step files with patterns, examples, and validation criteria
 - `workflow.md` — build order and data flow (optional)
 
-See the [QA Platform Domain Pack](https://github.com/isagawa-qa/platform) as a reference implementation.
+See the [QA Platform (Selenium)](https://github.com/isagawa-qa/platform-selenium) as a reference implementation.
 
 ### Bug Reports
 
