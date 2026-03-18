@@ -38,7 +38,7 @@ You (drop kernel in) → Agent scans repo → Builds own protocol
 
 SDD flips the traditional relationship between developer and agent:
 
-| Traditional | Spec-Driven Development |
+| Traditional | SDD + Kernel |
 |-------------|------------------------|
 | You write the spec and hope | Agent internalizes the spec and enforces it |
 | You enforce quality | Agent enforces its own quality |
