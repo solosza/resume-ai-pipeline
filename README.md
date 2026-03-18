@@ -20,9 +20,9 @@ Every existing solution is **advisory**. Give the agent instructions, context, o
 
 ## The Solution
 
-The Isagawa Kernel makes governance **mechanical**. The agent physically cannot skip a quality check, ignore a failure, or proceed without recording what it learned. It's not "please follow this spec" — it's "you are blocked until you do."
+The Isagawa Kernel introduces **Self-Driven Development (SDD)** — a framework where the agent builds, enforces, and improves its own governance. Not "spec-driven" where you write the spec and hope. Self-driven. The agent writes the spec, and then it mechanically can't violate it.
 
-The agent builds its own protocols. Enforces them automatically. Updates them every time something breaks. The system hardens itself with use.
+The agent physically cannot skip a quality check, ignore a failure, or proceed without recording what it learned. It's not "please follow this spec" — it's "you are blocked until you do."
 
 ```
 You (drop kernel in) → Agent scans repo → Builds own protocol
@@ -33,6 +33,20 @@ You (drop kernel in) → Agent scans repo → Builds own protocol
 ```
 
 **You don't write the rules. The agent does. And then it can't break them.**
+
+### What is Self-Driven Development?
+
+SDD flips the traditional relationship between developer and agent:
+
+| Traditional | Self-Driven Development |
+|-------------|------------------------|
+| You write the spec | Agent writes its own spec |
+| You enforce quality | Agent enforces its own quality |
+| You update after failures | Agent updates itself after failures |
+| Agent follows instructions (sometimes) | Agent follows its own rules (always — mechanically enforced) |
+| Quality depends on prompt engineering | Quality compounds automatically over time |
+
+The kernel is the runtime that makes SDD possible. Domain specs are the knowledge that makes it domain-aware.
 
 ---
 
@@ -70,6 +84,51 @@ Session 5:    Agent catches its own mistakes. Protocol is tightening.
 Session 20:   Governance is battle-tested. Same patterns, every time.
 Session 50+:  One-shot quality. The system has seen every failure mode.
 ```
+
+### Example: Kernel + QA Spec on a Real Project
+
+You have a web app. You want governed test automation. Here's what happens:
+
+```bash
+# 1. Clone a release repo (kernel + Selenium spec bundled)
+git clone https://github.com/isagawa-qa/platform-selenium.git my-qa-project
+cd my-qa-project
+
+# 2. Open in Claude Code
+claude
+```
+
+**You say:** "Build Selenium tests for our login flow"
+
+**What the agent does (governed, not guessing):**
+
+```
+Session Start  → Restores state from last session (or fresh start)
+Domain Setup   → Scans your repo + reads the Selenium QA spec
+                → Discovers: Python project, pytest, Page Object pattern expected
+                → Builds protocol: naming conventions, test structure, selectors
+                → Creates enforcement: quality gates for every test file
+                → Builds task queue: 12 tasks to cover the login flow
+
+Autonomous Cycle begins:
+  Task 001: Create base page object         → verify → complete ✓
+  Task 002: Create login page object         → verify → complete ✓
+  Task 003: Write happy-path login test      → verify → complete ✓
+  Task 004: Write invalid-credentials test   → fails (wrong selector pattern)
+            → blocked until lesson recorded
+            → learns: "use data-testid, not CSS classes"
+            → lesson encoded permanently
+            → retries → verify → complete ✓
+  Task 005: Write session-timeout test       → verify → complete ✓
+  ...
+  Task 012: Final test suite                 → verify → complete ✓
+
+Complete → All 12 tasks done. Test suite follows spec. Governed end to end.
+```
+
+**What you did:** Cloned a repo, opened it, said one sentence.
+
+**What you got:** A full test suite built to your domain's patterns, with every failure captured as a lesson that prevents the next one. Across sessions. Across tasks. Mechanically.
 
 ---
 
@@ -164,7 +223,31 @@ Three layers. The kernel governs, the spec teaches, the agent builds everything 
 
 ## Domain Specs
 
-The kernel is domain-agnostic. Pair it with a domain spec to point the agent at a specific problem space.
+The kernel governs. Domain specs teach. Together, you get a governed agent that knows your industry.
+
+A domain spec is a portable skill folder — markdown files that encode domain knowledge, patterns, conventions, and quality gates for a specific vertical. Drop one into any project with the kernel installed, and the agent builds to that domain's standards.
+
+### How to Drop In a Domain Spec
+
+```bash
+# You already have the kernel installed in your project.
+# Now add a domain spec:
+
+# Option 1: Clone a published spec
+git clone https://github.com/isagawa-qa/selenium-spec.git
+cp -r selenium-spec/ your-project/.claude/skills/selenium-spec/
+
+# Option 2: Already bundled (kernel + spec ship together)
+git clone https://github.com/isagawa-qa/platform-selenium.git
+cd platform-selenium
+claude   # Kernel + spec already installed. Just start.
+```
+
+The agent reads the domain spec during setup, merges it with what it discovers in your repo, and builds a protocol that covers both your codebase and your domain's requirements.
+
+**One kernel. Many specs. Each project gets domain-aware governance.**
+
+### Available Specs
 
 | Spec | What the agent builds | Status |
 |------|----------------------|--------|
@@ -174,9 +257,21 @@ The kernel is domain-agnostic. Pair it with a domain spec to point the agent at 
 | Health Insurance | EDI testing, claims processing, benefits configuration | Coming soon |
 | Real Estate | Lease-option deal management, buyer matching | Coming soon |
 
-**No domain spec?** The kernel still works. It scans your repo, builds a protocol from what it finds, and governs the agent's work. The spec just makes it domain-aware.
+### No Spec? No Problem.
 
-**Want to build your own?** Domain specs are just markdown skill folders. See the [Selenium spec](https://github.com/isagawa-qa/platform-selenium) for the pattern.
+The kernel works without a domain spec. It scans your repo, builds a protocol from what it finds, and governs the agent's work. The spec just makes it domain-aware — it's the difference between a governed agent and a governed agent that knows your industry.
+
+### Build Your Own
+
+Domain specs are just markdown skill folders. No code. No API. No schema to learn.
+
+A spec typically contains:
+- **Workflow** — how the agent should approach work in this domain
+- **Reference patterns** — conventions, naming, architecture the agent should follow
+- **Seeded lessons** — known pitfalls in this domain, pre-loaded so the agent doesn't hit them
+- **Task templates** — common work items the agent can cycle through
+
+See the [Selenium spec](https://github.com/isagawa-qa/platform-selenium) for a working example. Build one for your vertical — the kernel handles enforcement.
 
 ---
 
@@ -249,8 +344,11 @@ The enforcement knows what's wrong and tells the agent exactly how to fix it. No
 
 ## FAQ
 
+**What is SDD?**
+Self-Driven Development. A framework where the agent builds, enforces, and improves its own governance — instead of following specs you wrote. The kernel is the runtime that makes SDD work.
+
 **Is this a framework?**
-No. It's a set of markdown files and one enforcement script. No imports, no APIs, no build step. Copy it in, start working.
+SDD is the framework. The kernel is the implementation. It's a set of markdown files and one enforcement script. No imports, no APIs, no build step. Copy it in, start working.
 
 **Does it work without a domain spec?**
 Yes. The kernel scans your repo and builds a protocol from what it finds. The domain spec adds industry-specific knowledge, but the governance loop works either way.
@@ -266,6 +364,12 @@ Currently Claude Code. The architecture is agent-agnostic — any agent runtime 
 
 **How is this different from giving the agent a CLAUDE.md file?**
 CLAUDE.md is advisory — the agent reads it once and drifts. The kernel re-reads the protocol every N actions, audits work against it, and blocks non-compliance. Structure that persists, not instructions that decay.
+
+**Can I use my own domain spec with it?**
+Yes. Domain specs are just markdown skill folders. Build one for your vertical, drop it into `.claude/skills/`, and the kernel handles the rest. See the [Selenium spec](https://github.com/isagawa-qa/platform-selenium) for the pattern.
+
+**How do domain specs work with teams?**
+Everyone clones the same repo with kernel + spec installed. Every developer's agent builds to the same protocol. Same patterns, same quality gates, same enforcement. New team member? Clone and go.
 
 ---
 
